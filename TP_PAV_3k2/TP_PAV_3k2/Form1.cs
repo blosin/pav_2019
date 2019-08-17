@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TP_PAV_3k2
 {
-    public partial class Form1 : Form
+    public partial class agregarEmpleado : Form
     {
-        public Form1()
+        public agregarEmpleado()
         {
             InitializeComponent();
         }
