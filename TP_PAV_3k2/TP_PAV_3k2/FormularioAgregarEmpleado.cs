@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TP_PAV_3k2
 {
-    public partial class Form2 : Form
+    public partial class FormularioAgregarEmpleado : Form
     {
-        public Form2()
+        public FormularioAgregarEmpleado()
         {
             InitializeComponent();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace TP_PAV_3k2
 {
-    partial class Form2
+    partial class FormularioAgregarEstacion
     {
         /// <summary>
         /// Required designer variable.
@@ -53,6 +53,7 @@
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // textBox1
             // 
@@ -82,7 +83,7 @@
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 7;
             // 
-            // Form2
+            // FormularioAgregarEstacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -93,7 +94,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.bntAceptar);
-            this.Name = "Form2";
+            this.Name = "FormularioAgregarEstacion";
             this.Text = "Agresar Estacion";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,6 +1,6 @@
 ﻿namespace TP_PAV_3k2
 {
-    partial class agregarEmpleado
+    partial class FormularioAgregarEmpleado
     {
         /// <summary>
         /// Required designer variable.
@@ -109,7 +109,7 @@
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 8;
             // 
-            // agregarEmpleado
+            // FormularioAgregarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -123,7 +123,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.bntAceptar);
             this.Controls.Add(this.btnSalir);
-            this.Name = "agregarEmpleado";
+            this.Name = "FormularioAgregarEmpleado";
             this.Text = "Agregar Empleado";
             this.ResumeLayout(false);
             this.PerformLayout();
