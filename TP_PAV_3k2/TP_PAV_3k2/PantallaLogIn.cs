@@ -16,5 +16,10 @@ namespace TP_PAV_3k2
         {
             InitializeComponent();
         }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
