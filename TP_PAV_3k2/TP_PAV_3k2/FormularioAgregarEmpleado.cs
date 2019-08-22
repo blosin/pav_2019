@@ -25,6 +25,7 @@ namespace TP_PAV_3k2
 
         private void BntAceptar_Click(object sender, EventArgs e)
         {
+            //Valido los campos de texto
             if (txtNombre.Text == "")
             {
                 MessageBox.Show("El Nombre no puede quedar vacío.");
@@ -35,11 +36,17 @@ namespace TP_PAV_3k2
                 MessageBox.Show("El Apellido está vacío.");
                 txtApellido.Focus();
             }
-
+            else if (txtNumero.Text == "")
+            {
+                MessageBox.Show("Ingrese un número de documento.");
+                txtNumero.Focus();
+            }
+            //Con los datos validados llegar la grilla
         }
 
         private void FormularioAgregarEmpleado_Load(object sender, EventArgs e)
-        {
+        {   
+            //LOAD: Inicializo los valores del combo Tipos de Documento.
             ArrayList listaTipoDoc = new ArrayList();
             listaTipoDoc.Add("DNI");
             listaTipoDoc.Add("Pasaporte");

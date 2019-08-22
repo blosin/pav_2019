@@ -64,14 +64,14 @@
             // agregarEmpleadoToolStripMenuItem
             // 
             this.agregarEmpleadoToolStripMenuItem.Name = "agregarEmpleadoToolStripMenuItem";
-            this.agregarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.agregarEmpleadoToolStripMenuItem.Text = "Agregar Empleado";
             this.agregarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.agregarEmpleadoToolStripMenuItem_Click);
             // 
             // agregarSucursalToolStripMenuItem
             // 
             this.agregarSucursalToolStripMenuItem.Name = "agregarSucursalToolStripMenuItem";
-            this.agregarSucursalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarSucursalToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.agregarSucursalToolStripMenuItem.Text = "Agregar Sucursal";
             this.agregarSucursalToolStripMenuItem.Click += new System.EventHandler(this.agregarSucursalToolStripMenuItem_Click);
             // 
@@ -90,6 +90,7 @@
             this.grdEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdEmpleados.Location = new System.Drawing.Point(423, 81);
             this.grdEmpleados.Name = "grdEmpleados";
+            this.grdEmpleados.ReadOnly = true;
             this.grdEmpleados.Size = new System.Drawing.Size(334, 301);
             this.grdEmpleados.TabIndex = 4;
             // 
@@ -98,6 +99,7 @@
             this.grdEstaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdEstaciones.Location = new System.Drawing.Point(40, 81);
             this.grdEstaciones.Name = "grdEstaciones";
+            this.grdEstaciones.ReadOnly = true;
             this.grdEstaciones.Size = new System.Drawing.Size(312, 301);
             this.grdEstaciones.TabIndex = 5;
             // 
@@ -130,8 +132,10 @@
             this.Controls.Add(this.grdEmpleados);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormularioPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.Load += new System.EventHandler(this.FormularioPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);

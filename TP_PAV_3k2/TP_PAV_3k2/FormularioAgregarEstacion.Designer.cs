@@ -30,16 +30,16 @@
         {
             this.bntAceptar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtRazonSocial = new System.Windows.Forms.TextBox();
+            this.txtNumeroCalle = new System.Windows.Forms.TextBox();
+            this.txtCalle = new System.Windows.Forms.TextBox();
+            this.txtCUIT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.fechaHabilitación = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // bntAceptar
@@ -50,6 +50,7 @@
             this.bntAceptar.TabIndex = 2;
             this.bntAceptar.Text = "Aceptar";
             this.bntAceptar.UseVisualStyleBackColor = true;
+            this.bntAceptar.Click += new System.EventHandler(this.BntAceptar_Click);
             // 
             // btnSalir
             // 
@@ -61,37 +62,37 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // textBox1
+            // txtRazonSocial
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 79);
-            this.textBox1.MaxLength = 20;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtRazonSocial.Location = new System.Drawing.Point(182, 79);
+            this.txtRazonSocial.MaxLength = 20;
+            this.txtRazonSocial.Name = "txtRazonSocial";
+            this.txtRazonSocial.Size = new System.Drawing.Size(200, 20);
+            this.txtRazonSocial.TabIndex = 4;
             // 
-            // textBox2
+            // txtNumeroCalle
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 131);
-            this.textBox2.MaxLength = 5;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtNumeroCalle.Location = new System.Drawing.Point(182, 131);
+            this.txtNumeroCalle.MaxLength = 5;
+            this.txtNumeroCalle.Name = "txtNumeroCalle";
+            this.txtNumeroCalle.Size = new System.Drawing.Size(200, 20);
+            this.txtNumeroCalle.TabIndex = 5;
             // 
-            // textBox3
+            // txtCalle
             // 
-            this.textBox3.Location = new System.Drawing.Point(182, 105);
-            this.textBox3.MaxLength = 20;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 20);
-            this.textBox3.TabIndex = 6;
+            this.txtCalle.Location = new System.Drawing.Point(182, 105);
+            this.txtCalle.MaxLength = 20;
+            this.txtCalle.Name = "txtCalle";
+            this.txtCalle.Size = new System.Drawing.Size(200, 20);
+            this.txtCalle.TabIndex = 6;
             // 
-            // textBox4
+            // txtCUIT
             // 
-            this.textBox4.Location = new System.Drawing.Point(182, 53);
-            this.textBox4.MaxLength = 12;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 20);
-            this.textBox4.TabIndex = 7;
+            this.txtCUIT.Location = new System.Drawing.Point(182, 53);
+            this.txtCUIT.MaxLength = 12;
+            this.txtCUIT.Name = "txtCUIT";
+            this.txtCUIT.Size = new System.Drawing.Size(200, 20);
+            this.txtCUIT.TabIndex = 7;
             // 
             // label1
             // 
@@ -138,12 +139,14 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Fecha Habilitacion";
             // 
-            // dateTimePicker1
+            // fechaHabilitación
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(182, 162);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 13;
+            this.fechaHabilitación.Location = new System.Drawing.Point(182, 162);
+            this.fechaHabilitación.MaxDate = new System.DateTime(2019, 8, 22, 0, 0, 0, 0);
+            this.fechaHabilitación.Name = "fechaHabilitación";
+            this.fechaHabilitación.Size = new System.Drawing.Size(200, 20);
+            this.fechaHabilitación.TabIndex = 13;
+            this.fechaHabilitación.Value = new System.DateTime(2019, 8, 22, 0, 0, 0, 0);
             // 
             // FormularioAgregarEstacion
             // 
@@ -151,16 +154,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 339);
             this.ControlBox = false;
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.fechaHabilitación);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCUIT);
+            this.Controls.Add(this.txtCalle);
+            this.Controls.Add(this.txtNumeroCalle);
+            this.Controls.Add(this.txtRazonSocial);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.bntAceptar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -176,15 +179,15 @@
 
         private System.Windows.Forms.Button bntAceptar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtRazonSocial;
+        private System.Windows.Forms.TextBox txtNumeroCalle;
+        private System.Windows.Forms.TextBox txtCalle;
+        private System.Windows.Forms.TextBox txtCUIT;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker fechaHabilitación;
     }
 }

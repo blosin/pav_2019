@@ -32,7 +32,7 @@
             this.bntAceptar = new System.Windows.Forms.Button();
             this.txtLegajo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -83,13 +83,13 @@
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
             this.txtNombre.TabIndex = 3;
             // 
-            // textBox3
+            // txtNumero
             // 
-            this.textBox3.Location = new System.Drawing.Point(123, 143);
-            this.textBox3.MaxLength = 10;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtNumero.Location = new System.Drawing.Point(123, 143);
+            this.txtNumero.MaxLength = 10;
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(200, 20);
+            this.txtNumero.TabIndex = 5;
             // 
             // txtApellido
             // 
@@ -214,12 +214,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbTipoDoc);
             this.Controls.Add(this.txtApellido);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtLegajo);
             this.Controls.Add(this.bntAceptar);
             this.Controls.Add(this.btnSalir);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormularioAgregarEmpleado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Empleado";
             this.Load += new System.EventHandler(this.FormularioAgregarEmpleado_Load);
             this.ResumeLayout(false);
@@ -233,7 +235,7 @@
         private System.Windows.Forms.Button bntAceptar;
         private System.Windows.Forms.TextBox txtLegajo;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.ComboBox cmbTipoDoc;
         private System.Windows.Forms.Label label1;

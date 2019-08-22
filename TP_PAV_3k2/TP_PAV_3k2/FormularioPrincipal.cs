@@ -22,7 +22,6 @@ namespace TP_PAV_3k2
         {
             Form formulario = new FormularioAgregarEmpleado();
             formulario.Show();
-
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

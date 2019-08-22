@@ -22,5 +22,31 @@ namespace TP_PAV_3k2
             this.Close();
            
         }
+
+        private void BntAceptar_Click(object sender, EventArgs e)
+        {
+            //Valido los campos de texto
+            if (txtCUIT.Text == "")
+            {
+                MessageBox.Show("Ingrese un Número de CUIT");
+                txtCUIT.Focus();
+            }
+            else if (txtRazonSocial.Text == "")
+            {
+                MessageBox.Show("Ingrese un nombre de Razon Social");
+                txtRazonSocial.Focus();
+            }
+            else if (txtCalle.Text == "")
+            {
+                MessageBox.Show("Ingrese un nombre de Calle");
+                txtCalle.Focus();
+            }
+            else if (txtNumeroCalle.Text == "")
+            {
+                MessageBox.Show("Ingrese un número de calle");
+                txtNumeroCalle.Focus();
+            }
+            //Validados los datos se agregan a la grilla.
+        }
     }
 }
