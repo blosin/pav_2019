@@ -88,25 +88,26 @@
             // grdEmpleados
             // 
             this.grdEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdEmpleados.Location = new System.Drawing.Point(423, 81);
+            this.grdEmpleados.Location = new System.Drawing.Point(40, 80);
             this.grdEmpleados.Name = "grdEmpleados";
             this.grdEmpleados.ReadOnly = true;
-            this.grdEmpleados.Size = new System.Drawing.Size(334, 301);
+            this.grdEmpleados.Size = new System.Drawing.Size(717, 142);
             this.grdEmpleados.TabIndex = 4;
+            this.grdEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdEmpleados_CellContentClick);
             // 
             // grdEstaciones
             // 
             this.grdEstaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdEstaciones.Location = new System.Drawing.Point(40, 81);
+            this.grdEstaciones.Location = new System.Drawing.Point(40, 241);
             this.grdEstaciones.Name = "grdEstaciones";
             this.grdEstaciones.ReadOnly = true;
-            this.grdEstaciones.Size = new System.Drawing.Size(312, 301);
+            this.grdEstaciones.Size = new System.Drawing.Size(717, 141);
             this.grdEstaciones.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 65);
+            this.label1.Location = new System.Drawing.Point(37, 225);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 13);
             this.label1.TabIndex = 6;
@@ -115,7 +116,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(420, 65);
+            this.label2.Location = new System.Drawing.Point(37, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 13);
             this.label2.TabIndex = 7;

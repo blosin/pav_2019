@@ -53,5 +53,10 @@ namespace TP_PAV_3k2
             grdEmpleados.Columns.Add("clmFechaNac", "Fecha de Nacimiento");
             grdEmpleados.Columns.Add("clmFechaAlta", "Fecha de Alta");
         }
+
+        private void GrdEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
