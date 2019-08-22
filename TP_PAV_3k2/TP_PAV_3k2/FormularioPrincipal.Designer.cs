@@ -133,6 +133,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormularioPrincipal";
             this.Text = "Principal";
+            this.Load += new System.EventHandler(this.FormularioPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).EndInit();
