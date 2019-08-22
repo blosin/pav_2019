@@ -42,6 +42,7 @@ namespace TP_PAV_3k2
                 txtNumero.Focus();
             }
             //Con los datos validados llegar la grilla
+
         }
 
         private void FormularioAgregarEmpleado_Load(object sender, EventArgs e)
