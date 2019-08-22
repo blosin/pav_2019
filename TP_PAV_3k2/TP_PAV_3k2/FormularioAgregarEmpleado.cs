@@ -42,7 +42,7 @@ namespace TP_PAV_3k2
                 txtNumero.Focus();
             }
             //Con los datos validados llegar la grilla
-
+            //FormularioPrincipal.grillaEmpleados.Rows.Add(txtLegajo.Text, txtNombre.Text, txtApellido.Text, cmbTipoDoc.SelectedItem.ToString(), txtNumero.Text, dateFechaNacimiento.Value.ToString(), dateFechaAlta.Value.ToString());
         }
 
         private void FormularioAgregarEmpleado_Load(object sender, EventArgs e)

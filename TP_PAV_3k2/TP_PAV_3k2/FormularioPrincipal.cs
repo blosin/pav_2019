@@ -17,7 +17,7 @@ namespace TP_PAV_3k2
         {
             InitializeComponent();
         }
-
+        //public static DataGridView grillaEmpleados = new DataGridView();
         private void agregarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form formulario = new FormularioAgregarEmpleado();
@@ -53,7 +53,6 @@ namespace TP_PAV_3k2
             grdEmpleados.Columns.Add("clmFechaNac", "Fecha de Nacimiento");
             grdEmpleados.Columns.Add("clmFechaAlta", "Fecha de Alta");
         }
-
         private void GrdEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

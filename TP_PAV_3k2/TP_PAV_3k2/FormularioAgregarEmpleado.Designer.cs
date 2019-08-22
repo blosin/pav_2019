@@ -40,10 +40,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateFechaAlta = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -153,14 +153,14 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Fecha Nacimiento";
             // 
-            // dateTimePicker1
+            // dateFechaNacimiento
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(123, 169);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2019, 8, 21, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 14;
-            this.dateTimePicker1.Value = new System.DateTime(2019, 8, 21, 0, 0, 0, 0);
+            this.dateFechaNacimiento.Location = new System.Drawing.Point(123, 169);
+            this.dateFechaNacimiento.MaxDate = new System.DateTime(2019, 8, 21, 0, 0, 0, 0);
+            this.dateFechaNacimiento.Name = "dateFechaNacimiento";
+            this.dateFechaNacimiento.Size = new System.Drawing.Size(200, 20);
+            this.dateFechaNacimiento.TabIndex = 14;
+            this.dateFechaNacimiento.Value = new System.DateTime(2019, 8, 21, 0, 0, 0, 0);
             // 
             // label6
             // 
@@ -180,12 +180,12 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "Legajo Superior";
             // 
-            // dateTimePicker2
+            // dateFechaAlta
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(123, 195);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 17;
+            this.dateFechaAlta.Location = new System.Drawing.Point(123, 195);
+            this.dateFechaAlta.Name = "dateFechaAlta";
+            this.dateFechaAlta.Size = new System.Drawing.Size(200, 20);
+            this.dateFechaAlta.TabIndex = 17;
             // 
             // label8
             // 
@@ -203,10 +203,10 @@
             this.ClientSize = new System.Drawing.Size(342, 441);
             this.ControlBox = false;
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateFechaAlta);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateFechaNacimiento);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -243,10 +243,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateFechaNacimiento;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dateFechaAlta;
         private System.Windows.Forms.Label label8;
     }
 }
