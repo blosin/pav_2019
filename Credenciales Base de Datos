@@ -1,0 +1,4 @@
+MS SQL Server address:	PAV-3K2GRP1.mssql.somee.com
+Login name:	Walter0210_SQLLogin_1
+Login password:	z484w825pu
+Connection string:	workstation id=PAV-3K2GRP1.mssql.somee.com;packet size=4096;user id=Walter0210_SQLLogin_1;pwd=z484w825pu;data source=PAV-3K2GRP1.mssql.somee.com;persist security info=False;initial catalog=PAV-3K2GRP1
