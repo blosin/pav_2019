@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormularioABMEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioABMEmpleado.Designer.cs">
+      <DependentUpon>FormularioABMEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioABMSucursal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioABMSucursal.Designer.cs">
+      <DependentUpon>FormularioABMSucursal.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioAgregarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormularioABMEmpleado.resx">
+      <DependentUpon>FormularioABMEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioABMSucursal.resx">
+      <DependentUpon>FormularioABMSucursal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioAgregarEmpleado.resx">
       <DependentUpon>FormularioAgregarEmpleado.cs</DependentUpon>
     </EmbeddedResource>

@@ -20,7 +20,7 @@ namespace TP_PAV_3k2
         //public static DataGridView grillaEmpleados = new DataGridView();
         private void agregarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form formulario = new FormularioAgregarEmpleado();
+            Form formulario = new FormularioABMEmpleado();
             formulario.Show();
         }
 
@@ -31,7 +31,7 @@ namespace TP_PAV_3k2
 
         private void agregarSucursalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form formulario = new FormularioAgregarEstacion();
+            Form formulario = new FormularioABMSucursal();
             formulario.Show();
         }
 
