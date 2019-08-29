@@ -243,6 +243,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "FormularioABMEmpleado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "abmEmpleado";
             this.Load += new System.EventHandler(this.AbmEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).EndInit();

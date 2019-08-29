@@ -188,6 +188,7 @@
             this.Controls.Add(this.bntAgregar);
             this.Controls.Add(this.button1);
             this.Name = "FormularioABMSucursal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "abmSucursales";
             this.Load += new System.EventHandler(this.AbmSucursales_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdEstaciones)).EndInit();
