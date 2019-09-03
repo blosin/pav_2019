@@ -46,6 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccesoDB.cs" />
+    <Compile Include="UnidadDeMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnidadDeMedida.Designer.cs">
+      <DependentUpon>UnidadDeMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Urgencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Urgencia.Designer.cs">
+      <DependentUpon>Urgencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TipoCombustible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TipoCombustible.Designer.cs">
+      <DependentUpon>TipoCombustible.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioABMEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +103,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="TipoCombustible.resx">
+      <DependentUpon>TipoCombustible.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioABMEmpleado.resx">
       <DependentUpon>FormularioABMEmpleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +133,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UnidadDeMedida.resx">
+      <DependentUpon>UnidadDeMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Urgencia.resx">
+      <DependentUpon>Urgencia.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
