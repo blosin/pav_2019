@@ -43,17 +43,13 @@ namespace TP_PAV_3k2
             grdEstaciones.Columns.Add("clmCalle", "Calle");
             grdEstaciones.Columns.Add("clmNumero", "Numero");
             grdEstaciones.Columns.Add("clmFechaHablilitacion", "Fecha de Habilitación");
-
-            //Inicializo las columnas de la grid de Empleados.
-            grdEmpleados.Columns.Add("clmLegajo","Legajo");
-            grdEmpleados.Columns.Add("clmNombre", "Nombre");
-            grdEmpleados.Columns.Add("clmApellido", "Apellido");
-            grdEmpleados.Columns.Add("clmTipoDoc", "Tipo Documento");
-            grdEmpleados.Columns.Add("clmNumeroDoc", "Número Documento");
-            grdEmpleados.Columns.Add("clmFechaNac", "Fecha de Nacimiento");
-            grdEmpleados.Columns.Add("clmFechaAlta", "Fecha de Alta");
         }
         private void GrdEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void UnidadDeMedidaToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
