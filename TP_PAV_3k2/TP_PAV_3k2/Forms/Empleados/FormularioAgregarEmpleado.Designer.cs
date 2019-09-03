@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.bntAceptar = new System.Windows.Forms.Button();
             this.txtLegajo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
@@ -45,27 +43,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.dateFechaAlta = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(183, 353);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(140, 67);
-            this.btnSalir.TabIndex = 0;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // bntAceptar
-            // 
-            this.bntAceptar.Location = new System.Drawing.Point(27, 353);
-            this.bntAceptar.Name = "bntAceptar";
-            this.bntAceptar.Size = new System.Drawing.Size(140, 67);
-            this.bntAceptar.TabIndex = 1;
-            this.bntAceptar.Text = "Aceptar";
-            this.bntAceptar.UseVisualStyleBackColor = true;
-            this.bntAceptar.Click += new System.EventHandler(this.BntAceptar_Click);
             // 
             // txtLegajo
             // 
@@ -77,7 +57,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(123, 65);
+            this.txtNombre.Location = new System.Drawing.Point(123, 64);
             this.txtNombre.MaxLength = 15;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
@@ -196,12 +176,34 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "Tipo de Documento";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(50, 281);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 20;
+            this.button1.Text = "Guardar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.BntAceptar_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Location = new System.Drawing.Point(217, 281);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.TabIndex = 19;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
             // FormularioAgregarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 441);
+            this.ClientSize = new System.Drawing.Size(342, 349);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dateFechaAlta);
             this.Controls.Add(this.label7);
@@ -217,8 +219,6 @@
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtLegajo);
-            this.Controls.Add(this.bntAceptar);
-            this.Controls.Add(this.btnSalir);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FormularioAgregarEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -230,9 +230,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button bntAceptar;
         private System.Windows.Forms.TextBox txtLegajo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtNumero;
@@ -248,6 +245,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker dateFechaAlta;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSalir;
     }
 }
 

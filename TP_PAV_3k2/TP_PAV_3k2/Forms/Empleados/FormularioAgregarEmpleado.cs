@@ -13,16 +13,14 @@ namespace TP_PAV_3k2
 {
     public partial class FormularioAgregarEmpleado : Form
     {
-        private FormularioPrincipal formularioPrincipal;
-        public FormularioAgregarEmpleado(FormularioPrincipal formularioPrincipal)
+        public FormularioAgregarEmpleado()
         {
             InitializeComponent();
-            this.formularioPrincipal = formularioPrincipal;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
 
         private void BntAceptar_Click(object sender, EventArgs e)

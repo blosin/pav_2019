@@ -38,7 +38,8 @@ namespace TP_PAV_3k2
             else
             {
                 Form formulario = new FormularioPrincipal();
-                formulario.Show();
+                formulario.Show(this);
+                //this.Hide();
             }
 
         }

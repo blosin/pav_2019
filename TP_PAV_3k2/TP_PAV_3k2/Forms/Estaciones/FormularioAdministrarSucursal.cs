@@ -27,11 +27,6 @@ namespace TP_PAV_3k2
             grdEstaciones.Columns.Add("clmFechaHablilitacion", "Fecha de Habilitación");
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void BntAgregar_Click(object sender, EventArgs e)
         {
             //Valido los campos de texto
@@ -57,6 +52,17 @@ namespace TP_PAV_3k2
             }
             //Validados los datos se agregan a la grilla.
             grdEstaciones.Rows.Add(txtCUIT.Text, txtRazonSocial.Text, txtCalle.Text, txtNumeroCalle.Text, fechaHabilitación.Value.ToString());
+        }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            var ventana = new FormularioAgregarEstacion();
+            ventana.Show();
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

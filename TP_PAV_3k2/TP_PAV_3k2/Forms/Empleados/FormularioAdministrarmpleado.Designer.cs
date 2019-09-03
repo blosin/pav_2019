@@ -47,6 +47,8 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.grdEmpleados = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -182,7 +184,7 @@
             // 
             // bntAgregar
             // 
-            this.bntAgregar.Location = new System.Drawing.Point(606, 322);
+            this.bntAgregar.Location = new System.Drawing.Point(12, 322);
             this.bntAgregar.Name = "bntAgregar";
             this.bntAgregar.Size = new System.Drawing.Size(75, 27);
             this.bntAgregar.TabIndex = 20;
@@ -196,14 +198,15 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 27);
             this.btnSalir.TabIndex = 19;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "Volver";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // grdEmpleados
             // 
             this.grdEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdEmpleados.Location = new System.Drawing.Point(12, 12);
+            this.grdEmpleados.Location = new System.Drawing.Point(377, 12);
+            this.grdEmpleados.MultiSelect = false;
             this.grdEmpleados.Name = "grdEmpleados";
             this.grdEmpleados.ReadOnly = true;
             this.grdEmpleados.Size = new System.Drawing.Size(395, 296);
@@ -226,16 +229,37 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(450, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(322, 296);
+            this.panel1.Size = new System.Drawing.Size(329, 296);
             this.panel1.TabIndex = 37;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(137, 322);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(75, 27);
+            this.btnModificar.TabIndex = 39;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(266, 322);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 27);
+            this.btnEliminar.TabIndex = 40;
+            this.btnEliminar.Text = "Eliminiar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // FormularioABMEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 361);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.grdEmpleados);
             this.Controls.Add(this.bntAgregar);
@@ -244,7 +268,7 @@
             this.MaximizeBox = false;
             this.Name = "FormularioABMEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Empleados";
+            this.Text = "Administrar Empleado";
             this.Load += new System.EventHandler(this.AbmEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -274,5 +298,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.DataGridView grdEmpleados;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

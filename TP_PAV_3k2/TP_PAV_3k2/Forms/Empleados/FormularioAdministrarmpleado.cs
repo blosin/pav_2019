@@ -63,5 +63,11 @@ namespace TP_PAV_3k2
         {
             this.Close();
         }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            var ventana = new FormularioAgregarEmpleado();
+            ventana.ShowDialog();
+        }
     }
 }
