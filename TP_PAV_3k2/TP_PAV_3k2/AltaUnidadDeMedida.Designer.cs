@@ -1,6 +1,6 @@
 ﻿namespace TP_PAV_3k2
 {
-    partial class UnidadDeMedida
+    partial class AltaUnidadDeMedida
     {
         /// <summary>
         /// Required designer variable.

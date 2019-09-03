@@ -8,7 +8,7 @@ using System.Data.OleDb;
 
 namespace TP_PAV_3k2
 {
-    class acceso_BD
+    class accesoBD
     {
         //instancia objeto <conexion> de tipo <OleDbConnection>
         OleDbConnection conexion = new OleDbConnection();

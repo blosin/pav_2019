@@ -1,25 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace TP_PAV_3k2
 {
-    public partial class TipoCombustible : Form
+    class TipoCombustible
     {
-        public TipoCombustible()
-        {
-            InitializeComponent();
-        }
+        public int Id { get; set; }
+        public string Nombre { get; set; }
 
-        private void Form3_Load(object sender, EventArgs e)
+        public bool NombreValido()
         {
-
+            if (!string.IsNullOrEmpty(Nombre) && Nombre.Length < 51)
+                return true;
+            return false;
         }
     }
 }

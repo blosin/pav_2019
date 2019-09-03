@@ -47,23 +47,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDB.cs" />
-    <Compile Include="UnidadDeMedida.cs">
+    <Compile Include="RepositorioUnidadDeMedida.cs" />
+    <Compile Include="RepositorioUrgencia.cs" />
+    <Compile Include="RepositorioTipoCombustible.cs" />
+    <Compile Include="TipoCombustible.cs" />
+    <Compile Include="UnidadDeMedida.cs" />
+    <Compile Include="Urgencia.cs" />
+    <Compile Include="AltaUnidadDeMedida.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UnidadDeMedida.Designer.cs">
-      <DependentUpon>UnidadDeMedida.cs</DependentUpon>
+    <Compile Include="AltaUnidadDeMedida.Designer.cs">
+      <DependentUpon>AltaUnidadDeMedida.cs</DependentUpon>
     </Compile>
-    <Compile Include="Urgencia.cs">
+    <Compile Include="AltaUrgencia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Urgencia.Designer.cs">
-      <DependentUpon>Urgencia.cs</DependentUpon>
+    <Compile Include="AltaUrgencia.Designer.cs">
+      <DependentUpon>AltaUrgencia.cs</DependentUpon>
     </Compile>
-    <Compile Include="TipoCombustible.cs">
+    <Compile Include="AltaTipoCombustible.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TipoCombustible.Designer.cs">
-      <DependentUpon>TipoCombustible.cs</DependentUpon>
+    <Compile Include="AltaTipoCombustible.Designer.cs">
+      <DependentUpon>AltaTipoCombustible.cs</DependentUpon>
     </Compile>
     <Compile Include="FormularioABMEmpleado.cs">
       <SubType>Form</SubType>
@@ -103,8 +109,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="TipoCombustible.resx">
-      <DependentUpon>TipoCombustible.cs</DependentUpon>
+    <EmbeddedResource Include="AltaTipoCombustible.resx">
+      <DependentUpon>AltaTipoCombustible.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioABMEmpleado.resx">
       <DependentUpon>FormularioABMEmpleado.cs</DependentUpon>
@@ -133,11 +139,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UnidadDeMedida.resx">
-      <DependentUpon>UnidadDeMedida.cs</DependentUpon>
+    <EmbeddedResource Include="AltaUnidadDeMedida.resx">
+      <DependentUpon>AltaUnidadDeMedida.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Urgencia.resx">
-      <DependentUpon>Urgencia.cs</DependentUpon>
+    <EmbeddedResource Include="AltaUrgencia.resx">
+      <DependentUpon>AltaUrgencia.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
