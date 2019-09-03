@@ -23,7 +23,7 @@ namespace TP_PAV_3k2.Helper
         //pues no suministra el componete <Password> que debe agregado manualmente por el programador
 
         //string cadena_conexion = "Provider=SQLNCLI11;Data Source=maquis;Persist Security Info=True;User ID=avisuales1;Initial Catalog=pav1-db-peliculas;password=avisuales1"; //workstation id=pav1-db.mssql.somee.com;packet size=4096;user id=milizc_SQLLogin_1;pwd=2s9o1yeexo;data source=pav1-db.mssql.somee.com;persist security info=False;initial catalog=pav1-db
-        string cadena_conexion = "Provider=SQLNCLI11;workstation id=pav1-db.mssql.somee.com;packet size=4096;user id=milizc_SQLLogin_1;pwd=2s9o1yeexo;data source=pav1-db.mssql.somee.com;persist security info=False;initial catalog=pav1-db";
+        string cadena_conexion = "Provider=SQLNCLI11;workstation id=PAV-3K2GRP1.mssql.somee.com;packet size=4096;user id=Walter0210_SQLLogin_1;pwd=z484w825pu;data source=PAV-3K2GRP1.mssql.somee.com;persist security info=False;initial catalog=PAV-3K2GRP1";
         //procedimiento privado <conectar> que prepara la conexión con la base de dato
         private void conectar()
         {
