@@ -46,47 +46,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Empleados\FormularioAdministrarmpleado.cs">
+    <Compile Include="Modulos\AdministrarSoporte.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Empleados\FormularioAdministrarmpleado.Designer.cs">
+    <Compile Include="Modulos\AdministrarSoporte.Designer.cs">
+      <DependentUpon>AdministrarSoporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulos\Empleados\FormularioAdministrarmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Empleados\FormularioAdministrarmpleado.Designer.cs">
       <DependentUpon>FormularioAdministrarmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Estaciones\FormularioAdministrarSucursal.cs">
+    <Compile Include="Modulos\Estaciones\FormularioAdministrarSucursal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Estaciones\FormularioAdministrarSucursal.Designer.cs">
+    <Compile Include="Modulos\Estaciones\FormularioAdministrarSucursal.Designer.cs">
       <DependentUpon>FormularioAdministrarSucursal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Empleados\FormularioAgregarEmpleado.cs">
+    <Compile Include="Modulos\Empleados\FormularioAgregarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Empleados\FormularioAgregarEmpleado.Designer.cs">
+    <Compile Include="Modulos\Empleados\FormularioAgregarEmpleado.Designer.cs">
       <DependentUpon>FormularioAgregarEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Estaciones\FormularioAgregarEstacion.cs">
+    <Compile Include="Modulos\Estaciones\FormularioAgregarEstacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Estaciones\FormularioAgregarEstacion.Designer.cs">
+    <Compile Include="Modulos\Estaciones\FormularioAgregarEstacion.Designer.cs">
       <DependentUpon>FormularioAgregarEstacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormularioPrincipal.cs">
+    <Compile Include="Modulos\FormularioPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormularioPrincipal.Designer.cs">
+    <Compile Include="Modulos\FormularioPrincipal.Designer.cs">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Productos\Form1.cs">
+    <Compile Include="Modulos\Productos\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Productos\Form1.Designer.cs">
+    <Compile Include="Modulos\Productos\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\TipoCombustible\AdministrarTipoComb.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\TipoCombustible\AdministrarTipoComb.Designer.cs">
-      <DependentUpon>AdministrarTipoComb.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\acceso_BD.cs" />
     <Compile Include="PantallaLogIn.cs">
@@ -97,19 +97,22 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Empleados\FormularioAdministrarmpleado.resx">
+    <EmbeddedResource Include="Modulos\AdministrarSoporte.resx">
+      <DependentUpon>AdministrarSoporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulos\Empleados\FormularioAdministrarmpleado.resx">
       <DependentUpon>FormularioAdministrarmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Estaciones\FormularioAdministrarSucursal.resx">
+    <EmbeddedResource Include="Modulos\Estaciones\FormularioAdministrarSucursal.resx">
       <DependentUpon>FormularioAdministrarSucursal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Empleados\FormularioAgregarEmpleado.resx">
+    <EmbeddedResource Include="Modulos\Empleados\FormularioAgregarEmpleado.resx">
       <DependentUpon>FormularioAgregarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Estaciones\FormularioAgregarEstacion.resx">
+    <EmbeddedResource Include="Modulos\Estaciones\FormularioAgregarEstacion.resx">
       <DependentUpon>FormularioAgregarEstacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormularioPrincipal.resx">
+    <EmbeddedResource Include="Modulos\FormularioPrincipal.resx">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaLogIn.resx">
@@ -138,8 +141,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Forms\TipoUrgencia\" />
-    <Folder Include="Forms\UnidadMedida\" />
+    <Folder Include="Modulos\Soporte\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

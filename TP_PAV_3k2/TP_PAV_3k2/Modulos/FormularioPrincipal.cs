@@ -51,7 +51,20 @@ namespace TP_PAV_3k2
 
         private void UnidadDeMedidaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Form formulario = new Modulos.AdministrarSoporte();
+            formulario.ShowDialog();
+        }
 
+        private void NivelDeUrgenciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario = new Modulos.AdministrarSoporte();
+            formulario.ShowDialog();
+        }
+
+        private void TipoDeCombustibleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario = new Modulos.AdministrarSoporte();
+            formulario.ShowDialog();
         }
     }
 }

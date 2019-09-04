@@ -32,15 +32,15 @@
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarSucursalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.grdEstaciones = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnNuevoPedido = new System.Windows.Forms.Button();
             this.productoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.unidadDeMedidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nivelDeUrgenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeCombustibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.grdEstaciones = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnNuevoPedido = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstaciones)).BeginInit();
             this.SuspendLayout();
@@ -83,6 +83,38 @@
             this.agregarSucursalToolStripMenuItem.Text = "Estación";
             this.agregarSucursalToolStripMenuItem.Click += new System.EventHandler(this.agregarSucursalToolStripMenuItem_Click);
             // 
+            // productoToolStripMenuItem
+            // 
+            this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
+            this.productoToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.productoToolStripMenuItem.Text = "Producto";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(181, 6);
+            // 
+            // unidadDeMedidaToolStripMenuItem
+            // 
+            this.unidadDeMedidaToolStripMenuItem.Name = "unidadDeMedidaToolStripMenuItem";
+            this.unidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.unidadDeMedidaToolStripMenuItem.Text = "Unidad de Medida";
+            this.unidadDeMedidaToolStripMenuItem.Click += new System.EventHandler(this.UnidadDeMedidaToolStripMenuItem_Click);
+            // 
+            // nivelDeUrgenciaToolStripMenuItem
+            // 
+            this.nivelDeUrgenciaToolStripMenuItem.Name = "nivelDeUrgenciaToolStripMenuItem";
+            this.nivelDeUrgenciaToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.nivelDeUrgenciaToolStripMenuItem.Text = "Nivel de Urgencia";
+            this.nivelDeUrgenciaToolStripMenuItem.Click += new System.EventHandler(this.NivelDeUrgenciaToolStripMenuItem_Click);
+            // 
+            // tipoDeCombustibleToolStripMenuItem
+            // 
+            this.tipoDeCombustibleToolStripMenuItem.Name = "tipoDeCombustibleToolStripMenuItem";
+            this.tipoDeCombustibleToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.tipoDeCombustibleToolStripMenuItem.Text = "Tipo de Combustible";
+            this.tipoDeCombustibleToolStripMenuItem.Click += new System.EventHandler(this.TipoDeCombustibleToolStripMenuItem_Click);
+            // 
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(656, 390);
@@ -119,36 +151,6 @@
             this.btnNuevoPedido.TabIndex = 7;
             this.btnNuevoPedido.Text = "Nuevo Pedido";
             this.btnNuevoPedido.UseVisualStyleBackColor = true;
-            // 
-            // productoToolStripMenuItem
-            // 
-            this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
-            this.productoToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.productoToolStripMenuItem.Text = "Producto";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(181, 6);
-            // 
-            // unidadDeMedidaToolStripMenuItem
-            // 
-            this.unidadDeMedidaToolStripMenuItem.Name = "unidadDeMedidaToolStripMenuItem";
-            this.unidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.unidadDeMedidaToolStripMenuItem.Text = "Unidad de Medida";
-            this.unidadDeMedidaToolStripMenuItem.Click += new System.EventHandler(this.UnidadDeMedidaToolStripMenuItem_Click);
-            // 
-            // nivelDeUrgenciaToolStripMenuItem
-            // 
-            this.nivelDeUrgenciaToolStripMenuItem.Name = "nivelDeUrgenciaToolStripMenuItem";
-            this.nivelDeUrgenciaToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.nivelDeUrgenciaToolStripMenuItem.Text = "Nivel de Urgencia";
-            // 
-            // tipoDeCombustibleToolStripMenuItem
-            // 
-            this.tipoDeCombustibleToolStripMenuItem.Name = "tipoDeCombustibleToolStripMenuItem";
-            this.tipoDeCombustibleToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.tipoDeCombustibleToolStripMenuItem.Text = "Tipo de Combustible";
             // 
             // FormularioPrincipal
             // 
