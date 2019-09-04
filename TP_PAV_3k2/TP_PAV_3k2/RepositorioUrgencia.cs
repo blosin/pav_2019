@@ -35,14 +35,14 @@ namespace TP_PAV_3k2
 
         public bool Eliminar(string urgenciaId)
         {
-            string sqltxt = $"DELETE FROM [dbo].[Urgencia] WHERE id = {urgenciaId}";
+            string sqltxt = $"DELETE FROM [dbo].[Urgencia] WHERE idUrgencia = {urgenciaId}";
 
             return _BD.EjecutarSQL(sqltxt);
         }
 
         public Urgencia ObtenerUrgencia(string urgenciaId)
         {
-            string sqltxt = $"SELECT * FROM dbo.Urgencia WHERE id={urgenciaId}";
+            string sqltxt = $"SELECT * FROM dbo.Urgencia WHERE idUrgencia={urgenciaId}";
             var tablaTemporal = _BD.consulta(sqltxt);
 
             if (tablaTemporal.Rows.Count == 0)
@@ -60,7 +60,7 @@ namespace TP_PAV_3k2
 
         public bool Actualizar(Urgencia urgencia)
         {
-            string sqltxt = $"UPDATE dbo.Urgencia SET Nombre = '{urgencia.Nombre}' WHERE id={urgencia.Id}";
+            string sqltxt = $"UPDATE dbo.Urgencia SET Nombre = '{urgencia.Nombre}' WHERE idUrgencia={urgencia.Id}";
 
             return _BD.EjecutarSQL(sqltxt);
         }

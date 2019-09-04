@@ -107,15 +107,14 @@ namespace TP_PAV_3k2
                 MessageBox.Show("Debe seleccionar una fila");
                 return;
             }
-
-            /*foreach (DataGridViewRow fila in seieccionadas)
+            foreach (DataGridViewRow fila in seieccionadas)
             {
                 var id = fila.Cells[0].Value;
 
                 var ventana = new ModificarUrgencia(id.ToString());
                 ventana.ShowDialog();
                 ActualizarUrgencias();
-            }*/
+            }
         }
 
 

@@ -172,6 +172,9 @@
     <EmbeddedResource Include="FormularioPrincipal.resx">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModificarUrgencia.resx">
+      <DependentUpon>ModificarUrgencia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallaLogIn.resx">
       <DependentUpon>PantallaLogIn.cs</DependentUpon>
     </EmbeddedResource>
