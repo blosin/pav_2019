@@ -65,20 +65,23 @@ namespace TP_PAV_3k2
 
         private void agregarTipoCombustibleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AltaTipoCombustible formulario = new AltaTipoCombustible();
-            formulario.Show();
+            var TipoCombustibleForm = new ABMTipoCombustible(this);
+            TipoCombustibleForm.Show();
+            this.Hide();
         }
 
         private void agregarUnidadDeMedidaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AltaUnidadDeMedida formulario = new AltaUnidadDeMedida();
-            formulario.Show();
+            var UnidadMedida = new ABMUnidadMedida(this);
+            UnidadMedida.Show();
+            this.Hide();
         }
 
         private void agregarUrgenciaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AltaUrgencia formulario = new AltaUrgencia();
-            formulario.Show();
+            var Urgencia = new ABMUrgencia(this);
+            Urgencia.Show();
+            this.Hide();
         }
     }
 }

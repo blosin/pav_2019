@@ -8,9 +8,16 @@ namespace TP_PAV_3k2
 {
     public class Urgencia
     {
-        public int Id { get; set; }
-        public string Nombre { get; set; }
+        private int _id;
 
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+
+        public string Nombre { get; set; }
+                
         public bool NombreValido()
         {
             if (!string.IsNullOrEmpty(Nombre) && Nombre.Length < 51)

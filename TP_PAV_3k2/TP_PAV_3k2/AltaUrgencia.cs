@@ -12,9 +12,36 @@ namespace TP_PAV_3k2
 {
     public partial class AltaUrgencia : Form
     {
+        RepositorioUrgencia _repositorio;
+
         public AltaUrgencia()
         {
             InitializeComponent();
+            _repositorio = new RepositorioUrgencia();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var Urgencia = new Urgencia();
+            Urgencia.Nombre = txtNombre.Text;
+            
+            
+            if (!Urgencia.NombreValido())
+            {
+                MessageBox.Show("Nombre inválido");
+                return;
+            }
+            
+            if (_repositorio.Guardar(Urgencia))
+            {
+                MessageBox.Show("Se registro con éxito");
+                this.Dispose();
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

@@ -41,7 +41,7 @@ namespace TP_PAV_3k2
             return _BD.EjecutarSQL(sqltxt);
         }
 
-        public TipoCombustible ObtenerDirector(string TipoCombustibleId)
+        public TipoCombustible ObtenerTipoCombustible(string TipoCombustibleId)
         {
             string sqltxt = $"SELECT * FROM dbo.TipoCombustible WHERE id={TipoCombustibleId}";
             var tablaTemporal = _BD.consulta(sqltxt);

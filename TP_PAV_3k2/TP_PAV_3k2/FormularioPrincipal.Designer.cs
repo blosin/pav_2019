@@ -32,14 +32,14 @@
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarSucursalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarTipoCombustibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarUnidadDeMedidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarUrgenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSalir = new System.Windows.Forms.Button();
             this.grdEmpleados = new System.Windows.Forms.DataGridView();
             this.grdEstaciones = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.agregarTipoCombustibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarUnidadDeMedidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarUrgenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstaciones)).BeginInit();
@@ -81,6 +81,27 @@
             this.agregarSucursalToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
             this.agregarSucursalToolStripMenuItem.Text = "Agregar Sucursal";
             this.agregarSucursalToolStripMenuItem.Click += new System.EventHandler(this.agregarSucursalToolStripMenuItem_Click);
+            // 
+            // agregarTipoCombustibleToolStripMenuItem
+            // 
+            this.agregarTipoCombustibleToolStripMenuItem.Name = "agregarTipoCombustibleToolStripMenuItem";
+            this.agregarTipoCombustibleToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
+            this.agregarTipoCombustibleToolStripMenuItem.Text = "ABMTipoCombustible";
+            this.agregarTipoCombustibleToolStripMenuItem.Click += new System.EventHandler(this.agregarTipoCombustibleToolStripMenuItem_Click);
+            // 
+            // agregarUnidadDeMedidaToolStripMenuItem
+            // 
+            this.agregarUnidadDeMedidaToolStripMenuItem.Name = "agregarUnidadDeMedidaToolStripMenuItem";
+            this.agregarUnidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.agregarUnidadDeMedidaToolStripMenuItem.Text = "ABMUnidadMedida";
+            this.agregarUnidadDeMedidaToolStripMenuItem.Click += new System.EventHandler(this.agregarUnidadDeMedidaToolStripMenuItem_Click);
+            // 
+            // agregarUrgenciaToolStripMenuItem
+            // 
+            this.agregarUrgenciaToolStripMenuItem.Name = "agregarUrgenciaToolStripMenuItem";
+            this.agregarUrgenciaToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.agregarUrgenciaToolStripMenuItem.Text = "ABMUrgencia";
+            this.agregarUrgenciaToolStripMenuItem.Click += new System.EventHandler(this.agregarUrgenciaToolStripMenuItem_Click);
             // 
             // btnSalir
             // 
@@ -128,27 +149,6 @@
             this.label2.Size = new System.Drawing.Size(118, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Empleados Registrados";
-            // 
-            // agregarTipoCombustibleToolStripMenuItem
-            // 
-            this.agregarTipoCombustibleToolStripMenuItem.Name = "agregarTipoCombustibleToolStripMenuItem";
-            this.agregarTipoCombustibleToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this.agregarTipoCombustibleToolStripMenuItem.Text = "Agregar tipo combustible";
-            this.agregarTipoCombustibleToolStripMenuItem.Click += new System.EventHandler(this.agregarTipoCombustibleToolStripMenuItem_Click);
-            // 
-            // agregarUnidadDeMedidaToolStripMenuItem
-            // 
-            this.agregarUnidadDeMedidaToolStripMenuItem.Name = "agregarUnidadDeMedidaToolStripMenuItem";
-            this.agregarUnidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this.agregarUnidadDeMedidaToolStripMenuItem.Text = "Agregar unidad de medida";
-            this.agregarUnidadDeMedidaToolStripMenuItem.Click += new System.EventHandler(this.agregarUnidadDeMedidaToolStripMenuItem_Click);
-            // 
-            // agregarUrgenciaToolStripMenuItem
-            // 
-            this.agregarUrgenciaToolStripMenuItem.Name = "agregarUrgenciaToolStripMenuItem";
-            this.agregarUrgenciaToolStripMenuItem.Size = new System.Drawing.Size(215, 22);
-            this.agregarUrgenciaToolStripMenuItem.Text = "Agregar urgencia";
-            this.agregarUrgenciaToolStripMenuItem.Click += new System.EventHandler(this.agregarUrgenciaToolStripMenuItem_Click);
             // 
             // FormularioPrincipal
             // 

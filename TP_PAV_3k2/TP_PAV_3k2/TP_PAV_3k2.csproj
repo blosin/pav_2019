@@ -46,7 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABMTipoCombustible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMTipoCombustible.Designer.cs">
+      <DependentUpon>ABMTipoCombustible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABMUnidadMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMUnidadMedida.Designer.cs">
+      <DependentUpon>ABMUnidadMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABMUrgencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMUrgencia.Designer.cs">
+      <DependentUpon>ABMUrgencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="AccesoDB.cs" />
+    <Compile Include="ModificarTipoCombustible.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarTipoCombustible.Designer.cs">
+      <DependentUpon>ModificarTipoCombustible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarUnidadMedida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarUnidadMedida.Designer.cs">
+      <DependentUpon>ModificarUnidadMedida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarUrgencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarUrgencia.Designer.cs">
+      <DependentUpon>ModificarUrgencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="RepositorioUnidadDeMedida.cs" />
     <Compile Include="RepositorioUrgencia.cs" />
     <Compile Include="RepositorioTipoCombustible.cs" />
@@ -109,6 +145,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ABMTipoCombustible.resx">
+      <DependentUpon>ABMTipoCombustible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABMUnidadMedida.resx">
+      <DependentUpon>ABMUnidadMedida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABMUrgencia.resx">
+      <DependentUpon>ABMUrgencia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AltaTipoCombustible.resx">
       <DependentUpon>AltaTipoCombustible.cs</DependentUpon>
     </EmbeddedResource>
