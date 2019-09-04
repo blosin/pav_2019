@@ -12,9 +12,36 @@ namespace TP_PAV_3k2
 {
     public partial class AltaUnidadDeMedida : Form
     {
+        RepositorioUnidadDeMedida _repositorio;
+
         public AltaUnidadDeMedida()
         {
             InitializeComponent();
+            _repositorio = new RepositorioUnidadDeMedida();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            var UnidadMedida = new UnidadDeMedida();
+            UnidadMedida.Nombre = txtNombre.Text;
+
+
+            if (!UnidadMedida.NombreValido())
+            {
+                MessageBox.Show("Nombre inválido");
+                return;
+            }
+
+            if (_repositorio.Guardar(UnidadMedida))
+            {
+                MessageBox.Show("Se registro con éxito");
+                this.Dispose();
+            }
         }
     }
 }

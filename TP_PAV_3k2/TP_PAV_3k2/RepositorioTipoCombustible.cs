@@ -28,22 +28,22 @@ namespace TP_PAV_3k2
 
         public bool Guardar(TipoCombustible tipoCombustible)
         {
-            string sqltxt = $"INSERT dbo.TipoCombustible (Nombre) " +
-                $"VALUES ({tipoCombustible.Nombre}";               
+            string sqltxt = $"INSERT dbo.TipoCombustible (idTipoCombustible, Nombre) " +
+                $"VALUES (NEXT VALUE FOR TipoCombustibleSeq, '{tipoCombustible.Nombre}')";               
 
             return _BD.EjecutarSQL(sqltxt);
         }
 
         public bool Eliminar(string TipoCombustibleID)
         {
-            string sqltxt = $"DELETE FROM [dbo].[TipoCombustible] WHERE id = {TipoCombustibleID}";
+            string sqltxt = $"DELETE FROM [dbo].[TipoCombustible] WHERE idTipoCombustible = {TipoCombustibleID}";
 
             return _BD.EjecutarSQL(sqltxt);
         }
 
         public TipoCombustible ObtenerTipoCombustible(string TipoCombustibleId)
         {
-            string sqltxt = $"SELECT * FROM dbo.TipoCombustible WHERE id={TipoCombustibleId}";
+            string sqltxt = $"SELECT * FROM dbo.TipoCombustible WHERE idTipoCombustible={TipoCombustibleId}";
             var tablaTemporal = _BD.consulta(sqltxt);
 
             if (tablaTemporal.Rows.Count == 0)
@@ -61,7 +61,7 @@ namespace TP_PAV_3k2
 
         public bool Actualizar(TipoCombustible tipoCombustible)
         {
-            string sqltxt = $"UPDATE dbo.TipoCombustible SET Nombre = '{tipoCombustible.Nombre}' WHERE id={tipoCombustible.Id}";
+            string sqltxt = $"UPDATE dbo.TipoCombustible SET Nombre = '{tipoCombustible.Nombre}' WHERE idTipoCombustible={tipoCombustible.Id}";
 
             return _BD.EjecutarSQL(sqltxt);
         }

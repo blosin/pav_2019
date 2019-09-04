@@ -27,22 +27,22 @@ namespace TP_PAV_3k2
 
         public bool Guardar(UnidadDeMedida unidadmedida)
         {
-            string sqltxt = $"INSERT dbo.UnidadMedida (Nombre) " +
-                $"VALUES ({unidadmedida.Nombre}";
+            string sqltxt = $"INSERT dbo.UnidadMedida (idUnidadMedida, Nombre) " +
+                $"VALUES (NEXT VALUE FOR UnidadMedidaSeq, '{unidadmedida.Nombre}')";
 
             return _BD.EjecutarSQL(sqltxt);
         }
 
         public bool Eliminar(string unidadmedidaId)
         {
-            string sqltxt = $"DELETE FROM [dbo].[UnidadMedida] WHERE id = {unidadmedidaId}";
+            string sqltxt = $"DELETE FROM [dbo].[UnidadMedida] WHERE idUnidadMedida = {unidadmedidaId}";
 
             return _BD.EjecutarSQL(sqltxt);
         }
 
         public UnidadDeMedida OtenerUnidadMedida(string unidadmedidaId)
         {
-            string sqltxt = $"SELECT * FROM dbo.UnidadMedida WHERE id={unidadmedidaId}";
+            string sqltxt = $"SELECT * FROM dbo.UnidadMedida WHERE idUnidadMedida={unidadmedidaId}";
             var tablaTemporal = _BD.consulta(sqltxt);
 
             if (tablaTemporal.Rows.Count == 0)
@@ -60,7 +60,7 @@ namespace TP_PAV_3k2
 
         public bool Actualizar(UnidadDeMedida unidadmedida)
         {
-            string sqltxt = $"UPDATE dbo.UnidadMedida SET Nombre = '{unidadmedida.Nombre}' WHERE id={unidadmedida.Id}";
+            string sqltxt = $"UPDATE dbo.UnidadMedida SET Nombre = '{unidadmedida.Nombre}' WHERE idUnidadMedida={unidadmedida.Id}";
 
             return _BD.EjecutarSQL(sqltxt);
         }

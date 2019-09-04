@@ -172,6 +172,12 @@
     <EmbeddedResource Include="FormularioPrincipal.resx">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ModificarTipoCombustible.resx">
+      <DependentUpon>ModificarTipoCombustible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarUnidadMedida.resx">
+      <DependentUpon>ModificarUnidadMedida.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModificarUrgencia.resx">
       <DependentUpon>ModificarUrgencia.cs</DependentUpon>
     </EmbeddedResource>
