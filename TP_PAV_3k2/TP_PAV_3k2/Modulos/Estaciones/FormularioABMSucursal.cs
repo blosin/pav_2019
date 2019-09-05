@@ -58,5 +58,15 @@ namespace TP_PAV_3k2
             //Validados los datos se agregan a la grilla.
             grdEstaciones.Rows.Add(txtCUIT.Text, txtRazonSocial.Text, txtCalle.Text, txtNumeroCalle.Text, fechaHabilitación.Value.ToString());
         }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            //LLamar a AgregarEstacion con los datos seleccionados e la grilla
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            //Eliminar los datos seleccionados.
+        }
     }
 }

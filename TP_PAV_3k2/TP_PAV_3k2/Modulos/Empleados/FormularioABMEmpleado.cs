@@ -63,5 +63,15 @@ namespace TP_PAV_3k2
         {
             this.Close();
         }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            //llamar a FormuarioAgregarEmpleado con los datos de la grilla.
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            //eliminar selectedItem de la grilla
+        }
     }
 }
