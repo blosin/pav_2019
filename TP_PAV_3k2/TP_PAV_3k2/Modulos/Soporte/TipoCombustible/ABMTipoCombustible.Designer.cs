@@ -53,7 +53,7 @@
             this.dgvTipoCombustible.MultiSelect = false;
             this.dgvTipoCombustible.Name = "dgvTipoCombustible";
             this.dgvTipoCombustible.ReadOnly = true;
-            this.dgvTipoCombustible.Size = new System.Drawing.Size(244, 237);
+            this.dgvTipoCombustible.Size = new System.Drawing.Size(245, 237);
             this.dgvTipoCombustible.TabIndex = 0;
             // 
             // ID
@@ -90,7 +90,7 @@
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(413, 12);
+            this.btnActualizar.Location = new System.Drawing.Point(422, 12);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 3;
@@ -111,7 +111,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(313, 57);
+            this.label1.Location = new System.Drawing.Point(279, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 7;
@@ -119,14 +119,14 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(363, 54);
+            this.txtNombre.Location = new System.Drawing.Point(329, 60);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 6;
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(388, 226);
+            this.btnVolver.Location = new System.Drawing.Point(422, 226);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 23);
             this.btnVolver.TabIndex = 8;
@@ -137,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 261);
+            this.ClientSize = new System.Drawing.Size(509, 261);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombre);
@@ -146,6 +146,9 @@
             this.Controls.Add(this.btnBaja);
             this.Controls.Add(this.btnAlta);
             this.Controls.Add(this.dgvTipoCombustible);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ABMTipoCombustible";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administrar Tipos de Combustible";

@@ -38,37 +38,34 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(168, 83);
+            this.btnCancelar.Location = new System.Drawing.Point(164, 76);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(24, 83);
+            this.btnAceptar.Location = new System.Drawing.Point(25, 76);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 11;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
-            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // lblName
             // 
-            this.lblName.Location = new System.Drawing.Point(143, 6);
+            this.lblName.Location = new System.Drawing.Point(164, 35);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(100, 23);
             this.lblName.TabIndex = 10;
             this.lblName.Text = ".";
-            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 8);
+            this.label2.Location = new System.Drawing.Point(21, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 9;
@@ -76,7 +73,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(143, 32);
+            this.txtNombre.Location = new System.Drawing.Point(164, 12);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 8;
@@ -84,7 +81,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 35);
+            this.label1.Location = new System.Drawing.Point(21, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 13);
             this.label1.TabIndex = 7;
@@ -94,15 +91,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(257, 124);
+            this.ClientSize = new System.Drawing.Size(284, 111);
+            this.ControlBox = false;
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "ModificarTipoCombustible";
-            this.Text = "ModificarTipoCombustible";
+            this.Text = "Modificar Tipo de Combustible";
             this.Load += new System.EventHandler(this.ModificarTipoCombustible_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
