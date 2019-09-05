@@ -14,6 +14,7 @@ namespace TP_PAV_3k2
     {
         RepositorioTipoCombustible _repositorioTipoCombustible;
         FormularioPrincipal _formularioPrincipal;
+        
 
         public ABMTipoCombustible()
         {
