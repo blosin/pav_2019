@@ -46,6 +46,7 @@
             this.btnModificar.TabIndex = 9;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnActualizar
             // 
@@ -55,6 +56,7 @@
             this.btnActualizar.TabIndex = 8;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnBaja
             // 
@@ -64,6 +66,7 @@
             this.btnBaja.TabIndex = 7;
             this.btnBaja.Text = "Baja";
             this.btnBaja.UseVisualStyleBackColor = true;
+            this.btnBaja.Click += new System.EventHandler(this.btnBaja_Click);
             // 
             // btnAlta
             // 
@@ -108,6 +111,8 @@
             this.Controls.Add(this.dgvUnidadMedida);
             this.Name = "ABMUnidadMedida";
             this.Text = "ABMUnidadMedida";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ABMUnidadMedida_FormClosing);
+            this.Load += new System.EventHandler(this.ABMUnidadMedida_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnidadMedida)).EndInit();
             this.ResumeLayout(false);
 

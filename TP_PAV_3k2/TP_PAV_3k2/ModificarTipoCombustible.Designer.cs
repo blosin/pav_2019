@@ -44,6 +44,7 @@
             this.btnCancelar.TabIndex = 12;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -53,6 +54,7 @@
             this.btnAceptar.TabIndex = 11;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // lblName
             // 
@@ -61,6 +63,7 @@
             this.lblName.Size = new System.Drawing.Size(100, 23);
             this.lblName.TabIndex = 10;
             this.lblName.Text = ".";
+            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // label2
             // 
@@ -100,6 +103,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ModificarTipoCombustible";
             this.Text = "ModificarTipoCombustible";
+            this.Load += new System.EventHandler(this.ModificarTipoCombustible_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

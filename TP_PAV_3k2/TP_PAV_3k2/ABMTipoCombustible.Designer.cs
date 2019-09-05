@@ -77,6 +77,7 @@
             this.btnBaja.TabIndex = 2;
             this.btnBaja.Text = "Baja";
             this.btnBaja.UseVisualStyleBackColor = true;
+            this.btnBaja.Click += new System.EventHandler(this.btnBaja_Click);
             // 
             // btnActualizar
             // 
@@ -86,6 +87,7 @@
             this.btnActualizar.TabIndex = 3;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnModificar
             // 
@@ -95,6 +97,7 @@
             this.btnModificar.TabIndex = 4;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // ABMTipoCombustible
             // 
@@ -108,6 +111,8 @@
             this.Controls.Add(this.dgvTipoCombustible);
             this.Name = "ABMTipoCombustible";
             this.Text = "ABMTipoCombustible";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ABMTipoCombustible_FormClosing);
+            this.Load += new System.EventHandler(this.ABMTipoCombustible_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoCombustible)).EndInit();
             this.ResumeLayout(false);
 
