@@ -80,6 +80,8 @@
             // 
             // dgvUrgencia
             // 
+            this.dgvUrgencia.AllowUserToAddRows = false;
+            this.dgvUrgencia.AllowUserToDeleteRows = false;
             this.dgvUrgencia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUrgencia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -110,6 +112,7 @@
             this.Controls.Add(this.btnAlta);
             this.Controls.Add(this.dgvUrgencia);
             this.Name = "ABMUrgencia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMUrgencia";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ABMUrgencia_FormClosing);
             this.Load += new System.EventHandler(this.ABMUrgencia_Load);

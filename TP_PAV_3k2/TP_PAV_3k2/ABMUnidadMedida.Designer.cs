@@ -80,6 +80,8 @@
             // 
             // dgvUnidadMedida
             // 
+            this.dgvUnidadMedida.AllowUserToAddRows = false;
+            this.dgvUnidadMedida.AllowUserToDeleteRows = false;
             this.dgvUnidadMedida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUnidadMedida.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -110,6 +112,7 @@
             this.Controls.Add(this.btnAlta);
             this.Controls.Add(this.dgvUnidadMedida);
             this.Name = "ABMUnidadMedida";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMUnidadMedida";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ABMUnidadMedida_FormClosing);
             this.Load += new System.EventHandler(this.ABMUnidadMedida_Load);

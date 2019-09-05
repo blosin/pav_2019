@@ -40,6 +40,8 @@
             // 
             // dgvTipoCombustible
             // 
+            this.dgvTipoCombustible.AllowUserToAddRows = false;
+            this.dgvTipoCombustible.AllowUserToDeleteRows = false;
             this.dgvTipoCombustible.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoCombustible.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -110,6 +112,7 @@
             this.Controls.Add(this.btnAlta);
             this.Controls.Add(this.dgvTipoCombustible);
             this.Name = "ABMTipoCombustible";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABMTipoCombustible";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ABMTipoCombustible_FormClosing);
             this.Load += new System.EventHandler(this.ABMTipoCombustible_Load);
