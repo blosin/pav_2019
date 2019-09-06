@@ -13,7 +13,7 @@ namespace TP_PAV_3k2
 
         public bool NombreValido()
         {
-            if (!string.IsNullOrEmpty(Nombre) && Nombre.Length < 51)
+            if (!string.IsNullOrEmpty(Nombre) && Nombre.Length < 25)
                 return true;
             return false;
         }
