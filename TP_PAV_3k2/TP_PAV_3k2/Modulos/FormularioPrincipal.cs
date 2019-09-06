@@ -13,6 +13,14 @@ namespace TP_PAV_3k2
 {
     public partial class FormularioPrincipal : Form
     {
+        private PantallaLogIn formLogin;
+
+        public FormularioPrincipal(PantallaLogIn login)
+        {
+            InitializeComponent();
+            formLogin = login;
+        }
+
         public FormularioPrincipal()
         {
             InitializeComponent();
@@ -27,6 +35,8 @@ namespace TP_PAV_3k2
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+            formLogin.Show();
+            
         }
 
         private void agregarSucursalToolStripMenuItem_Click(object sender, EventArgs e)

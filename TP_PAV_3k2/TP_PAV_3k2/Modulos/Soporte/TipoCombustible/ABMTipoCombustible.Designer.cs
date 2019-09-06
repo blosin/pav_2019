@@ -53,6 +53,7 @@
             this.dgvTipoCombustible.MultiSelect = false;
             this.dgvTipoCombustible.Name = "dgvTipoCombustible";
             this.dgvTipoCombustible.ReadOnly = true;
+            this.dgvTipoCombustible.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvTipoCombustible.Size = new System.Drawing.Size(245, 237);
             this.dgvTipoCombustible.TabIndex = 0;
             // 

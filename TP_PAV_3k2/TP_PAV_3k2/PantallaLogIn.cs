@@ -37,10 +37,10 @@ namespace TP_PAV_3k2
             }
             else
             {
-                Form formulario = new FormularioPrincipal();
+                Form formulario = new FormularioPrincipal(this);
                 formulario.Show();
+                this.Hide();
             }
-
         }
     }
 }
