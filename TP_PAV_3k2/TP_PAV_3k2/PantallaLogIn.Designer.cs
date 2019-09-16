@@ -108,6 +108,7 @@
             this.Name = "PantallaLogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PantallaLogIn";
+            this.Load += new System.EventHandler(this.PantallaLogIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

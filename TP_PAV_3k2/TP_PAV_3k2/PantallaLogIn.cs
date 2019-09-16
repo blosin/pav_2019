@@ -43,5 +43,11 @@ namespace TP_PAV_3k2
             }
 
         }
+
+        private void PantallaLogIn_Load(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }
