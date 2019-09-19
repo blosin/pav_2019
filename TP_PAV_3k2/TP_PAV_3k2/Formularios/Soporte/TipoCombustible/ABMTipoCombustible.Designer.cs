@@ -33,7 +33,6 @@
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAlta = new System.Windows.Forms.Button();
             this.btnBaja = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoCombustible)).BeginInit();
             this.SuspendLayout();
@@ -81,16 +80,6 @@
             this.btnBaja.UseVisualStyleBackColor = true;
             this.btnBaja.Click += new System.EventHandler(this.btnBaja_Click);
             // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Location = new System.Drawing.Point(156, 29);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnActualizar.TabIndex = 3;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
             // btnModificar
             // 
             this.btnModificar.Location = new System.Drawing.Point(156, 0);
@@ -107,7 +96,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(243, 206);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnBaja);
             this.Controls.Add(this.btnAlta);
             this.Controls.Add(this.dgvTipoCombustible);
@@ -128,7 +116,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.Button btnAlta;
         private System.Windows.Forms.Button btnBaja;
-        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnModificar;
     }
 }

@@ -13,11 +13,17 @@ namespace TP_PAV_3k2
 {
     public partial class FormularioPrincipal : Form
     {
+        PantallaLogIn Login = new PantallaLogIn();
         public FormularioPrincipal()
         {
             InitializeComponent();
         }
         //public static DataGridView grillaEmpleados = new DataGridView();
+        public FormularioPrincipal(PantallaLogIn login)
+        {
+            InitializeComponent();
+            Login = login;
+        }
         private void agregarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form formulario = new FormularioABMEmpleado();
@@ -27,6 +33,7 @@ namespace TP_PAV_3k2
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+            Login.Show();
         }
 
         private void agregarSucursalToolStripMenuItem_Click(object sender, EventArgs e)

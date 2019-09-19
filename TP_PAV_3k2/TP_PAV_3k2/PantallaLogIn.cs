@@ -37,9 +37,15 @@ namespace TP_PAV_3k2
             }
             else
             {
-                Form formulario = new FormularioPrincipal();
+                FormularioPrincipal formulario = new FormularioPrincipal(this);
                 formulario.Show();
+                this.Hide();
             }
+
+        }
+
+        private void PantallaLogIn_Load(object sender, EventArgs e)
+        {
 
         }
     }
