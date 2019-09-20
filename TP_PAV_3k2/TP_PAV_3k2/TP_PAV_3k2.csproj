@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\Producto\Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Producto\Productos.Designer.cs">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Soporte\Estados\ABMEstados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,7 @@
     <Compile Include="Formularios\Soporte\TipoUrgencia\ModificarUrgencia.Designer.cs">
       <DependentUpon>ModificarUrgencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repositorios\RepositorioSurtidor.cs" />
     <Compile Include="Repositorios\RepositorioUnidadDeMedida.cs" />
     <Compile Include="Repositorios\RepositorioUrgencia.cs" />
     <Compile Include="Repositorios\RepositorioTipoCombustible.cs" />
@@ -157,6 +164,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Producto\Productos.resx">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Soporte\Estados\ABMEstados.resx">
       <DependentUpon>ABMEstados.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,7 +243,6 @@
   <ItemGroup>
     <Folder Include="Formularios\DetalleOrdenCompra\" />
     <Folder Include="Formularios\OrdenDeCompra\" />
-    <Folder Include="Formularios\Producto\" />
     <Folder Include="Formularios\Tickets\" />
     <Folder Include="Formularios\TickeXProducto\" />
   </ItemGroup>

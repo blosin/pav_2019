@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
+using TP_PAV_3k2.Formularios.Surtidor;
 
 namespace TP_PAV_3k2
 {
@@ -89,6 +90,14 @@ namespace TP_PAV_3k2
             var Urgencia = new ABMUrgencia(this);
             Urgencia.Show();
             this.Hide();
+        }
+
+        private void aBMSurtidorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var surtidor = new Surtidor(this);
+            surtidor.Show();
+            this.Hide();
+
         }
     }
 }
