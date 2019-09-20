@@ -101,6 +101,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
             this.Name = "ModificarUnidadMedida";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModificarUnidadMedida";
             this.Load += new System.EventHandler(this.ModificarUnidadMedida_Load);
             this.ResumeLayout(false);

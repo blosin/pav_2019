@@ -56,7 +56,7 @@ namespace TP_PAV_3k2
                 txtNumero.Focus();
             }
             //Con los datos validados llegar la grilla
-            grdEmpleados.Rows.Add(txtLegajo.Text, txtLegajo.Text, txtApellido.Text, cmbTipoDoc.SelectedItem.ToString(), txtNumero.Text, dateFechaNacimiento.Value.ToString(), dateFechaAlta.Value.ToString());
+            grdEmpleados.Rows.Add(txtNombre.Text, txtApellido.Text, cmbTipoDoc.SelectedItem.ToString(), txtNumero.Text, dateFechaNacimiento.Value.ToString(), dateFechaAlta.Value.ToString());
         }
 
         private void BtnSalir_Click(object sender, EventArgs e)

@@ -37,16 +37,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtLegajo = new System.Windows.Forms.TextBox();
             this.bntAgregar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.grdEmpleados = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -130,15 +129,6 @@
             this.label2.TabIndex = 27;
             this.label2.Text = "Nombre";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Legajo";
-            // 
             // cmbTipoDoc
             // 
             this.cmbTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -172,14 +162,6 @@
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
             this.txtNombre.TabIndex = 22;
             // 
-            // txtLegajo
-            // 
-            this.txtLegajo.Location = new System.Drawing.Point(119, 3);
-            this.txtLegajo.MaxLength = 8;
-            this.txtLegajo.Name = "txtLegajo";
-            this.txtLegajo.Size = new System.Drawing.Size(200, 20);
-            this.txtLegajo.TabIndex = 21;
-            // 
             // bntAgregar
             // 
             this.bntAgregar.Location = new System.Drawing.Point(134, 322);
@@ -211,8 +193,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtLegajo);
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.dateFechaAlta);
@@ -231,6 +212,13 @@
             this.panel1.Size = new System.Drawing.Size(322, 263);
             this.panel1.TabIndex = 37;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(119, 189);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 20);
+            this.textBox1.TabIndex = 36;
+            // 
             // FormularioABMEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,7 +232,7 @@
             this.MaximizeBox = false;
             this.Name = "FormularioABMEmpleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "abmEmpleado";
+            this.Text = "abmEmpleados";
             this.Load += new System.EventHandler(this.AbmEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -264,15 +252,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbTipoDoc;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtLegajo;
         private System.Windows.Forms.Button bntAgregar;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.DataGridView grdEmpleados;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

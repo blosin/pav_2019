@@ -35,16 +35,14 @@
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblNombre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnidadMedida)).BeginInit();
             this.SuspendLayout();
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(261, 103);
+            this.btnModificar.Location = new System.Drawing.Point(248, 48);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.Size = new System.Drawing.Size(100, 30);
             this.btnModificar.TabIndex = 9;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -52,9 +50,9 @@
             // 
             // btnBaja
             // 
-            this.btnBaja.Location = new System.Drawing.Point(261, 132);
+            this.btnBaja.Location = new System.Drawing.Point(248, 84);
             this.btnBaja.Name = "btnBaja";
-            this.btnBaja.Size = new System.Drawing.Size(75, 23);
+            this.btnBaja.Size = new System.Drawing.Size(100, 30);
             this.btnBaja.TabIndex = 7;
             this.btnBaja.Text = "Baja";
             this.btnBaja.UseVisualStyleBackColor = true;
@@ -62,9 +60,9 @@
             // 
             // btnAlta
             // 
-            this.btnAlta.Location = new System.Drawing.Point(261, 74);
+            this.btnAlta.Location = new System.Drawing.Point(248, 12);
             this.btnAlta.Name = "btnAlta";
-            this.btnAlta.Size = new System.Drawing.Size(75, 23);
+            this.btnAlta.Size = new System.Drawing.Size(100, 30);
             this.btnAlta.TabIndex = 6;
             this.btnAlta.Text = "Alta";
             this.btnAlta.UseVisualStyleBackColor = true;
@@ -78,9 +76,9 @@
             this.dgvUnidadMedida.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Nombre});
-            this.dgvUnidadMedida.Location = new System.Drawing.Point(-2, 12);
+            this.dgvUnidadMedida.Location = new System.Drawing.Point(2, 12);
             this.dgvUnidadMedida.Name = "dgvUnidadMedida";
-            this.dgvUnidadMedida.Size = new System.Drawing.Size(244, 193);
+            this.dgvUnidadMedida.Size = new System.Drawing.Size(240, 172);
             this.dgvUnidadMedida.TabIndex = 5;
             // 
             // ID
@@ -95,36 +93,19 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(368, 171);
+            this.btnVolver.Location = new System.Drawing.Point(337, 154);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(75, 23);
+            this.btnVolver.Size = new System.Drawing.Size(100, 30);
             this.btnVolver.TabIndex = 10;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(307, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 11;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(249, 41);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
-            this.lblNombre.TabIndex = 12;
-            this.lblNombre.Text = "Nombre";
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // ABMUnidadMedida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(449, 197);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(449, 196);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnBaja);
@@ -137,7 +118,6 @@
             this.Load += new System.EventHandler(this.ABMUnidadMedida_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnidadMedida)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -150,7 +130,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label lblNombre;
     }
 }

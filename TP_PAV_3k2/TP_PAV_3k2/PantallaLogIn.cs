@@ -44,9 +44,21 @@ namespace TP_PAV_3k2
 
         }
 
-        private void PantallaLogIn_Load(object sender, EventArgs e)
+        
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnIngresar.PerformClick();
+            }
+        }
 
+        private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                btnIngresar.PerformClick();
+            }
         }
     }
 }

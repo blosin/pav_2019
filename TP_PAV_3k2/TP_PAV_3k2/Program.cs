@@ -16,7 +16,7 @@ namespace TP_PAV_3k2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PantallaLogIn());
+            Application.Run(new FormularioPrincipal());
         }
     }
 }

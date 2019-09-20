@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\Soporte\Estados\ABMEstados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Soporte\Estados\ABMEstados.Designer.cs">
+      <DependentUpon>ABMEstados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Soporte\TipoCombustible\ABMTipoCombustible.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Soporte\TipoCombustible\ABMTipoCombustible.Designer.cs">
       <DependentUpon>ABMTipoCombustible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Soporte\TipoDocumentos\TipoDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Soporte\TipoDocumentos\TipoDocumento.Designer.cs">
+      <DependentUpon>TipoDocumento.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Soporte\UnidfadMedida\ABMUnidadMedida.cs">
       <SubType>Form</SubType>
@@ -63,6 +75,12 @@
     </Compile>
     <Compile Include="Formularios\Soporte\TipoUrgencia\ABMUrgencia.Designer.cs">
       <DependentUpon>ABMUrgencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Surtidor\Surtidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Surtidor\Surtidor.Designer.cs">
+      <DependentUpon>Surtidor.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\AccesoDB.cs" />
     <Compile Include="Formularios\Soporte\TipoCombustible\ModificarTipoCombustible.cs">
@@ -119,12 +137,6 @@
     <Compile Include="Formularios\Estaciones\FormularioABMSucursal.Designer.cs">
       <DependentUpon>FormularioABMSucursal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Empleados\FormularioAgregarEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\Empleados\FormularioAgregarEmpleado.Designer.cs">
-      <DependentUpon>FormularioAgregarEmpleado.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\Estaciones\FormularioAgregarEstacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,8 +157,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Soporte\Estados\ABMEstados.resx">
+      <DependentUpon>ABMEstados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Soporte\TipoCombustible\ABMTipoCombustible.resx">
       <DependentUpon>ABMTipoCombustible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Soporte\TipoDocumentos\TipoDocumento.resx">
+      <DependentUpon>TipoDocumento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Soporte\UnidfadMedida\ABMUnidadMedida.resx">
       <DependentUpon>ABMUnidadMedida.cs</DependentUpon>
@@ -163,9 +181,6 @@
     <EmbeddedResource Include="Formularios\Estaciones\FormularioABMSucursal.resx">
       <DependentUpon>FormularioABMSucursal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Empleados\FormularioAgregarEmpleado.resx">
-      <DependentUpon>FormularioAgregarEmpleado.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estaciones\FormularioAgregarEstacion.resx">
       <DependentUpon>FormularioAgregarEstacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Soporte\TipoUrgencia\ModificarUrgencia.resx">
       <DependentUpon>ModificarUrgencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Surtidor\Surtidor.resx">
+      <DependentUpon>Surtidor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaLogIn.resx">
       <DependentUpon>PantallaLogIn.cs</DependentUpon>
@@ -212,6 +230,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Formularios\DetalleOrdenCompra\" />
+    <Folder Include="Formularios\OrdenDeCompra\" />
+    <Folder Include="Formularios\Producto\" />
+    <Folder Include="Formularios\Tickets\" />
+    <Folder Include="Formularios\TickeXProducto\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

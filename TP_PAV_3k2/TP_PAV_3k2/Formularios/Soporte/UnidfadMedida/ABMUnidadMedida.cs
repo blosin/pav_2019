@@ -114,5 +114,10 @@ namespace TP_PAV_3k2
                 ActualizarUnidadMedidas();
             }
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

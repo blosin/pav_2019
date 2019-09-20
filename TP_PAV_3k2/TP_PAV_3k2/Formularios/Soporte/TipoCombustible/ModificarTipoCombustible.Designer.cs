@@ -102,6 +102,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
             this.Name = "ModificarTipoCombustible";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModificarTipoCombustible";
             this.Load += new System.EventHandler(this.ModificarTipoCombustible_Load);
             this.ResumeLayout(false);
