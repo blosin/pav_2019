@@ -242,9 +242,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Formularios\DetalleOrdenCompra\" />
+    <Folder Include="Formularios\detalleTicket\" />
     <Folder Include="Formularios\OrdenDeCompra\" />
     <Folder Include="Formularios\Tickets\" />
-    <Folder Include="Formularios\TickeXProducto\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

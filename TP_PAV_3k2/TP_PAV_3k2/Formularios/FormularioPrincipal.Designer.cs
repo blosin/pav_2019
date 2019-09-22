@@ -35,12 +35,14 @@
             this.agregarTipoCombustibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUnidadDeMedidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUrgenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aBMSurtidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSalir = new System.Windows.Forms.Button();
             this.grdEmpleados = new System.Windows.Forms.DataGridView();
             this.grdEstaciones = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.aBMSurtidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordenDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ticketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstaciones)).BeginInit();
@@ -49,7 +51,9 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuToolStripMenuItem});
+            this.menuToolStripMenuItem,
+            this.ordenDeCompraToolStripMenuItem,
+            this.ticketToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -105,6 +109,13 @@
             this.agregarUrgenciaToolStripMenuItem.Text = "ABMUrgencia";
             this.agregarUrgenciaToolStripMenuItem.Click += new System.EventHandler(this.agregarUrgenciaToolStripMenuItem_Click);
             // 
+            // aBMSurtidorToolStripMenuItem
+            // 
+            this.aBMSurtidorToolStripMenuItem.Name = "aBMSurtidorToolStripMenuItem";
+            this.aBMSurtidorToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.aBMSurtidorToolStripMenuItem.Text = "ABMSurtidor";
+            this.aBMSurtidorToolStripMenuItem.Click += new System.EventHandler(this.aBMSurtidorToolStripMenuItem_Click);
+            // 
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(656, 390);
@@ -152,12 +163,17 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Empleados Registrados";
             // 
-            // aBMSurtidorToolStripMenuItem
+            // ordenDeCompraToolStripMenuItem
             // 
-            this.aBMSurtidorToolStripMenuItem.Name = "aBMSurtidorToolStripMenuItem";
-            this.aBMSurtidorToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.aBMSurtidorToolStripMenuItem.Text = "ABMSurtidor";
-            this.aBMSurtidorToolStripMenuItem.Click += new System.EventHandler(this.aBMSurtidorToolStripMenuItem_Click);
+            this.ordenDeCompraToolStripMenuItem.Name = "ordenDeCompraToolStripMenuItem";
+            this.ordenDeCompraToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
+            this.ordenDeCompraToolStripMenuItem.Text = "Orden de Compra";
+            // 
+            // ticketToolStripMenuItem
+            // 
+            this.ticketToolStripMenuItem.Name = "ticketToolStripMenuItem";
+            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.ticketToolStripMenuItem.Text = "Ticket";
             // 
             // FormularioPrincipal
             // 
@@ -200,5 +216,7 @@
         private System.Windows.Forms.ToolStripMenuItem agregarUnidadDeMedidaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarUrgenciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aBMSurtidorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ordenDeCompraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ticketToolStripMenuItem;
     }
 }
