@@ -27,8 +27,8 @@ namespace TP_PAV_3k2
 
         public bool Guardar(UnidadDeMedida unidadmedida)
         {
-            string sqltxt = $"INSERT dbo.UnidadMedida (idUnidadMedida, Nombre) " +
-                $"VALUES (NEXT VALUE FOR UnidadMedidaSeq, '{unidadmedida.Nombre}')";
+            string sqltxt = $"INSERT dbo.UnidadMedida (Nombre) " +
+                $"VALUES ('{unidadmedida.Nombre}')";
 
             return _BD.EjecutarSQL(sqltxt);
         }

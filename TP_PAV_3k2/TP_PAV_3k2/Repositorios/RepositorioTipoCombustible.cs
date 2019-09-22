@@ -28,8 +28,8 @@ namespace TP_PAV_3k2
 
         public bool Guardar(TipoCombustible tipoCombustible)
         {
-            string sqltxt = $"INSERT dbo.TipoCombustible (idTipoCombustible, Nombre) " +
-                $"VALUES (NEXT VALUE FOR TipoCombustibleSeq, '{tipoCombustible.Nombre}')";               
+            string sqltxt = $"INSERT dbo.TipoCombustible ( Nombre) " +
+                $"VALUES ('{tipoCombustible.Nombre}')";               
 
             return _BD.EjecutarSQL(sqltxt);
         }

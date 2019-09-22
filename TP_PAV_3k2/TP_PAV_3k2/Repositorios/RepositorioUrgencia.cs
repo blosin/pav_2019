@@ -27,8 +27,8 @@ namespace TP_PAV_3k2
 
         public bool Guardar(Urgencia urgencia)
         {
-            string sqltxt = $"INSERT [dbo].[Urgencia] ([idUrgencia], [Nombre]) " +
-                $"VALUES (NEXT VALUE FOR UrgenciaSeq, '{urgencia.Nombre}')";
+            string sqltxt = $"INSERT [dbo].[Urgencia] ([Nombre]) " +
+                $"VALUES ('{urgencia.Nombre}')";
 
             return _BD.EjecutarSQL(sqltxt);
         }
