@@ -71,7 +71,7 @@
             // txtNumeroCalle
             // 
             this.txtNumeroCalle.Location = new System.Drawing.Point(182, 59);
-            this.txtNumeroCalle.MaxLength = 5;
+            this.txtNumeroCalle.MaxLength = 10;
             this.txtNumeroCalle.Name = "txtNumeroCalle";
             this.txtNumeroCalle.Size = new System.Drawing.Size(200, 20);
             this.txtNumeroCalle.TabIndex = 5;

@@ -42,29 +42,36 @@ namespace TP_PAV_3k2.Repositorios
             return _BD.EjecutarSQL(sqltxt);
         }
 
-        /*public TipoCombustible ObtenerTipoCombustible(string TipoCombustibleId)
+        public Estacion ObtenerSucursal(string estacionID)
         {
-            string sqltxt = $"SELECT * FROM dbo.TipoCombustible WHERE idTipoCombustible={TipoCombustibleId}";
+            string sqltxt = $"SELECT * FROM dbo.Estacion WHERE cuit={estacionID}";
             var tablaTemporal = _BD.consulta(sqltxt);
 
             if (tablaTemporal.Rows.Count == 0)
                 return null;
-            var tipoCombustible = new TipoCombustible();
+            var estacion = new Estacion();
             foreach (DataRow fila in tablaTemporal.Rows)
             {
+                DateTime fecha;
                 if (fila.HasErrors)
                     continue;
-                tipoCombustible.Id = int.Parse(fila.ItemArray[0].ToString());
-                tipoCombustible.Nombre = fila.ItemArray[1].ToString();
-            }
-            return tipoCombustible;
-        }*/
+                estacion.cuit = int.Parse(fila.ItemArray[0].ToString());
+                estacion.razonSocial = fila.ItemArray[1].ToString();
+                estacion.calle = fila.ItemArray[2].ToString();
+                estacion.numero = int.Parse(fila.ItemArray[3].ToString());
+                DateTime.TryParse(fila.ItemArray[4]?.ToString(), out fecha);
+                estacion.fechaHabilitacion = fecha;
 
-        /*public bool Actualizar(TipoCombustible tipoCombustible)
+            }
+            return estacion;
+        }
+
+        public bool Actualizar(Estacion estacion)
         {
-            string sqltxt = $"UPDATE dbo.TipoCombustible SET Nombre = '{tipoCombustible.Nombre}' WHERE idTipoCombustible={tipoCombustible.Id}";
+            string sqltxt = $"UPDATE dbo.Estacion SET razonSocial = '{estacion.razonSocial}', " +
+                $"calle = '{estacion.calle}', numero= '{estacion.numero}', fechaHabilitacion = '{estacion.fechaHabilitacion.ToString("yyyy-MM-dd")}'  WHERE cuit={estacion.cuit}";
 
             return _BD.EjecutarSQL(sqltxt);
-        }*/
+        }
     }
 }

@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Estacion.cs" />
+    <Compile Include="Formularios\Estaciones\ModificarEstaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estaciones\ModificarEstaciones.Designer.cs">
+      <DependentUpon>ModificarEstaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Producto\Productos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Estaciones\ModificarEstaciones.resx">
+      <DependentUpon>ModificarEstaciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Producto\Productos.resx">
       <DependentUpon>Productos.cs</DependentUpon>
     </EmbeddedResource>

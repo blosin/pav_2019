@@ -81,43 +81,43 @@
             // agregarEmpleadoToolStripMenuItem
             // 
             this.agregarEmpleadoToolStripMenuItem.Name = "agregarEmpleadoToolStripMenuItem";
-            this.agregarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.agregarEmpleadoToolStripMenuItem.Text = "Agregar Empleado";
+            this.agregarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.agregarEmpleadoToolStripMenuItem.Text = "Administrar empleados";
             this.agregarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.agregarEmpleadoToolStripMenuItem_Click);
             // 
             // agregarSucursalToolStripMenuItem
             // 
             this.agregarSucursalToolStripMenuItem.Name = "agregarSucursalToolStripMenuItem";
-            this.agregarSucursalToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.agregarSucursalToolStripMenuItem.Text = "Agregar Sucursal";
+            this.agregarSucursalToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.agregarSucursalToolStripMenuItem.Text = "Administrar sucursales";
             this.agregarSucursalToolStripMenuItem.Click += new System.EventHandler(this.agregarSucursalToolStripMenuItem_Click);
             // 
             // agregarTipoCombustibleToolStripMenuItem
             // 
             this.agregarTipoCombustibleToolStripMenuItem.Name = "agregarTipoCombustibleToolStripMenuItem";
-            this.agregarTipoCombustibleToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.agregarTipoCombustibleToolStripMenuItem.Text = "ABMTipoCombustible";
+            this.agregarTipoCombustibleToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.agregarTipoCombustibleToolStripMenuItem.Text = "Administrar tipos de  combustible";
             this.agregarTipoCombustibleToolStripMenuItem.Click += new System.EventHandler(this.agregarTipoCombustibleToolStripMenuItem_Click);
             // 
             // agregarUnidadDeMedidaToolStripMenuItem
             // 
             this.agregarUnidadDeMedidaToolStripMenuItem.Name = "agregarUnidadDeMedidaToolStripMenuItem";
-            this.agregarUnidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.agregarUnidadDeMedidaToolStripMenuItem.Text = "ABMUnidadMedida";
+            this.agregarUnidadDeMedidaToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.agregarUnidadDeMedidaToolStripMenuItem.Text = "Administrar unidades de medida";
             this.agregarUnidadDeMedidaToolStripMenuItem.Click += new System.EventHandler(this.agregarUnidadDeMedidaToolStripMenuItem_Click);
             // 
             // agregarUrgenciaToolStripMenuItem
             // 
             this.agregarUrgenciaToolStripMenuItem.Name = "agregarUrgenciaToolStripMenuItem";
-            this.agregarUrgenciaToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.agregarUrgenciaToolStripMenuItem.Text = "ABMUrgencia";
+            this.agregarUrgenciaToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.agregarUrgenciaToolStripMenuItem.Text = "Administrar urgencias";
             this.agregarUrgenciaToolStripMenuItem.Click += new System.EventHandler(this.agregarUrgenciaToolStripMenuItem_Click);
             // 
             // aBMSurtidorToolStripMenuItem
             // 
             this.aBMSurtidorToolStripMenuItem.Name = "aBMSurtidorToolStripMenuItem";
-            this.aBMSurtidorToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.aBMSurtidorToolStripMenuItem.Text = "ABMSurtidor";
+            this.aBMSurtidorToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.aBMSurtidorToolStripMenuItem.Text = "Administrar surtidores";
             this.aBMSurtidorToolStripMenuItem.Click += new System.EventHandler(this.aBMSurtidorToolStripMenuItem_Click);
             // 
             // ordenDeCompraToolStripMenuItem
@@ -145,7 +145,7 @@
             // grdEmpleados
             // 
             this.grdEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdEmpleados.Location = new System.Drawing.Point(40, 80);
+            this.grdEmpleados.Location = new System.Drawing.Point(40, 241);
             this.grdEmpleados.Name = "grdEmpleados";
             this.grdEmpleados.ReadOnly = true;
             this.grdEmpleados.Size = new System.Drawing.Size(717, 142);
@@ -155,7 +155,7 @@
             // grdEstaciones
             // 
             this.grdEstaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdEstaciones.Location = new System.Drawing.Point(40, 241);
+            this.grdEstaciones.Location = new System.Drawing.Point(39, 81);
             this.grdEstaciones.Name = "grdEstaciones";
             this.grdEstaciones.ReadOnly = true;
             this.grdEstaciones.Size = new System.Drawing.Size(717, 141);
