@@ -7,46 +7,90 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP_PAV_3k2.Clases;
+using TP_PAV_3k2.Repositorios;
 
 namespace TP_PAV_3k2
 {
     public partial class FormularioAgregarEstacion : Form
     {
+        FormularioABMSucursal form;
+        Estacion estacion;
+        RepositorioSucursal repositorio;
         public FormularioAgregarEstacion()
         {
             InitializeComponent();
+            form = new FormularioABMSucursal();
+            estacion = new Estacion();
+            repositorio = new RepositorioSucursal();
+        }
+
+        public FormularioAgregarEstacion(FormularioABMSucursal form)
+        {
+            InitializeComponent();
+            form = new FormularioABMSucursal();
+            estacion = new Estacion();
+            repositorio = new RepositorioSucursal();
+            this.form = form;            
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();        
            
         }
 
         private void BntAceptar_Click(object sender, EventArgs e)
         {
-            //Valido los campos de texto
-            if (txtCUIT.Text == "")
+            estacion.razonSocial=txtRazonSocial.Text;
+            estacion.calle=txtCalle.Text;
+            int defaul;
+            
+            estacion.fechaHabilitacion = fechaHabilitación.Value.Date;
+            if(estacion.razonSocialValida()==false)
             {
-                MessageBox.Show("Ingrese un Número de CUIT");
-                txtCUIT.Focus();
-            }
-            else if (txtRazonSocial.Text == "")
-            {
-                MessageBox.Show("Ingrese un nombre de Razon Social");
+                MessageBox.Show("ingrese razon social valida");
+                txtRazonSocial.Text = null;
                 txtRazonSocial.Focus();
-            }
-            else if (txtCalle.Text == "")
+                return;
+            }            
+            if(estacion.calleValida()==false)
             {
-                MessageBox.Show("Ingrese un nombre de Calle");
+                MessageBox.Show("ingrese calle valida");
+                txtCalle.Text = null;
                 txtCalle.Focus();
+                return;
             }
-            else if (txtNumeroCalle.Text == "")
+            if (int.TryParse(txtNumeroCalle.Text, out defaul))
             {
-                MessageBox.Show("Ingrese un número de calle");
-                txtNumeroCalle.Focus();
+                estacion.numero = defaul;
+
             }
-            //Validados los datos se agregan a la grilla.
+            else
+            {
+                txtNumeroCalle.Text = null;
+                MessageBox.Show("numero erroneo");
+                return;
+            }
+            if (estacion.numeroValido()==false)
+            {
+                MessageBox.Show("ingrese numero de calle valido");
+                txtNumeroCalle.Text = null;
+                txtNumeroCalle.Focus();
+                return;
+            }
+            if(estacion.fechaValida()==false)
+            {
+                MessageBox.Show("ingrese fecha valida");
+                return;
+            }
+
+            repositorio.Guardar(estacion);
+            this.Dispose();
+            
+            
+
+
         }
     }
 }

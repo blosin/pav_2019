@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Estacion.cs" />
     <Compile Include="Formularios\Producto\Productos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +108,8 @@
     <Compile Include="Formularios\Soporte\TipoUrgencia\ModificarUrgencia.Designer.cs">
       <DependentUpon>ModificarUrgencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repositorios\RepositorioEmpleado.cs" />
+    <Compile Include="Repositorios\RepositorioSucursal.cs" />
     <Compile Include="Repositorios\RepositorioSurtidor.cs" />
     <Compile Include="Repositorios\RepositorioUnidadDeMedida.cs" />
     <Compile Include="Repositorios\RepositorioUrgencia.cs" />

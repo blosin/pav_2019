@@ -23,6 +23,21 @@ namespace TP_PAV_3k2.Repositorios
 
             return _BD.consulta(sqltxt);
         }
-        
+
+        public DataTable ObtenerEstados()
+        {
+            string sqltxt = "SELECT * FROM dbo.Estado";
+
+            return _BD.consulta(sqltxt);
+        }
+
+        public DataTable ObtenerCuits()
+        {
+            string sqltxt = "SELECT * FROM dbo.Estacion";
+
+            return _BD.consulta(sqltxt);
+        }
+
+
     }
 }

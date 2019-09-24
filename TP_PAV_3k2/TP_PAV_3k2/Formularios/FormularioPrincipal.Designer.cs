@@ -36,13 +36,17 @@
             this.agregarUnidadDeMedidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUrgenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBMSurtidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordenDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ticketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSalir = new System.Windows.Forms.Button();
             this.grdEmpleados = new System.Windows.Forms.DataGridView();
             this.grdEstaciones = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ordenDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ticketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAgregarEmpleado = new System.Windows.Forms.Button();
+            this.btnQuitarEmpleado = new System.Windows.Forms.Button();
+            this.btnAgregarSucursal = new System.Windows.Forms.Button();
+            this.btnQuitarSucursal = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstaciones)).BeginInit();
@@ -56,7 +60,7 @@
             this.ticketToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(920, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -116,11 +120,23 @@
             this.aBMSurtidorToolStripMenuItem.Text = "ABMSurtidor";
             this.aBMSurtidorToolStripMenuItem.Click += new System.EventHandler(this.aBMSurtidorToolStripMenuItem_Click);
             // 
+            // ordenDeCompraToolStripMenuItem
+            // 
+            this.ordenDeCompraToolStripMenuItem.Name = "ordenDeCompraToolStripMenuItem";
+            this.ordenDeCompraToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
+            this.ordenDeCompraToolStripMenuItem.Text = "Orden de Compra";
+            // 
+            // ticketToolStripMenuItem
+            // 
+            this.ticketToolStripMenuItem.Name = "ticketToolStripMenuItem";
+            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.ticketToolStripMenuItem.Text = "Ticket";
+            // 
             // btnSalir
             // 
             this.btnSalir.Location = new System.Drawing.Point(656, 390);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(101, 31);
+            this.btnSalir.Size = new System.Drawing.Size(100, 30);
             this.btnSalir.TabIndex = 3;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -148,7 +164,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 225);
+            this.label1.Location = new System.Drawing.Point(37, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 13);
             this.label1.TabIndex = 6;
@@ -157,29 +173,58 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 64);
+            this.label2.Location = new System.Drawing.Point(37, 225);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Empleados Registrados";
             // 
-            // ordenDeCompraToolStripMenuItem
+            // btnAgregarEmpleado
             // 
-            this.ordenDeCompraToolStripMenuItem.Name = "ordenDeCompraToolStripMenuItem";
-            this.ordenDeCompraToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
-            this.ordenDeCompraToolStripMenuItem.Text = "Orden de Compra";
+            this.btnAgregarEmpleado.Location = new System.Drawing.Point(763, 241);
+            this.btnAgregarEmpleado.Name = "btnAgregarEmpleado";
+            this.btnAgregarEmpleado.Size = new System.Drawing.Size(100, 30);
+            this.btnAgregarEmpleado.TabIndex = 8;
+            this.btnAgregarEmpleado.Text = "Agregar";
+            this.btnAgregarEmpleado.UseVisualStyleBackColor = true;
             // 
-            // ticketToolStripMenuItem
+            // btnQuitarEmpleado
             // 
-            this.ticketToolStripMenuItem.Name = "ticketToolStripMenuItem";
-            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.ticketToolStripMenuItem.Text = "Ticket";
+            this.btnQuitarEmpleado.Location = new System.Drawing.Point(763, 277);
+            this.btnQuitarEmpleado.Name = "btnQuitarEmpleado";
+            this.btnQuitarEmpleado.Size = new System.Drawing.Size(100, 30);
+            this.btnQuitarEmpleado.TabIndex = 9;
+            this.btnQuitarEmpleado.Text = "Quitar";
+            this.btnQuitarEmpleado.UseVisualStyleBackColor = true;
+            this.btnQuitarEmpleado.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // btnAgregarSucursal
+            // 
+            this.btnAgregarSucursal.Location = new System.Drawing.Point(763, 80);
+            this.btnAgregarSucursal.Name = "btnAgregarSucursal";
+            this.btnAgregarSucursal.Size = new System.Drawing.Size(100, 30);
+            this.btnAgregarSucursal.TabIndex = 10;
+            this.btnAgregarSucursal.Text = "Agregar";
+            this.btnAgregarSucursal.UseVisualStyleBackColor = true;
+            // 
+            // btnQuitarSucursal
+            // 
+            this.btnQuitarSucursal.Location = new System.Drawing.Point(763, 116);
+            this.btnQuitarSucursal.Name = "btnQuitarSucursal";
+            this.btnQuitarSucursal.Size = new System.Drawing.Size(100, 30);
+            this.btnQuitarSucursal.TabIndex = 11;
+            this.btnQuitarSucursal.Text = "Quitar";
+            this.btnQuitarSucursal.UseVisualStyleBackColor = true;
             // 
             // FormularioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(920, 450);
+            this.Controls.Add(this.btnQuitarSucursal);
+            this.Controls.Add(this.btnAgregarSucursal);
+            this.Controls.Add(this.btnQuitarEmpleado);
+            this.Controls.Add(this.btnAgregarEmpleado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grdEstaciones);
@@ -218,5 +263,9 @@
         private System.Windows.Forms.ToolStripMenuItem aBMSurtidorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordenDeCompraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ticketToolStripMenuItem;
+        private System.Windows.Forms.Button btnAgregarEmpleado;
+        private System.Windows.Forms.Button btnQuitarEmpleado;
+        private System.Windows.Forms.Button btnAgregarSucursal;
+        private System.Windows.Forms.Button btnQuitarSucursal;
     }
 }

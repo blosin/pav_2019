@@ -28,7 +28,7 @@ namespace TP_PAV_3k2
         private void agregarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form formulario = new FormularioABMEmpleado();
-            formulario.Show();
+            formulario.ShowDialog();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace TP_PAV_3k2
         private void agregarSucursalToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form formulario = new FormularioABMSucursal();
-            formulario.Show();
+            formulario.ShowDialog();
         }
 
         private void FormularioPrincipal_Load(object sender, EventArgs e)
@@ -97,6 +97,11 @@ namespace TP_PAV_3k2
             var surtidor = new Surtidor(this);
             surtidor.Show();
             this.Hide();
+
+        }
+
+        private void btnQuitar_Click(object sender, EventArgs e)
+        {
 
         }
     }

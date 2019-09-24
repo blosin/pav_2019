@@ -27,7 +27,7 @@ namespace TP_PAV_3k2.Formularios.Surtidor
             repositorioSurtidor = new RepositorioSurtidor();
             _formularioPrincipal = form;
         }
-        public void cargarCombo()
+        public void cargarComboTipoCombustible()
         {
             DataTable tablacombo = new DataTable();
             tablacombo=repositorioSurtidor.ObtenerTiposCombustible();
@@ -35,10 +35,27 @@ namespace TP_PAV_3k2.Formularios.Surtidor
             cmbTipoCombustible.ValueMember = "idTipoCombustible";
             cmbTipoCombustible.DisplayMember = "nombre";
         }
-
+        public void cargarComboEstado()
+        {
+            DataTable tablacombo = new DataTable();
+            tablacombo = repositorioSurtidor.ObtenerEstados();
+            cmbTipoCombustible.DataSource = tablacombo;
+            cmbTipoCombustible.ValueMember = "idEstado";
+            cmbTipoCombustible.DisplayMember = "nombre";
+        }
+        public void cargarComboCuit()
+        {
+            DataTable tablacombo = new DataTable();
+            tablacombo = repositorioSurtidor.ObtenerCuits();
+            cmbTipoCombustible.DataSource = tablacombo;
+            cmbTipoCombustible.ValueMember = "cuit";
+            cmbTipoCombustible.DisplayMember = "cuit";
+        }
         private void Surtidor_Load(object sender, EventArgs e)
         {
-            cargarCombo();
+            cargarComboTipoCombustible();
+            cargarComboEstado();
+            cargarComboCuit();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
