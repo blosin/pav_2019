@@ -9,15 +9,18 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
 using TP_PAV_3k2.Formularios.Surtidor;
+using TP_PAV_3k2.Repositorios;
 
 namespace TP_PAV_3k2
 {
     public partial class FormularioPrincipal : Form
     {
+        RepositorioSucursal repositorio;
         PantallaLogIn Login = new PantallaLogIn();
         public FormularioPrincipal()
         {
             InitializeComponent();
+            repositorio = new RepositorioSucursal();
         }
         //public static DataGridView grillaEmpleados = new DataGridView();
         public FormularioPrincipal(PantallaLogIn login)
@@ -39,19 +42,20 @@ namespace TP_PAV_3k2
 
         private void agregarSucursalToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form formulario = new FormularioABMSucursal();
+            Form formulario = new FormularioABMSucursal(this);
             formulario.ShowDialog();
         }
 
         private void FormularioPrincipal_Load(object sender, EventArgs e)
         {
-            //Inicializo las columnas de la grid de Estaciones Registradas.
+            ActualizarSucursales();
+            /*//Inicializo las columnas de la grid de Estaciones Registradas.
             grdEstaciones.Columns.Add("clmCUIT","CUIT");
             grdEstaciones.Columns.Add("clmRazonSocial", "Razon Social");
             grdEstaciones.Columns.Add("clmCalle", "Calle");
             grdEstaciones.Columns.Add("clmNumero", "Numero");
             grdEstaciones.Columns.Add("clmFechaHablilitacion", "Fecha de Habilitación");
-
+            */
             //Inicializo las columnas de la grid de Empleados.
             grdEmpleados.Columns.Add("clmLegajo","Legajo");
             grdEmpleados.Columns.Add("clmNombre", "Nombre");
@@ -60,6 +64,30 @@ namespace TP_PAV_3k2
             grdEmpleados.Columns.Add("clmNumeroDoc", "Número Documento");
             grdEmpleados.Columns.Add("clmFechaNac", "Fecha de Nacimiento");
             grdEmpleados.Columns.Add("clmFechaAlta", "Fecha de Alta");
+        }
+        public void ActualizarSucursales()
+        {
+            grdEstaciones.Rows.Clear();
+            var sucursales = repositorio.ObtenerSucursales().Rows;
+            ActualizarGrilla(sucursales);
+        }
+        private void ActualizarGrilla(DataRowCollection registros)
+        {
+            foreach (DataRow registro in registros)
+            {
+                if (registro.HasErrors)
+                    continue; // no corto el ciclo
+                var fila = new string[] {
+                    registro.ItemArray[0].ToString(),
+                    registro.ItemArray[1].ToString(),
+                    registro.ItemArray[2].ToString(),
+                    registro.ItemArray[3].ToString(),
+                    registro.ItemArray[4].ToString(),
+
+                };
+
+                grdEstaciones.Rows.Add(fila);
+            }
         }
         private void GrdEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -103,6 +131,11 @@ namespace TP_PAV_3k2
         private void btnQuitar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarSucursales();
         }
     }
 }

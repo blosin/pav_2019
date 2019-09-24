@@ -15,10 +15,17 @@ namespace TP_PAV_3k2
     public partial class FormularioABMSucursal : Form
     {
         RepositorioSucursal repositorio;
+        FormularioPrincipal formulario;
         public FormularioABMSucursal()
         {
             InitializeComponent();
             repositorio = new RepositorioSucursal();
+        }
+        public FormularioABMSucursal(FormularioPrincipal formularioTemporal)
+        {
+            InitializeComponent();
+            repositorio = new RepositorioSucursal();
+            formulario = formularioTemporal;
         }
 
         private void AbmSucursales_Load(object sender, EventArgs e)
@@ -29,6 +36,7 @@ namespace TP_PAV_3k2
         private void Button1_Click(object sender, EventArgs e)
         {
             this.Dispose();
+            formulario.ActualizarSucursales();
         }
 
         private void BntAgregar_Click(object sender, EventArgs e)

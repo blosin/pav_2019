@@ -43,10 +43,11 @@
             this.grdEstaciones = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAgregarEmpleado = new System.Windows.Forms.Button();
-            this.btnQuitarEmpleado = new System.Windows.Forms.Button();
-            this.btnAgregarSucursal = new System.Windows.Forms.Button();
-            this.btnQuitarSucursal = new System.Windows.Forms.Button();
+            this.cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.razonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaHabilitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstaciones)).BeginInit();
@@ -148,17 +149,23 @@
             this.grdEmpleados.Location = new System.Drawing.Point(40, 241);
             this.grdEmpleados.Name = "grdEmpleados";
             this.grdEmpleados.ReadOnly = true;
-            this.grdEmpleados.Size = new System.Drawing.Size(717, 142);
+            this.grdEmpleados.Size = new System.Drawing.Size(868, 142);
             this.grdEmpleados.TabIndex = 4;
             this.grdEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdEmpleados_CellContentClick);
             // 
             // grdEstaciones
             // 
             this.grdEstaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdEstaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cuit,
+            this.razonSocial,
+            this.calle,
+            this.numero,
+            this.fechaHabilitacion});
             this.grdEstaciones.Location = new System.Drawing.Point(39, 81);
             this.grdEstaciones.Name = "grdEstaciones";
             this.grdEstaciones.ReadOnly = true;
-            this.grdEstaciones.Size = new System.Drawing.Size(717, 141);
+            this.grdEstaciones.Size = new System.Drawing.Size(869, 141);
             this.grdEstaciones.TabIndex = 5;
             // 
             // label1
@@ -179,52 +186,41 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Empleados Registrados";
             // 
-            // btnAgregarEmpleado
+            // cuit
             // 
-            this.btnAgregarEmpleado.Location = new System.Drawing.Point(763, 241);
-            this.btnAgregarEmpleado.Name = "btnAgregarEmpleado";
-            this.btnAgregarEmpleado.Size = new System.Drawing.Size(100, 30);
-            this.btnAgregarEmpleado.TabIndex = 8;
-            this.btnAgregarEmpleado.Text = "Agregar";
-            this.btnAgregarEmpleado.UseVisualStyleBackColor = true;
+            this.cuit.HeaderText = "Cuit";
+            this.cuit.Name = "cuit";
+            this.cuit.ReadOnly = true;
             // 
-            // btnQuitarEmpleado
+            // razonSocial
             // 
-            this.btnQuitarEmpleado.Location = new System.Drawing.Point(763, 277);
-            this.btnQuitarEmpleado.Name = "btnQuitarEmpleado";
-            this.btnQuitarEmpleado.Size = new System.Drawing.Size(100, 30);
-            this.btnQuitarEmpleado.TabIndex = 9;
-            this.btnQuitarEmpleado.Text = "Quitar";
-            this.btnQuitarEmpleado.UseVisualStyleBackColor = true;
-            this.btnQuitarEmpleado.Click += new System.EventHandler(this.btnQuitar_Click);
+            this.razonSocial.HeaderText = "Razon Social";
+            this.razonSocial.Name = "razonSocial";
+            this.razonSocial.ReadOnly = true;
             // 
-            // btnAgregarSucursal
+            // calle
             // 
-            this.btnAgregarSucursal.Location = new System.Drawing.Point(763, 80);
-            this.btnAgregarSucursal.Name = "btnAgregarSucursal";
-            this.btnAgregarSucursal.Size = new System.Drawing.Size(100, 30);
-            this.btnAgregarSucursal.TabIndex = 10;
-            this.btnAgregarSucursal.Text = "Agregar";
-            this.btnAgregarSucursal.UseVisualStyleBackColor = true;
+            this.calle.HeaderText = "Calle";
+            this.calle.Name = "calle";
+            this.calle.ReadOnly = true;
             // 
-            // btnQuitarSucursal
+            // numero
             // 
-            this.btnQuitarSucursal.Location = new System.Drawing.Point(763, 116);
-            this.btnQuitarSucursal.Name = "btnQuitarSucursal";
-            this.btnQuitarSucursal.Size = new System.Drawing.Size(100, 30);
-            this.btnQuitarSucursal.TabIndex = 11;
-            this.btnQuitarSucursal.Text = "Quitar";
-            this.btnQuitarSucursal.UseVisualStyleBackColor = true;
+            this.numero.HeaderText = "Numero";
+            this.numero.Name = "numero";
+            this.numero.ReadOnly = true;
+            // 
+            // fechaHabilitacion
+            // 
+            this.fechaHabilitacion.HeaderText = "Fecha De Habilitacion";
+            this.fechaHabilitacion.Name = "fechaHabilitacion";
+            this.fechaHabilitacion.ReadOnly = true;
             // 
             // FormularioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 450);
-            this.Controls.Add(this.btnQuitarSucursal);
-            this.Controls.Add(this.btnAgregarSucursal);
-            this.Controls.Add(this.btnQuitarEmpleado);
-            this.Controls.Add(this.btnAgregarEmpleado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grdEstaciones);
@@ -263,9 +259,10 @@
         private System.Windows.Forms.ToolStripMenuItem aBMSurtidorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordenDeCompraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ticketToolStripMenuItem;
-        private System.Windows.Forms.Button btnAgregarEmpleado;
-        private System.Windows.Forms.Button btnQuitarEmpleado;
-        private System.Windows.Forms.Button btnAgregarSucursal;
-        private System.Windows.Forms.Button btnQuitarSucursal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cuit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn razonSocial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaHabilitacion;
     }
 }
