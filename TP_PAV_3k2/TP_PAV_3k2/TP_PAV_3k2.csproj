@@ -46,7 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Empleado.cs" />
     <Compile Include="Clases\Estacion.cs" />
+    <Compile Include="Formularios\Empleados\AgregarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Empleados\AgregarEmpleado.Designer.cs">
+      <DependentUpon>AgregarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Empleados\ModificarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Empleados\ModificarEmpleado.Designer.cs">
+      <DependentUpon>ModificarEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Estaciones\ModificarEstaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +186,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Empleados\AgregarEmpleado.resx">
+      <DependentUpon>AgregarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Empleados\ModificarEmpleado.resx">
+      <DependentUpon>ModificarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estaciones\ModificarEstaciones.resx">
       <DependentUpon>ModificarEstaciones.cs</DependentUpon>
     </EmbeddedResource>

@@ -32,12 +32,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.grdEstaciones = new System.Windows.Forms.DataGridView();
             this.btnQuitar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             this.Cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaHabilitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstaciones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,6 +75,7 @@
             this.grdEstaciones.ReadOnly = true;
             this.grdEstaciones.Size = new System.Drawing.Size(616, 337);
             this.grdEstaciones.TabIndex = 28;
+            this.grdEstaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstaciones_CellContentClick);
             // 
             // btnQuitar
             // 
@@ -85,6 +86,16 @@
             this.btnQuitar.Text = "Quitar";
             this.btnQuitar.UseVisualStyleBackColor = true;
             this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(12, 355);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(100, 57);
+            this.btnModificar.TabIndex = 30;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // Cuit
             // 
@@ -115,16 +126,7 @@
             this.FechaHabilitacion.HeaderText = "Fecha Habilitacion";
             this.FechaHabilitacion.Name = "FechaHabilitacion";
             this.FechaHabilitacion.ReadOnly = true;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(12, 355);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(100, 57);
-            this.btnModificar.TabIndex = 30;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            this.FechaHabilitacion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // FormularioABMSucursal
             // 
@@ -150,11 +152,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView grdEstaciones;
         private System.Windows.Forms.Button btnQuitar;
+        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cuit;
         private System.Windows.Forms.DataGridViewTextBoxColumn RazonSocial;
         private System.Windows.Forms.DataGridViewTextBoxColumn Calle;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaHabilitacion;
-        private System.Windows.Forms.Button btnModificar;
     }
 }

@@ -41,13 +41,13 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.grdEmpleados = new System.Windows.Forms.DataGridView();
             this.grdEstaciones = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.razonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaHabilitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstaciones)).BeginInit();
@@ -69,8 +69,8 @@
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarEmpleadoToolStripMenuItem,
             this.agregarSucursalToolStripMenuItem,
+            this.agregarEmpleadoToolStripMenuItem,
             this.agregarTipoCombustibleToolStripMenuItem,
             this.agregarUnidadDeMedidaToolStripMenuItem,
             this.agregarUrgenciaToolStripMenuItem,
@@ -168,24 +168,6 @@
             this.grdEstaciones.Size = new System.Drawing.Size(869, 141);
             this.grdEstaciones.TabIndex = 5;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Estaciones Registradas";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 225);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Empleados Registrados";
-            // 
             // cuit
             // 
             this.cuit.HeaderText = "Cuit";
@@ -215,6 +197,24 @@
             this.fechaHabilitacion.HeaderText = "Fecha De Habilitacion";
             this.fechaHabilitacion.Name = "fechaHabilitacion";
             this.fechaHabilitacion.ReadOnly = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Estaciones Registradas";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(37, 225);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Empleados Registrados";
             // 
             // FormularioPrincipal
             // 
