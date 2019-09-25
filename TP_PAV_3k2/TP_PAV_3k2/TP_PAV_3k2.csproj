@@ -48,6 +48,8 @@
   <ItemGroup>
     <Compile Include="Clases\Empleado.cs" />
     <Compile Include="Clases\Estacion.cs" />
+    <Compile Include="Clases\Estadoss.cs" />
+    <Compile Include="Clases\TipoDocumento.cs" />
     <Compile Include="Formularios\Empleados\AgregarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,11 +80,35 @@
     <Compile Include="Formularios\Soporte\Estados\ABMEstados.Designer.cs">
       <DependentUpon>ABMEstados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Soporte\Estados\AltaEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Soporte\Estados\AltaEstado.Designer.cs">
+      <DependentUpon>AltaEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Soporte\Estados\ModificarEstados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Soporte\Estados\ModificarEstados.Designer.cs">
+      <DependentUpon>ModificarEstados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Soporte\TipoCombustible\ABMTipoCombustible.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Soporte\TipoCombustible\ABMTipoCombustible.Designer.cs">
       <DependentUpon>ABMTipoCombustible.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Soporte\TipoDocumentos\AltaTipoDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Soporte\TipoDocumentos\AltaTipoDocumento.Designer.cs">
+      <DependentUpon>AltaTipoDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Soporte\TipoDocumentos\ModificarTipoDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Soporte\TipoDocumentos\ModificarTipoDocumento.Designer.cs">
+      <DependentUpon>ModificarTipoDocumento.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Soporte\TipoDocumentos\TipoDocumento.cs">
       <SubType>Form</SubType>
@@ -128,8 +154,10 @@
       <DependentUpon>ModificarUrgencia.cs</DependentUpon>
     </Compile>
     <Compile Include="Repositorios\RepositorioEmpleado.cs" />
+    <Compile Include="Repositorios\RepositorioEstados.cs" />
     <Compile Include="Repositorios\RepositorioSucursal.cs" />
     <Compile Include="Repositorios\RepositorioSurtidor.cs" />
+    <Compile Include="Repositorios\RepositorioTiposDoc.cs" />
     <Compile Include="Repositorios\RepositorioUnidadDeMedida.cs" />
     <Compile Include="Repositorios\RepositorioUrgencia.cs" />
     <Compile Include="Repositorios\RepositorioTipoCombustible.cs" />
@@ -201,8 +229,20 @@
     <EmbeddedResource Include="Formularios\Soporte\Estados\ABMEstados.resx">
       <DependentUpon>ABMEstados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Soporte\Estados\AltaEstado.resx">
+      <DependentUpon>AltaEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Soporte\Estados\ModificarEstados.resx">
+      <DependentUpon>ModificarEstados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Soporte\TipoCombustible\ABMTipoCombustible.resx">
       <DependentUpon>ABMTipoCombustible.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Soporte\TipoDocumentos\AltaTipoDocumento.resx">
+      <DependentUpon>AltaTipoDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Soporte\TipoDocumentos\ModificarTipoDocumento.resx">
+      <DependentUpon>ModificarTipoDocumento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Soporte\TipoDocumentos\TipoDocumento.resx">
       <DependentUpon>TipoDocumento.cs</DependentUpon>

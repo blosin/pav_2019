@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbLegajoSup = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.dateFechaAlta = new System.Windows.Forms.DateTimePicker();
@@ -50,7 +50,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cmbLegajoSup);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.dateFechaAlta);
@@ -69,14 +69,14 @@
             this.panel1.Size = new System.Drawing.Size(322, 263);
             this.panel1.TabIndex = 38;
             // 
-            // comboBox1
+            // cmbLegajoSup
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(119, 181);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(203, 21);
-            this.comboBox1.TabIndex = 36;
+            this.cmbLegajoSup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLegajoSup.FormattingEnabled = true;
+            this.cmbLegajoSup.Location = new System.Drawing.Point(119, 181);
+            this.cmbLegajoSup.Name = "cmbLegajoSup";
+            this.cmbLegajoSup.Size = new System.Drawing.Size(203, 21);
+            this.cmbLegajoSup.TabIndex = 36;
             // 
             // label8
             // 
@@ -198,6 +198,7 @@
             this.btnCancelar.TabIndex = 41;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -207,6 +208,7 @@
             this.btnAceptar.TabIndex = 40;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // AgregarEmpleado
             // 
@@ -218,6 +220,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "AgregarEmpleado";
             this.Text = "AgregarEmpleado";
+            this.Load += new System.EventHandler(this.AgregarEmpleado_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -227,7 +230,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbLegajoSup;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DateTimePicker dateFechaAlta;

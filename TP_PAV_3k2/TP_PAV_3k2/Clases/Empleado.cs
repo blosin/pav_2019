@@ -11,7 +11,7 @@ namespace TP_PAV_3k2.Clases
         public int legajo { get; set; }
         public string nombre { get; set; }
         public string apellido { get; set; }
-        public int tipoDoc { get; set; }
+        public string tipoDoc { get; set; }
         public int nroDoc { get;set; }
         public DateTime fechaNacimiento { get; set; }
         public DateTime fechaAlta { get; set; }

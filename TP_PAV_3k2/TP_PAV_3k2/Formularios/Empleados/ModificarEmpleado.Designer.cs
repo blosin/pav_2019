@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbLegajoSup = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.dateFechaAlta = new System.Windows.Forms.DateTimePicker();
@@ -45,12 +45,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblLegajo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.lblLegajo);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.cmbLegajoSup);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.dateFechaAlta);
@@ -69,14 +73,14 @@
             this.panel1.Size = new System.Drawing.Size(322, 263);
             this.panel1.TabIndex = 38;
             // 
-            // comboBox1
+            // cmbLegajoSup
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(119, 181);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(203, 21);
-            this.comboBox1.TabIndex = 36;
+            this.cmbLegajoSup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLegajoSup.FormattingEnabled = true;
+            this.cmbLegajoSup.Location = new System.Drawing.Point(119, 181);
+            this.cmbLegajoSup.Name = "cmbLegajoSup";
+            this.cmbLegajoSup.Size = new System.Drawing.Size(203, 21);
+            this.cmbLegajoSup.TabIndex = 36;
             // 
             // label8
             // 
@@ -198,6 +202,7 @@
             this.btnAceptar.TabIndex = 37;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -207,6 +212,25 @@
             this.btnCancelar.TabIndex = 39;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Legajo:";
+            // 
+            // lblLegajo
+            // 
+            this.lblLegajo.AutoSize = true;
+            this.lblLegajo.Location = new System.Drawing.Point(43, 0);
+            this.lblLegajo.Name = "lblLegajo";
+            this.lblLegajo.Size = new System.Drawing.Size(10, 13);
+            this.lblLegajo.TabIndex = 41;
+            this.lblLegajo.Text = ".";
             // 
             // ModificarEmpleado
             // 
@@ -218,6 +242,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ModificarEmpleado";
             this.Text = "ModificarEmpleado";
+            this.Load += new System.EventHandler(this.ModificarEmpleado_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -227,7 +252,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbLegajoSup;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DateTimePicker dateFechaAlta;
@@ -243,5 +268,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblLegajo;
+        private System.Windows.Forms.Label label1;
     }
 }

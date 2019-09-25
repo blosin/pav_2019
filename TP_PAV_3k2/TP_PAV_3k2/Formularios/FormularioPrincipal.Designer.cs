@@ -30,12 +30,14 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarSucursalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarTipoCombustibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUnidadDeMedidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUrgenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBMSurtidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administrarTiposDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administrarEstadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ticketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -48,6 +50,14 @@
             this.fechaHabilitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.legajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nroDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaNac = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.legajoSup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstaciones)).BeginInit();
@@ -74,17 +84,12 @@
             this.agregarTipoCombustibleToolStripMenuItem,
             this.agregarUnidadDeMedidaToolStripMenuItem,
             this.agregarUrgenciaToolStripMenuItem,
-            this.aBMSurtidorToolStripMenuItem});
+            this.aBMSurtidorToolStripMenuItem,
+            this.administrarTiposDocumentoToolStripMenuItem,
+            this.administrarEstadosToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
-            // 
-            // agregarEmpleadoToolStripMenuItem
-            // 
-            this.agregarEmpleadoToolStripMenuItem.Name = "agregarEmpleadoToolStripMenuItem";
-            this.agregarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.agregarEmpleadoToolStripMenuItem.Text = "Administrar empleados";
-            this.agregarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.agregarEmpleadoToolStripMenuItem_Click);
             // 
             // agregarSucursalToolStripMenuItem
             // 
@@ -92,6 +97,13 @@
             this.agregarSucursalToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
             this.agregarSucursalToolStripMenuItem.Text = "Administrar sucursales";
             this.agregarSucursalToolStripMenuItem.Click += new System.EventHandler(this.agregarSucursalToolStripMenuItem_Click);
+            // 
+            // agregarEmpleadoToolStripMenuItem
+            // 
+            this.agregarEmpleadoToolStripMenuItem.Name = "agregarEmpleadoToolStripMenuItem";
+            this.agregarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.agregarEmpleadoToolStripMenuItem.Text = "Administrar empleados";
+            this.agregarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.agregarEmpleadoToolStripMenuItem_Click);
             // 
             // agregarTipoCombustibleToolStripMenuItem
             // 
@@ -121,6 +133,20 @@
             this.aBMSurtidorToolStripMenuItem.Text = "Administrar surtidores";
             this.aBMSurtidorToolStripMenuItem.Click += new System.EventHandler(this.aBMSurtidorToolStripMenuItem_Click);
             // 
+            // administrarTiposDocumentoToolStripMenuItem
+            // 
+            this.administrarTiposDocumentoToolStripMenuItem.Name = "administrarTiposDocumentoToolStripMenuItem";
+            this.administrarTiposDocumentoToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.administrarTiposDocumentoToolStripMenuItem.Text = "Administrar tipos documento";
+            this.administrarTiposDocumentoToolStripMenuItem.Click += new System.EventHandler(this.administrarTiposDocumentoToolStripMenuItem_Click);
+            // 
+            // administrarEstadosToolStripMenuItem
+            // 
+            this.administrarEstadosToolStripMenuItem.Name = "administrarEstadosToolStripMenuItem";
+            this.administrarEstadosToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.administrarEstadosToolStripMenuItem.Text = "Administrar estados";
+            this.administrarEstadosToolStripMenuItem.Click += new System.EventHandler(this.administrarEstadosToolStripMenuItem_Click);
+            // 
             // ordenDeCompraToolStripMenuItem
             // 
             this.ordenDeCompraToolStripMenuItem.Name = "ordenDeCompraToolStripMenuItem";
@@ -146,6 +172,15 @@
             // grdEmpleados
             // 
             this.grdEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.legajo,
+            this.nombre,
+            this.apellido,
+            this.tipoDoc,
+            this.nroDoc,
+            this.fechaNac,
+            this.fechaAlta,
+            this.legajoSup});
             this.grdEmpleados.Location = new System.Drawing.Point(40, 241);
             this.grdEmpleados.Name = "grdEmpleados";
             this.grdEmpleados.ReadOnly = true;
@@ -216,6 +251,54 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Empleados Registrados";
             // 
+            // legajo
+            // 
+            this.legajo.HeaderText = "Legajo";
+            this.legajo.Name = "legajo";
+            this.legajo.ReadOnly = true;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            // 
+            // apellido
+            // 
+            this.apellido.HeaderText = "Apellido";
+            this.apellido.Name = "apellido";
+            this.apellido.ReadOnly = true;
+            // 
+            // tipoDoc
+            // 
+            this.tipoDoc.HeaderText = "Tipo de documento";
+            this.tipoDoc.Name = "tipoDoc";
+            this.tipoDoc.ReadOnly = true;
+            // 
+            // nroDoc
+            // 
+            this.nroDoc.HeaderText = "Numero de documento";
+            this.nroDoc.Name = "nroDoc";
+            this.nroDoc.ReadOnly = true;
+            // 
+            // fechaNac
+            // 
+            this.fechaNac.HeaderText = "Fecha de nacimiento";
+            this.fechaNac.Name = "fechaNac";
+            this.fechaNac.ReadOnly = true;
+            // 
+            // fechaAlta
+            // 
+            this.fechaAlta.HeaderText = "Fecha de alta";
+            this.fechaAlta.Name = "fechaAlta";
+            this.fechaAlta.ReadOnly = true;
+            // 
+            // legajoSup
+            // 
+            this.legajoSup.HeaderText = "Legajo de superior";
+            this.legajoSup.Name = "legajoSup";
+            this.legajoSup.ReadOnly = true;
+            // 
             // FormularioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -264,5 +347,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn calle;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaHabilitacion;
+        private System.Windows.Forms.ToolStripMenuItem administrarTiposDocumentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem administrarEstadosToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn legajo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nroDoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaNac;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaAlta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn legajoSup;
     }
 }

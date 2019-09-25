@@ -46,7 +46,7 @@ namespace TP_PAV_3k2
             form.ShowDialog();
                        
         }
-        private void ActualizarSucursales()
+        public void ActualizarSucursales()
         {
             grdEstaciones.Rows.Clear();
             var sucursales = repositorio.ObtenerSucursales().Rows;

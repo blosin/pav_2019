@@ -27,8 +27,7 @@ namespace TP_PAV_3k2
 
         public FormularioAgregarEstacion(FormularioABMSucursal form)
         {
-            InitializeComponent();
-            form = new FormularioABMSucursal();
+            InitializeComponent();            
             estacion = new Estacion();
             repositorio = new RepositorioSucursal();
             this.form = form;            
@@ -36,8 +35,7 @@ namespace TP_PAV_3k2
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Dispose();        
-           
+            this.Dispose();   
         }
 
         private void BntAceptar_Click(object sender, EventArgs e)
@@ -87,10 +85,7 @@ namespace TP_PAV_3k2
 
             repositorio.Guardar(estacion);
             this.Dispose();
-            
-            
-
-
+            form.ActualizarSucursales();
         }
     }
 }

@@ -31,8 +31,6 @@
             this.bntAgregar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.grdEmpleados = new System.Windows.Forms.DataGridView();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.legajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +39,8 @@
             this.fechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.legajoSuperior = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnQuitar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,24 +81,6 @@
             this.grdEmpleados.ReadOnly = true;
             this.grdEmpleados.Size = new System.Drawing.Size(892, 337);
             this.grdEmpleados.TabIndex = 36;
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(12, 388);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(100, 57);
-            this.btnModificar.TabIndex = 37;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(910, 45);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "Quitar";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // legajo
             // 
@@ -148,12 +130,32 @@
             this.legajoSuperior.Name = "legajoSuperior";
             this.legajoSuperior.ReadOnly = true;
             // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(12, 388);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(100, 57);
+            this.btnModificar.TabIndex = 37;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.Location = new System.Drawing.Point(910, 45);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(75, 23);
+            this.btnQuitar.TabIndex = 38;
+            this.btnQuitar.Text = "Quitar";
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormularioABMEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 457);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.grdEmpleados);
             this.Controls.Add(this.bntAgregar);
@@ -174,7 +176,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.DataGridView grdEmpleados;
         private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnQuitar;
         private System.Windows.Forms.DataGridViewTextBoxColumn legajo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido;

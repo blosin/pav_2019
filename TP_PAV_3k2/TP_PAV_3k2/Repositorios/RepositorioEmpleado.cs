@@ -17,59 +17,83 @@ namespace TP_PAV_3k2.Repositorios
             _BD = new accesoBD();
         }
 
-        public DataTable ObtenerSucursales()
+        public DataTable ObtenerEmpleados()
         {
             //se define una variable local a la función <sqltxt> del tipo <string> donde en el 
             //momento de su creación se le asigan su contenido, que es el comando SELECT  
             //necesario para poder establecer la veracidad del usuario.
-            string sqltxt = "SELECT * FROM dbo.Empleado";
+            string sqltxt = "SELECT a.legajo, a.nombre, a.apellido, b.nombre, a.nroDoc, a.fechaNacimiento, a.fechaAlta, a.legajoSuperior FROM dbo.Empleado a, TipoDocumento b WHERE a.tipoDoc=b.idTipoDocumento";
+
+            return _BD.consulta(sqltxt);
+        }
+        public DataTable ObtenerLegajos()
+        {
+            string sqltxt = "SELECT legajo FROM dbo.Empleado";
 
             return _BD.consulta(sqltxt);
         }
 
         public bool Guardar(Empleado empleado)
         {
-            string sqltxt = $"INSERT dbo.Empleado (razonSocial, calle, numero, fechaHabilitacion)" +
-                $"VALUES ('{empleado.razonSocial}', '{empleado.calle}', '{empleado.numero}', '{empleado.ReturnFechaHabilitacion()}')";
-
+            string sqltxt="";
+            if (empleado.legajoSuperior != -1)
+            {
+                sqltxt = $"INSERT dbo.Empleado (nombre, apellido, tipoDoc, nroDoc, fechaNacimiento, fechaAlta, legajoSuperior)" +
+                    $"VALUES ('{empleado.nombre}', '{empleado.apellido}', (SELECT a.idTipoDocumento FROM TipoDocumento a, Empleado b WHERE a.nombre=b.tipoDoc), '{empleado.nroDoc}', '{empleado.ReturnfechaNacimiento()}', '{empleado.ReturnFechaAlta()}', '{empleado.legajoSuperior}')";
+            }
+            else
+            {
+                sqltxt= sqltxt = $"INSERT dbo.Empleado (nombre, apellido, tipoDoc, nroDoc, fechaNacimiento, fechaAlta)" +
+                    $"VALUES ('{empleado.nombre}', '{empleado.apellido}', (SELECT a.idTipoDocumento FROM TipoDocumento a, Empleado b WHERE a.nombre='{empleado.tipoDoc}' AND a.idTipoDocumento=b.tipoDoc), '{empleado.nroDoc}', '{empleado.ReturnfechaNacimiento()}', '{empleado.ReturnFechaAlta()}')";
+            }
             return _BD.EjecutarSQL(sqltxt);
         }
 
         public bool Eliminar(string legajo)
         {
-            string sqltxt = $"DELETE FROM [dbo].[Estacion] WHERE legajo = {legajo}";
+            string sqltxt = $"DELETE FROM [dbo].[Empleado] WHERE legajo = {legajo}";
 
             return _BD.EjecutarSQL(sqltxt);
         }
-
+        public DataTable SoySupervisorActivo(string legajo)
+        {
+            string sqltxt = $"SELECT * FROM empleado WHERE legajoSuperior='{legajo}";
+            return _BD.consulta(sqltxt);
+        }
         public Empleado ObtenerEmpleado(string legajo)
         {
-            string sqltxt = $"SELECT * FROM dbo.Estacion WHERE legajo={legajo}";
+            string sqltxt =$"SELECT a.legajo, a.nombre, a.apellido, b.nombre, a.nroDoc, a.fechaNacimiento, a.fechaAlta, a.legajoSuperior FROM dbo.Empleado a, TipoDocumento b WHERE a.tipoDoc = b.idTipoDocumento AND legajo='{legajo}'";
             var tablaTemporal = _BD.consulta(sqltxt);
 
             if (tablaTemporal.Rows.Count == 0)
                 return null;
-            var estacion = new Estacion();
+            var empleado = new Empleado();
             foreach (DataRow fila in tablaTemporal.Rows)
             {
-                DateTime fecha;
+                DateTime fecha1;
+                DateTime fecha2;
                 if (fila.HasErrors)
                     continue;
-                estacion.cuit = int.Parse(fila.ItemArray[0].ToString());
-                estacion.razonSocial = fila.ItemArray[1].ToString();
-                estacion.calle = fila.ItemArray[2].ToString();
-                estacion.numero = int.Parse(fila.ItemArray[3].ToString());
-                DateTime.TryParse(fila.ItemArray[4]?.ToString(), out fecha);
-                estacion.fechaHabilitacion = fecha;
+                empleado.legajo = int.Parse(fila.ItemArray[0].ToString());
+                empleado.nombre = fila.ItemArray[1].ToString();
+                empleado.apellido = fila.ItemArray[2].ToString();
+                empleado.tipoDoc = fila.ItemArray[3].ToString();
+                empleado.nroDoc = int.Parse(fila.ItemArray[4].ToString());
+                DateTime.TryParse(fila.ItemArray[5]?.ToString(), out fecha1);
+                empleado.fechaNacimiento = fecha1;
+                DateTime.TryParse(fila.ItemArray[6]?.ToString(), out fecha2);
+                empleado.fechaAlta = fecha2;
 
             }
-            return estacion;
+            return empleado;
         }
 
-        public bool Actualizar(Estacion estacion)
+        public bool Actualizar(Empleado empleado)
         {
-            string sqltxt = $"UPDATE dbo.Estacion SET razonSocial = '{estacion.razonSocial}', " +
-                $"calle = '{estacion.calle}', numero= '{estacion.numero}', fechaHabilitacion = '{estacion.fechaHabilitacion.ToString("yyyy-MM-dd")}'  WHERE cuit={estacion.cuit}";
+            string sqltxt = $"UPDATE dbo.Empleado SET nombre = '{empleado.nombre}', " +
+                $"apellido = '{empleado.apellido}', tipoDoc= (SELECT a.idTipoDocumento FROM TipoDocumento a, Empleado b WHERE a.nombre=b.tipoDoc), " +
+                $"nroDoc = '{empleado.nroDoc}', fechaNacimiento= '{empleado.fechaNacimiento.ToString("yyyy-MM-dd")}', fechaAlta='{empleado.fechaAlta.ToString("yyyy-MM-dd")}', legajoSuperior='{empleado.legajoSuperior}'" +
+                $"WHERE legajo={empleado.legajo}";
 
             return _BD.EjecutarSQL(sqltxt);
         }

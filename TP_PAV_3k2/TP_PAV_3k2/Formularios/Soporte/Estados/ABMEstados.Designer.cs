@@ -32,10 +32,10 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnBaja = new System.Windows.Forms.Button();
             this.btnAlta = new System.Windows.Forms.Button();
-            this.dgvUnidadMedida = new System.Windows.Forms.DataGridView();
+            this.dgvEstados = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUnidadMedida)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).BeginInit();
             this.SuspendLayout();
             // 
             // btnVolver
@@ -56,6 +56,7 @@
             this.btnModificar.TabIndex = 14;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnBaja
             // 
@@ -65,6 +66,7 @@
             this.btnBaja.TabIndex = 13;
             this.btnBaja.Text = "Baja";
             this.btnBaja.UseVisualStyleBackColor = true;
+            this.btnBaja.Click += new System.EventHandler(this.btnBaja_Click);
             // 
             // btnAlta
             // 
@@ -74,19 +76,20 @@
             this.btnAlta.TabIndex = 12;
             this.btnAlta.Text = "Alta";
             this.btnAlta.UseVisualStyleBackColor = true;
+            this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
             // 
-            // dgvUnidadMedida
+            // dgvEstados
             // 
-            this.dgvUnidadMedida.AllowUserToAddRows = false;
-            this.dgvUnidadMedida.AllowUserToDeleteRows = false;
-            this.dgvUnidadMedida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUnidadMedida.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvEstados.AllowUserToAddRows = false;
+            this.dgvEstados.AllowUserToDeleteRows = false;
+            this.dgvEstados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.Nombre});
-            this.dgvUnidadMedida.Location = new System.Drawing.Point(3, 12);
-            this.dgvUnidadMedida.Name = "dgvUnidadMedida";
-            this.dgvUnidadMedida.Size = new System.Drawing.Size(240, 172);
-            this.dgvUnidadMedida.TabIndex = 11;
+            this.dgvEstados.Location = new System.Drawing.Point(3, 12);
+            this.dgvEstados.Name = "dgvEstados";
+            this.dgvEstados.Size = new System.Drawing.Size(240, 172);
+            this.dgvEstados.TabIndex = 11;
             // 
             // ID
             // 
@@ -107,10 +110,12 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnBaja);
             this.Controls.Add(this.btnAlta);
-            this.Controls.Add(this.dgvUnidadMedida);
+            this.Controls.Add(this.dgvEstados);
             this.Name = "ABMEstado";
             this.Text = "Agregar estados";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUnidadMedida)).EndInit();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ABMEstado_FormClosing);
+            this.Load += new System.EventHandler(this.ABMEstado_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstados)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -121,7 +126,7 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnBaja;
         private System.Windows.Forms.Button btnAlta;
-        private System.Windows.Forms.DataGridView dgvUnidadMedida;
+        private System.Windows.Forms.DataGridView dgvEstados;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
     }
