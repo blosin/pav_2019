@@ -44,11 +44,9 @@ namespace TP_PAV_3k2.Formularios.Empleados
             cmbLegajoSup.DataSource = Legajos;
             cmbLegajoSup.ValueMember = "legajo";
             cmbLegajoSup.DisplayMember = "legajo";
-            cmbTipoDoc.SelectedText = empleado.tipoDoc;
-            cmbLegajoSup.SelectedText = empleado.legajoSuperior.ToString();
-            /*cmbTipoDoc
-            txtCalle.Text = estacion.calle;
-            fechaHabilitación.Value = estacion.fechaHabilitacion;*/
+            cmbTipoDoc.SelectedValue = repositorio.idTipoDoc(empleado.tipoDoc);
+            cmbLegajoSup.SelectedValue = empleado.legajoSuperior;
+                         
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -58,7 +56,64 @@ namespace TP_PAV_3k2.Formularios.Empleados
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            var datosEmpleado = new Empleado();
+            datosEmpleado.legajo = empleado.legajo;
+            datosEmpleado.nombre = txtNombre.Text;
+            datosEmpleado.apellido = txtApellido.Text;
+            datosEmpleado.tipoDoc = cmbTipoDoc.SelectedText;
+            int nroDocumento;
+            if (int.TryParse(txtNumero.Text, out nroDocumento))
+                datosEmpleado.nroDoc = nroDocumento;
+            else
+            {
+                MessageBox.Show("numero de documento erroneo");
+                txtNumero.Text = null;
+                txtNumero.Focus();
+                return;
+            }
+            datosEmpleado.fechaNacimiento = dateFechaNacimiento.Value.Date;
+            empleado.fechaAlta = dateFechaAlta.Value.Date;
 
+            int legajoSup = -1;
+            if (cmbLegajoSup.SelectedValue == null)
+            {
+                empleado.legajoSuperior = legajoSup;
+            }
+            else
+            {
+                empleado.legajoSuperior = int.Parse(cmbLegajoSup.SelectedValue.ToString());
+            }
+
+            if (datosEmpleado.nombreValido() == false)
+            {
+                MessageBox.Show("ingrese razon social valida");
+                txtNombre.Text = null;
+                txtNombre.Focus();
+                return;
+            }
+            if (datosEmpleado.apellidoValido() == false)
+            {
+                MessageBox.Show("ingrese calle valida");
+                txtApellido.Text = null;
+                txtApellido.Focus();
+                return;
+            }
+            if (datosEmpleado.fechaNacimientoValida() == false)
+            {
+                MessageBox.Show("ingrese fecha de nacimiento valida");
+                return;
+            }
+            if(datosEmpleado.fechaAltaValida()==false)
+            {
+                MessageBox.Show("ingrese fecha de alta valida");
+                return;
+            }
+
+            if (repositorio.Actualizar(datosEmpleado))
+            {
+                MessageBox.Show("Se actualizó con éxito");
+                this.Dispose();
+            }
         }
     }
 }

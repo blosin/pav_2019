@@ -39,6 +39,12 @@ namespace TP_PAV_3k2.Formularios.Empleados
         {
             empleado.nombre = txtNombre.Text;
             empleado.apellido = txtApellido.Text;
+            if(cmbTipoDoc.SelectedValue==null)
+            {
+                MessageBox.Show("seleccione un tipo de Documento valido");
+                    return;
+            }
+            else
             empleado.tipoDoc = cmbTipoDoc.SelectedValue.ToString();
             int nroDocumento;
             if (int.TryParse(txtNumero.Text, out nroDocumento))
@@ -69,14 +75,14 @@ namespace TP_PAV_3k2.Formularios.Empleados
             
             if (empleado.nombreValido() == false)
             {
-                MessageBox.Show("ingrese razon social valida");
+                MessageBox.Show("ingrese nombre valido");
                 txtNombre.Text = null;
                 txtNombre.Focus();
                 return;
             }
             if (empleado.apellidoValido() == false)
             {
-                MessageBox.Show("ingrese calle valida");
+                MessageBox.Show("ingrese apellido valido");
                 txtApellido.Text = null;
                 txtApellido.Focus();
                 return;

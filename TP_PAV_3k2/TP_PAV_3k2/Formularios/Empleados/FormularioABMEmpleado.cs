@@ -127,5 +127,10 @@ namespace TP_PAV_3k2
                 ActualizarEmpleados();
             }
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarEmpleados();
+        }
     }
 }

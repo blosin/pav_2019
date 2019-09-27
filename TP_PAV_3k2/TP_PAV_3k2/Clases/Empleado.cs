@@ -54,6 +54,13 @@ namespace TP_PAV_3k2.Clases
                 return false;
             return true;
         }
+        public bool fechaAltaValida()
+        {
+            DateTime fechaActual = DateTime.Today.Date;
+            if (fechaAlta > fechaActual)
+                return false;
+            return true;
+        }
         public string ReturnfechaNacimiento()
         {
             return fechaNacimiento.ToString("yyyy-MM-dd");
