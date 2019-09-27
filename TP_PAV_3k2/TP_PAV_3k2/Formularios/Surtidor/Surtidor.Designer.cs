@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.cmbTipoCombustible = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbCuit = new System.Windows.Forms.ComboBox();
             this.lblCuit = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,14 +38,14 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cmbEstado
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(106, 55);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Location = new System.Drawing.Point(106, 55);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(121, 21);
+            this.cmbEstado.TabIndex = 0;
             // 
             // cmbTipoCombustible
             // 
@@ -56,14 +56,14 @@
             this.cmbTipoCombustible.Size = new System.Drawing.Size(121, 21);
             this.cmbTipoCombustible.TabIndex = 1;
             // 
-            // comboBox3
+            // cmbCuit
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(106, 1);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 2;
+            this.cmbCuit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCuit.FormattingEnabled = true;
+            this.cmbCuit.Location = new System.Drawing.Point(106, 1);
+            this.cmbCuit.Name = "cmbCuit";
+            this.cmbCuit.Size = new System.Drawing.Size(121, 21);
+            this.cmbCuit.TabIndex = 2;
             // 
             // lblCuit
             // 
@@ -100,6 +100,7 @@
             this.btnGrabar.TabIndex = 6;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // btnCancelar
             // 
@@ -121,9 +122,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblCuit);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.cmbCuit);
             this.Controls.Add(this.cmbTipoCombustible);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbEstado);
             this.Name = "Surtidor";
             this.Text = "ABM Surtidores";
             this.Load += new System.EventHandler(this.Surtidor_Load);
@@ -134,9 +135,9 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.ComboBox cmbTipoCombustible;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbCuit;
         private System.Windows.Forms.Label lblCuit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

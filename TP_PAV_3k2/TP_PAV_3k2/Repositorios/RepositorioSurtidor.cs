@@ -26,7 +26,7 @@ namespace TP_PAV_3k2.Repositorios
 
         public DataTable ObtenerEstados()
         {
-            string sqltxt = "SELECT * FROM dbo.Estado";
+            string sqltxt = "SELECT * FROM Estado";
 
             return _BD.consulta(sqltxt);
         }

@@ -128,6 +128,12 @@
     <Compile Include="Formularios\Soporte\TipoUrgencia\ABMUrgencia.Designer.cs">
       <DependentUpon>ABMUrgencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Surtidor\ABMSurtidores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Surtidor\ABMSurtidores.Designer.cs">
+      <DependentUpon>ABMSurtidores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Surtidor\Surtidor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,6 +282,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Soporte\TipoUrgencia\ModificarUrgencia.resx">
       <DependentUpon>ModificarUrgencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Surtidor\ABMSurtidores.resx">
+      <DependentUpon>ABMSurtidores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Surtidor\Surtidor.resx">
       <DependentUpon>Surtidor.cs</DependentUpon>
