@@ -116,7 +116,8 @@ namespace TP_PAV_3k2.Formularios.Empleados
             cmbLegajoSup.ValueMember ="legajo";
             cmbLegajoSup.DisplayMember = "legajo";
             cmbTipoDoc.SelectedIndex = -1;
-            cmbLegajoSup.SelectedIndex = -1;           
+            cmbLegajoSup.SelectedIndex = -1;
+            dateFechaAlta.Value = DateTime.Today;
 
         }
     }
