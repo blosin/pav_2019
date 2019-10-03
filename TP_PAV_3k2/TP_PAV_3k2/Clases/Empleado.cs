@@ -16,6 +16,7 @@ namespace TP_PAV_3k2.Clases
         public DateTime fechaNacimiento { get; set; }
         public DateTime fechaAlta { get; set; }
         public int legajoSuperior { get; set; }
+        public string cuit { get; set; }
 
         public bool legajoValido()
         {
