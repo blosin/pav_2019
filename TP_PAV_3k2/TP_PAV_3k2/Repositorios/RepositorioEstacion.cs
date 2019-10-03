@@ -8,11 +8,11 @@ using TP_PAV_3k2.Clases;
 
 namespace TP_PAV_3k2.Repositorios
 {
-    class RepositorioSucursal
+    class RepositorioEstacion
     {
         private accesoBD _BD;
 
-        public RepositorioSucursal()
+        public RepositorioEstacion()
         {
             _BD = new accesoBD();
         }

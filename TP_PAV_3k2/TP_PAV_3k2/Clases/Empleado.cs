@@ -18,6 +18,12 @@ namespace TP_PAV_3k2.Clases
         public int legajoSuperior { get; set; }
         public string cuit { get; set; }
 
+        public bool cuitValido()
+        {
+            if (!string.IsNullOrEmpty(cuit.ToString()) && cuit.ToString().Length < 51)
+                return true;
+            return false;
+        }
         public bool legajoValido()
         {
             if (!string.IsNullOrEmpty(legajo.ToString()))

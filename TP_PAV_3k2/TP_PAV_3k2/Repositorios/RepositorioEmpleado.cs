@@ -22,7 +22,7 @@ namespace TP_PAV_3k2.Repositorios
             //se define una variable local a la función <sqltxt> del tipo <string> donde en el 
             //momento de su creación se le asigan su contenido, que es el comando SELECT  
             //necesario para poder establecer la veracidad del usuario.
-            string sqltxt = "SELECT a.legajo, a.nombre, a.apellido, b.nombre, a.nroDoc, a.fechaNacimiento, a.fechaAlta, a.legajoSuperior FROM Empleado a, TipoDocumento b WHERE a.tipoDoc=b.idTipoDocumento";
+            string sqltxt = "SELECT a.legajo, a.nombre, a.apellido, b.nombre, a.nroDoc, a.fechaNacimiento, a.fechaAlta, a.legajoSuperior, a.cuit FROM Empleado a, TipoDocumento b WHERE a.tipoDoc=b.idTipoDocumento";
 
             return _BD.consulta(sqltxt);
         }

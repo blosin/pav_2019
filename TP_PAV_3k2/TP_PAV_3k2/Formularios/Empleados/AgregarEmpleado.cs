@@ -107,6 +107,7 @@ namespace TP_PAV_3k2.Formularios.Empleados
         {
             DataTable tiposDoc;
             DataTable Legajos;
+            DataTable Estaciones;
             tiposDoc = repositorioTiposDoc.ObtenerTiposDocumento();
             cmbTipoDoc.DataSource = tiposDoc;
             cmbTipoDoc.ValueMember = "nombre";
@@ -117,6 +118,7 @@ namespace TP_PAV_3k2.Formularios.Empleados
             cmbLegajoSup.DisplayMember = "legajo";
             cmbTipoDoc.SelectedIndex = -1;
             cmbLegajoSup.SelectedIndex = -1;
+            cmbEstaciones.SelectedIndex = -1;
             dateFechaAlta.Value = DateTime.Today;
 
         }

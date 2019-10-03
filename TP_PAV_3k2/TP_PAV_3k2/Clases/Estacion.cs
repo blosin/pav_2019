@@ -8,7 +8,7 @@ namespace TP_PAV_3k2.Clases
 {
     class Estacion
     {
-        public int cuit { get; set; }
+        public string cuit { get; set; }
         public string razonSocial { get; set; }
         public string calle { get; set; }
         public int numero { get; set; }

@@ -14,17 +14,17 @@ namespace TP_PAV_3k2
 {
     public partial class FormularioABMSucursal : Form
     {
-        RepositorioSucursal repositorio;
+        RepositorioEstacion repositorio;
         FormularioPrincipal formulario;
         public FormularioABMSucursal()
         {
             InitializeComponent();
-            repositorio = new RepositorioSucursal();
+            repositorio = new RepositorioEstacion();
         }
         public FormularioABMSucursal(FormularioPrincipal formularioTemporal)
         {
             InitializeComponent();
-            repositorio = new RepositorioSucursal();
+            repositorio = new RepositorioEstacion();
             formulario = formularioTemporal;
         }
 

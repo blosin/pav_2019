@@ -41,13 +41,13 @@
             this.legajoSuperior = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnQuitar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
+            this.estacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
             // bntAgregar
             // 
-            this.bntAgregar.Location = new System.Drawing.Point(910, 12);
+            this.bntAgregar.Location = new System.Drawing.Point(972, 12);
             this.bntAgregar.Name = "bntAgregar";
             this.bntAgregar.Size = new System.Drawing.Size(75, 27);
             this.bntAgregar.TabIndex = 20;
@@ -76,11 +76,12 @@
             this.nroDocumento,
             this.fechaNacimiento,
             this.fechaAlta,
-            this.legajoSuperior});
+            this.legajoSuperior,
+            this.estacion});
             this.grdEmpleados.Location = new System.Drawing.Point(12, 12);
             this.grdEmpleados.Name = "grdEmpleados";
             this.grdEmpleados.ReadOnly = true;
-            this.grdEmpleados.Size = new System.Drawing.Size(892, 337);
+            this.grdEmpleados.Size = new System.Drawing.Size(954, 337);
             this.grdEmpleados.TabIndex = 36;
             // 
             // legajo
@@ -143,7 +144,7 @@
             // 
             // btnQuitar
             // 
-            this.btnQuitar.Location = new System.Drawing.Point(910, 45);
+            this.btnQuitar.Location = new System.Drawing.Point(972, 45);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(75, 23);
             this.btnQuitar.TabIndex = 38;
@@ -151,22 +152,17 @@
             this.btnQuitar.UseVisualStyleBackColor = true;
             this.btnQuitar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnActualizar
+            // estacion
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(910, 151);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnActualizar.TabIndex = 39;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.estacion.HeaderText = "Estacion";
+            this.estacion.Name = "estacion";
+            this.estacion.ReadOnly = true;
             // 
             // FormularioABMEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 457);
-            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.btnQuitar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.grdEmpleados);
@@ -197,6 +193,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaNacimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaAlta;
         private System.Windows.Forms.DataGridViewTextBoxColumn legajoSuperior;
-        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn estacion;
     }
 }

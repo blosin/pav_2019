@@ -161,7 +161,7 @@
     </Compile>
     <Compile Include="Repositorios\RepositorioEmpleado.cs" />
     <Compile Include="Repositorios\RepositorioEstados.cs" />
-    <Compile Include="Repositorios\RepositorioSucursal.cs" />
+    <Compile Include="Repositorios\RepositorioEstacion.cs" />
     <Compile Include="Repositorios\RepositorioSurtidor.cs" />
     <Compile Include="Repositorios\RepositorioTiposDoc.cs" />
     <Compile Include="Repositorios\RepositorioUnidadDeMedida.cs" />

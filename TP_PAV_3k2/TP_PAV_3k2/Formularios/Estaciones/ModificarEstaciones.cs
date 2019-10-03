@@ -14,13 +14,13 @@ namespace TP_PAV_3k2.Formularios.Estaciones
 {
     public partial class ModificarEstaciones : Form
     {
-        RepositorioSucursal repositorio;
+        RepositorioEstacion repositorio;
         Estacion estacion;
         
         public ModificarEstaciones(string id)
         {
             InitializeComponent();
-            repositorio = new RepositorioSucursal();
+            repositorio = new RepositorioEstacion();
             estacion = repositorio.ObtenerSucursal(id);
         }
 

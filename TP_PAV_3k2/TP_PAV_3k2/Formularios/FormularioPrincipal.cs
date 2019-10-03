@@ -17,13 +17,13 @@ namespace TP_PAV_3k2
 {
     public partial class FormularioPrincipal : Form
     {
-        RepositorioSucursal repositorio;
+        RepositorioEstacion repositorio;
         RepositorioEmpleado repositorioEmpleados;
         PantallaLogIn Login = new PantallaLogIn();
         public FormularioPrincipal()
         {
             InitializeComponent();
-            repositorio = new RepositorioSucursal();
+            repositorio = new RepositorioEstacion();
             repositorioEmpleados = new RepositorioEmpleado();
         }
         //public static DataGridView grillaEmpleados = new DataGridView();

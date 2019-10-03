@@ -16,20 +16,20 @@ namespace TP_PAV_3k2
     {
         FormularioABMSucursal form;
         Estacion estacion;
-        RepositorioSucursal repositorio;
+        RepositorioEstacion repositorio;
         public FormularioAgregarEstacion()
         {
             InitializeComponent();
             form = new FormularioABMSucursal();
             estacion = new Estacion();
-            repositorio = new RepositorioSucursal();
+            repositorio = new RepositorioEstacion();
         }
 
         public FormularioAgregarEstacion(FormularioABMSucursal form)
         {
             InitializeComponent();            
             estacion = new Estacion();
-            repositorio = new RepositorioSucursal();
+            repositorio = new RepositorioEstacion();
             this.form = form;            
         }
 
