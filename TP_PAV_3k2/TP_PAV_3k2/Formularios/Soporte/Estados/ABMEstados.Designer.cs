@@ -112,6 +112,7 @@
             this.Controls.Add(this.btnAlta);
             this.Controls.Add(this.dgvEstados);
             this.Name = "ABMEstado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar estados";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ABMEstado_FormClosing);
             this.Load += new System.EventHandler(this.ABMEstado_Load);

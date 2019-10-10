@@ -64,6 +64,7 @@ namespace TP_PAV_3k2
                     registro.ItemArray[5].ToString(),
                     registro.ItemArray[6].ToString(),
                     registro.ItemArray[7].ToString(),
+                    registro.ItemArray[8].ToString(),
 
                 };
 
@@ -74,7 +75,7 @@ namespace TP_PAV_3k2
         private void BtnSalir_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            formulario.ActualizarEmpleados();
+            //formulario.ActualizarEmpleados();
         }
 
         private void button1_Click(object sender, EventArgs e)

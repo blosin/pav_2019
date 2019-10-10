@@ -1,6 +1,6 @@
 ﻿namespace TP_PAV_3k2.Formularios.Surtidor
 {
-    partial class Surtidor
+    partial class AltaSurtidor
     {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,7 @@
             // 
             this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Location = new System.Drawing.Point(106, 55);
+            this.cmbEstado.Location = new System.Drawing.Point(133, 32);
             this.cmbEstado.Name = "cmbEstado";
             this.cmbEstado.Size = new System.Drawing.Size(121, 21);
             this.cmbEstado.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             this.cmbTipoCombustible.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoCombustible.FormattingEnabled = true;
-            this.cmbTipoCombustible.Location = new System.Drawing.Point(106, 29);
+            this.cmbTipoCombustible.Location = new System.Drawing.Point(133, 59);
             this.cmbTipoCombustible.Name = "cmbTipoCombustible";
             this.cmbTipoCombustible.Size = new System.Drawing.Size(121, 21);
             this.cmbTipoCombustible.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             this.cmbCuit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCuit.FormattingEnabled = true;
-            this.cmbCuit.Location = new System.Drawing.Point(106, 1);
+            this.cmbCuit.Location = new System.Drawing.Point(134, 5);
             this.cmbCuit.Name = "cmbCuit";
             this.cmbCuit.Size = new System.Drawing.Size(121, 21);
             this.cmbCuit.TabIndex = 2;
@@ -68,7 +68,7 @@
             // lblCuit
             // 
             this.lblCuit.AutoSize = true;
-            this.lblCuit.Location = new System.Drawing.Point(12, 9);
+            this.lblCuit.Location = new System.Drawing.Point(40, 13);
             this.lblCuit.Name = "lblCuit";
             this.lblCuit.Size = new System.Drawing.Size(32, 13);
             this.lblCuit.TabIndex = 3;
@@ -77,7 +77,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 37);
+            this.label2.Location = new System.Drawing.Point(39, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 4;
@@ -86,7 +86,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 63);
+            this.label3.Location = new System.Drawing.Point(39, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 5;
@@ -94,7 +94,7 @@
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(70, 113);
+            this.btnGrabar.Location = new System.Drawing.Point(98, 117);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(75, 23);
             this.btnGrabar.TabIndex = 6;
@@ -104,7 +104,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(151, 113);
+            this.btnCancelar.Location = new System.Drawing.Point(179, 117);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 7;
@@ -112,7 +112,7 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // Surtidor
+            // AltaSurtidor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,8 +125,9 @@
             this.Controls.Add(this.cmbCuit);
             this.Controls.Add(this.cmbTipoCombustible);
             this.Controls.Add(this.cmbEstado);
-            this.Name = "Surtidor";
-            this.Text = "ABM Surtidores";
+            this.Name = "AltaSurtidor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Alta Surtidor";
             this.Load += new System.EventHandler(this.Surtidor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

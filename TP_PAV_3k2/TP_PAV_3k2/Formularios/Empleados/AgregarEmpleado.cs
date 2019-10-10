@@ -18,6 +18,7 @@ namespace TP_PAV_3k2.Formularios.Empleados
         Empleado empleado;
         RepositorioEmpleado repositorio;
         RepositorioTiposDoc repositorioTiposDoc;
+        RepositorioEstacion repositorioEstacion;
         public AgregarEmpleado()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace TP_PAV_3k2.Formularios.Empleados
             empleado = new Empleado();
             repositorio = new RepositorioEmpleado();
             repositorioTiposDoc = new RepositorioTiposDoc();
+            repositorioEstacion = new RepositorioEstacion();
         }
         public AgregarEmpleado(FormularioABMEmpleado form)
         {
@@ -32,6 +34,7 @@ namespace TP_PAV_3k2.Formularios.Empleados
             empleado = new Empleado();
             repositorio = new RepositorioEmpleado();
             repositorioTiposDoc = new RepositorioTiposDoc();
+            repositorioEstacion = new RepositorioEstacion();
             this.form = form;
         }
 
@@ -59,6 +62,16 @@ namespace TP_PAV_3k2.Formularios.Empleados
             
             empleado.fechaNacimiento = dateFechaNacimiento.Value.Date;
             empleado.fechaAlta = DateTime.Today;
+            
+            if(cmbEstaciones.SelectedValue==null)
+            {
+                MessageBox.Show("debe seleccionar un cuit");
+                return;
+            }
+            else
+            {
+                empleado.cuit = cmbEstaciones.SelectedValue.ToString();
+            }
             int legajoSup = -1;
             if (cmbLegajoSup.SelectedValue == null)
             {
@@ -116,10 +129,15 @@ namespace TP_PAV_3k2.Formularios.Empleados
             cmbLegajoSup.DataSource = Legajos;
             cmbLegajoSup.ValueMember ="legajo";
             cmbLegajoSup.DisplayMember = "legajo";
+            Estaciones = repositorioEstacion.ObtenerSucursales();
+            cmbEstaciones.DataSource = Estaciones;
+            cmbEstaciones.ValueMember = "cuit";
+            cmbEstaciones.DisplayMember = "cuit";
             cmbTipoDoc.SelectedIndex = -1;
             cmbLegajoSup.SelectedIndex = -1;
             cmbEstaciones.SelectedIndex = -1;
             dateFechaAlta.Value = DateTime.Today;
+            
 
         }
     }

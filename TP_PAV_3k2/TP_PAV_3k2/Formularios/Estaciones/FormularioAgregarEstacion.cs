@@ -42,6 +42,7 @@ namespace TP_PAV_3k2
         {
             estacion.razonSocial=txtRazonSocial.Text;
             estacion.calle=txtCalle.Text;
+            estacion.cuit = txtCuit.Text;
             int defaul;
             
             estacion.fechaHabilitacion = fechaHabilitación.Value.Date;
@@ -82,10 +83,32 @@ namespace TP_PAV_3k2
                 MessageBox.Show("ingrese fecha valida");
                 return;
             }
+            if (estacion.cuitValido() == false)
+            {
+                MessageBox.Show("ingrese cuit valido");
+                txtCuit.Focus();
+                return;
 
-            repositorio.Guardar(estacion);
-            this.Dispose();
-            form.ActualizarSucursales();
+            }
+            if (repositorio.existeEstacion(estacion.cuit))
+            {
+                repositorio.Guardar(estacion);
+                this.Dispose();
+                form.ActualizarSucursales();
+            }
+            else
+            {
+                MessageBox.Show("ya existe ese cuit");
+                txtCuit.Focus();
+                return;
+            }
+
+            
+        }
+
+        private void FormularioAgregarEstacion_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -17,6 +17,7 @@ namespace TP_PAV_3k2.Formularios.Empleados
         RepositorioEmpleado repositorio;
         Empleado empleado;
         RepositorioTiposDoc repositorioTiposDoc;
+        RepositorioEstacion repositorioEstacion;
 
         public ModificarEmpleado(string legajo)
         {
@@ -24,6 +25,7 @@ namespace TP_PAV_3k2.Formularios.Empleados
             repositorio = new RepositorioEmpleado();
             empleado = repositorio.ObtenerEmpleado(legajo);
             repositorioTiposDoc = new RepositorioTiposDoc();
+            repositorioEstacion = new RepositorioEstacion();
         }
 
         private void ModificarEmpleado_Load(object sender, EventArgs e)
@@ -36,16 +38,22 @@ namespace TP_PAV_3k2.Formularios.Empleados
             dateFechaAlta.Value = empleado.fechaAlta;
             DataTable tiposDoc;
             DataTable Legajos;
+            DataTable Estaciones;
             tiposDoc = repositorioTiposDoc.ObtenerTiposDocumento();
             cmbTipoDoc.DataSource = tiposDoc;
-            cmbTipoDoc.ValueMember = "idTipoDocumento";
+            cmbTipoDoc.ValueMember = "nombre";
             cmbTipoDoc.DisplayMember = "nombre";
             Legajos = repositorio.ObtenerLegajos();
+            Estaciones = repositorioEstacion.ObtenerSucursales();
             cmbLegajoSup.DataSource = Legajos;
             cmbLegajoSup.ValueMember = "legajo";
             cmbLegajoSup.DisplayMember = "legajo";
-            cmbTipoDoc.SelectedValue = repositorio.idTipoDoc(empleado.tipoDoc);
+            cmbEstacion.DataSource = Estaciones;
+            cmbEstacion.ValueMember = "cuit";
+            cmbEstacion.DisplayMember = "cuit";
+            cmbTipoDoc.SelectedValue = empleado.tipoDoc;
             cmbLegajoSup.SelectedValue = empleado.legajoSuperior;
+            cmbEstacion.SelectedValue = empleado.cuit;
                          
         }
 
@@ -60,7 +68,7 @@ namespace TP_PAV_3k2.Formularios.Empleados
             datosEmpleado.legajo = empleado.legajo;
             datosEmpleado.nombre = txtNombre.Text;
             datosEmpleado.apellido = txtApellido.Text;
-            datosEmpleado.tipoDoc = cmbTipoDoc.SelectedText;
+            datosEmpleado.tipoDoc = cmbTipoDoc.SelectedValue.ToString();
             int nroDocumento;
             if (int.TryParse(txtNumero.Text, out nroDocumento))
                 datosEmpleado.nroDoc = nroDocumento;
@@ -72,16 +80,16 @@ namespace TP_PAV_3k2.Formularios.Empleados
                 return;
             }
             datosEmpleado.fechaNacimiento = dateFechaNacimiento.Value.Date;
-            empleado.fechaAlta = dateFechaAlta.Value.Date;
+            datosEmpleado.fechaAlta = dateFechaAlta.Value.Date;
 
             int legajoSup = -1;
             if (cmbLegajoSup.SelectedValue == null)
             {
-                empleado.legajoSuperior = legajoSup;
+                datosEmpleado.legajoSuperior = legajoSup;
             }
             else
             {
-                empleado.legajoSuperior = int.Parse(cmbLegajoSup.SelectedValue.ToString());
+                datosEmpleado.legajoSuperior = int.Parse(cmbLegajoSup.SelectedValue.ToString());
             }
 
             if (datosEmpleado.nombreValido() == false)
@@ -108,12 +116,20 @@ namespace TP_PAV_3k2.Formularios.Empleados
                 MessageBox.Show("ingrese fecha de alta valida");
                 return;
             }
-
-            if (repositorio.Actualizar(datosEmpleado))
+            datosEmpleado.cuit = cmbEstacion.SelectedValue.ToString();
+            /*if(cmbLegajoSup.SelectedValue==null)
             {
-                MessageBox.Show("Se actualizó con éxito");
-                this.Dispose();
-            }
+                MessageBox.Show("funcionabien");
+                return;
+            }*/
+            
+           
+           if (repositorio.Actualizar(datosEmpleado))
+           {
+              MessageBox.Show("Se actualizó con éxito");
+              this.Dispose();
+           }
+            
         }
     }
 }

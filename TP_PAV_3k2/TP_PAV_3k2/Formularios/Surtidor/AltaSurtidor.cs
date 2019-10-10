@@ -8,31 +8,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP_PAV_3k2.Clases;
 using TP_PAV_3k2.Repositorios;
 
 namespace TP_PAV_3k2.Formularios.Surtidor
 {
-    public partial class Surtidor : Form
+    public partial class AltaSurtidor : Form
     {
-        FormularioPrincipal _formularioPrincipal;
+       
         RepositorioSurtidor repositorioSurtidor;
-        public Surtidor()
+        Surtidorr surtidor;
+        ABMSurtidores form;
+        public AltaSurtidor()
         {
             InitializeComponent();
             repositorioSurtidor = new RepositorioSurtidor();
+            form = new ABMSurtidores();
+            surtidor = new Surtidorr();
         }
-        public Surtidor(FormularioPrincipal form)
+
+        public AltaSurtidor(ABMSurtidores form)
         {
             InitializeComponent();
-            repositorioSurtidor = new RepositorioSurtidor();
-            _formularioPrincipal = form;
+            surtidor = new Surtidorr();
+            repositorioSurtidor = new RepositorioSurtidor();            
+            this.form = form;
         }
+
         public void cargarComboTipoCombustible()
         {
             DataTable tablacombo = new DataTable();
             tablacombo=repositorioSurtidor.ObtenerTiposCombustible();
             cmbTipoCombustible.DataSource = tablacombo;
-            cmbTipoCombustible.ValueMember = "idTipoCombustible";
+            cmbTipoCombustible.ValueMember = "nombre";
             cmbTipoCombustible.DisplayMember = "nombre";
         }
         public void cargarComboEstado()
@@ -40,7 +48,7 @@ namespace TP_PAV_3k2.Formularios.Surtidor
             DataTable tablacombo = new DataTable();
             tablacombo = repositorioSurtidor.ObtenerEstados();
             cmbEstado.DataSource = tablacombo;
-            cmbEstado.ValueMember = "idEstado";
+            cmbEstado.ValueMember = "nombre";
             cmbEstado.DisplayMember = "nombre";
         }
         public void cargarComboCuit()
@@ -56,17 +64,46 @@ namespace TP_PAV_3k2.Formularios.Surtidor
             cargarComboTipoCombustible();
             cargarComboEstado();
             cargarComboCuit();
+            cmbCuit.SelectedIndex = -1;
+            cmbEstado.SelectedIndex = -1;
+            cmbTipoCombustible.SelectedIndex = -1;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
-            _formularioPrincipal.Show();
+            this.Dispose();
         }
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
+            if (cmbCuit.SelectedValue == null)
+            {
+                MessageBox.Show("seleccione un cuit valido");
+                return;
+            }
+            else
+            surtidor.cuit = cmbCuit.SelectedValue.ToString();
 
+            if (cmbTipoCombustible.SelectedValue == null)
+            {
+                MessageBox.Show("seleccione un tipo de combustible valido");
+                return;
+            }
+            else
+            surtidor.idTipoCombustible = cmbTipoCombustible.SelectedValue.ToString();
+
+            if (cmbEstado.SelectedValue == null)
+            {
+                MessageBox.Show("seleccione un estado valido");
+                return;
+            }
+            else
+            surtidor.idEstado= cmbEstado.SelectedValue.ToString();
+
+
+            repositorioSurtidor.Guardar(surtidor);
+            this.Dispose();
+            form.ActualizarSurtidores();
         }
     }
 }

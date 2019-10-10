@@ -80,6 +80,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombre);
             this.Name = "AltaEstado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AltaEstado";
             this.ResumeLayout(false);
             this.PerformLayout();

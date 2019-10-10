@@ -165,6 +165,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.bntAceptar);
             this.Name = "ModificarEstaciones";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Estacion";
             this.Load += new System.EventHandler(this.ModificarEstaciones_Load);
             this.ResumeLayout(false);

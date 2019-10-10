@@ -32,24 +32,17 @@
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarSucursalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aBMSurtidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administrarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administrarTiposDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administrarEstadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarTipoCombustibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUnidadDeMedidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUrgenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMSurtidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administrarTiposDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administrarEstadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ticketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSalir = new System.Windows.Forms.Button();
             this.grdEmpleados = new System.Windows.Forms.DataGridView();
-            this.grdEstaciones = new System.Windows.Forms.DataGridView();
-            this.cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.razonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaHabilitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.legajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +51,14 @@
             this.fechaNac = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.legajoSup = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grdEstaciones = new System.Windows.Forms.DataGridView();
+            this.cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.razonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaHabilitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstaciones)).BeginInit();
@@ -79,14 +80,15 @@
             // menuToolStripMenuItem
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarSucursalToolStripMenuItem,
             this.agregarEmpleadoToolStripMenuItem,
-            this.agregarTipoCombustibleToolStripMenuItem,
-            this.agregarUnidadDeMedidaToolStripMenuItem,
-            this.agregarUrgenciaToolStripMenuItem,
+            this.agregarSucursalToolStripMenuItem,
+            this.administrarEstadosToolStripMenuItem,
+            this.administrarProductosToolStripMenuItem,
             this.aBMSurtidorToolStripMenuItem,
             this.administrarTiposDocumentoToolStripMenuItem,
-            this.administrarEstadosToolStripMenuItem});
+            this.agregarTipoCombustibleToolStripMenuItem,
+            this.agregarUnidadDeMedidaToolStripMenuItem,
+            this.agregarUrgenciaToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
@@ -95,7 +97,7 @@
             // 
             this.agregarSucursalToolStripMenuItem.Name = "agregarSucursalToolStripMenuItem";
             this.agregarSucursalToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.agregarSucursalToolStripMenuItem.Text = "Administrar sucursales";
+            this.agregarSucursalToolStripMenuItem.Text = "Administrar estaciones";
             this.agregarSucursalToolStripMenuItem.Click += new System.EventHandler(this.agregarSucursalToolStripMenuItem_Click);
             // 
             // agregarEmpleadoToolStripMenuItem
@@ -104,6 +106,34 @@
             this.agregarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
             this.agregarEmpleadoToolStripMenuItem.Text = "Administrar empleados";
             this.agregarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.agregarEmpleadoToolStripMenuItem_Click);
+            // 
+            // aBMSurtidorToolStripMenuItem
+            // 
+            this.aBMSurtidorToolStripMenuItem.Name = "aBMSurtidorToolStripMenuItem";
+            this.aBMSurtidorToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.aBMSurtidorToolStripMenuItem.Text = "Administrar surtidores";
+            this.aBMSurtidorToolStripMenuItem.Click += new System.EventHandler(this.aBMSurtidorToolStripMenuItem_Click);
+            // 
+            // administrarProductosToolStripMenuItem
+            // 
+            this.administrarProductosToolStripMenuItem.Name = "administrarProductosToolStripMenuItem";
+            this.administrarProductosToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.administrarProductosToolStripMenuItem.Text = "Administrar Productos";
+            this.administrarProductosToolStripMenuItem.Click += new System.EventHandler(this.administrarProductosToolStripMenuItem_Click);
+            // 
+            // administrarTiposDocumentoToolStripMenuItem
+            // 
+            this.administrarTiposDocumentoToolStripMenuItem.Name = "administrarTiposDocumentoToolStripMenuItem";
+            this.administrarTiposDocumentoToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.administrarTiposDocumentoToolStripMenuItem.Text = "Administrar tipos documento";
+            this.administrarTiposDocumentoToolStripMenuItem.Click += new System.EventHandler(this.administrarTiposDocumentoToolStripMenuItem_Click);
+            // 
+            // administrarEstadosToolStripMenuItem
+            // 
+            this.administrarEstadosToolStripMenuItem.Name = "administrarEstadosToolStripMenuItem";
+            this.administrarEstadosToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.administrarEstadosToolStripMenuItem.Text = "Administrar estados";
+            this.administrarEstadosToolStripMenuItem.Click += new System.EventHandler(this.administrarEstadosToolStripMenuItem_Click);
             // 
             // agregarTipoCombustibleToolStripMenuItem
             // 
@@ -125,27 +155,6 @@
             this.agregarUrgenciaToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
             this.agregarUrgenciaToolStripMenuItem.Text = "Administrar urgencias";
             this.agregarUrgenciaToolStripMenuItem.Click += new System.EventHandler(this.agregarUrgenciaToolStripMenuItem_Click);
-            // 
-            // aBMSurtidorToolStripMenuItem
-            // 
-            this.aBMSurtidorToolStripMenuItem.Name = "aBMSurtidorToolStripMenuItem";
-            this.aBMSurtidorToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.aBMSurtidorToolStripMenuItem.Text = "Administrar surtidores";
-            this.aBMSurtidorToolStripMenuItem.Click += new System.EventHandler(this.aBMSurtidorToolStripMenuItem_Click);
-            // 
-            // administrarTiposDocumentoToolStripMenuItem
-            // 
-            this.administrarTiposDocumentoToolStripMenuItem.Name = "administrarTiposDocumentoToolStripMenuItem";
-            this.administrarTiposDocumentoToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.administrarTiposDocumentoToolStripMenuItem.Text = "Administrar tipos documento";
-            this.administrarTiposDocumentoToolStripMenuItem.Click += new System.EventHandler(this.administrarTiposDocumentoToolStripMenuItem_Click);
-            // 
-            // administrarEstadosToolStripMenuItem
-            // 
-            this.administrarEstadosToolStripMenuItem.Name = "administrarEstadosToolStripMenuItem";
-            this.administrarEstadosToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.administrarEstadosToolStripMenuItem.Text = "Administrar estados";
-            this.administrarEstadosToolStripMenuItem.Click += new System.EventHandler(this.administrarEstadosToolStripMenuItem_Click);
             // 
             // ordenDeCompraToolStripMenuItem
             // 
@@ -187,69 +196,6 @@
             this.grdEmpleados.Size = new System.Drawing.Size(868, 142);
             this.grdEmpleados.TabIndex = 4;
             this.grdEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdEmpleados_CellContentClick);
-            // 
-            // grdEstaciones
-            // 
-            this.grdEstaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdEstaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.cuit,
-            this.razonSocial,
-            this.calle,
-            this.numero,
-            this.fechaHabilitacion});
-            this.grdEstaciones.Location = new System.Drawing.Point(39, 81);
-            this.grdEstaciones.Name = "grdEstaciones";
-            this.grdEstaciones.ReadOnly = true;
-            this.grdEstaciones.Size = new System.Drawing.Size(869, 141);
-            this.grdEstaciones.TabIndex = 5;
-            // 
-            // cuit
-            // 
-            this.cuit.HeaderText = "Cuit";
-            this.cuit.Name = "cuit";
-            this.cuit.ReadOnly = true;
-            // 
-            // razonSocial
-            // 
-            this.razonSocial.HeaderText = "Razon Social";
-            this.razonSocial.Name = "razonSocial";
-            this.razonSocial.ReadOnly = true;
-            // 
-            // calle
-            // 
-            this.calle.HeaderText = "Calle";
-            this.calle.Name = "calle";
-            this.calle.ReadOnly = true;
-            // 
-            // numero
-            // 
-            this.numero.HeaderText = "Numero";
-            this.numero.Name = "numero";
-            this.numero.ReadOnly = true;
-            // 
-            // fechaHabilitacion
-            // 
-            this.fechaHabilitacion.HeaderText = "Fecha De Habilitacion";
-            this.fechaHabilitacion.Name = "fechaHabilitacion";
-            this.fechaHabilitacion.ReadOnly = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Estaciones Registradas";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 225);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Empleados Registrados";
             // 
             // legajo
             // 
@@ -298,6 +244,71 @@
             this.legajoSup.HeaderText = "Legajo de superior";
             this.legajoSup.Name = "legajoSup";
             this.legajoSup.ReadOnly = true;
+            // 
+            // grdEstaciones
+            // 
+            this.grdEstaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdEstaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cuit,
+            this.razonSocial,
+            this.calle,
+            this.numero,
+            this.fechaHabilitacion});
+            this.grdEstaciones.Location = new System.Drawing.Point(39, 81);
+            this.grdEstaciones.Name = "grdEstaciones";
+            this.grdEstaciones.ReadOnly = true;
+            this.grdEstaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdEstaciones.Size = new System.Drawing.Size(869, 141);
+            this.grdEstaciones.TabIndex = 5;
+            this.grdEstaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstaciones_CellClick_1);
+            // 
+            // cuit
+            // 
+            this.cuit.HeaderText = "Cuit";
+            this.cuit.Name = "cuit";
+            this.cuit.ReadOnly = true;
+            // 
+            // razonSocial
+            // 
+            this.razonSocial.HeaderText = "Razon Social";
+            this.razonSocial.Name = "razonSocial";
+            this.razonSocial.ReadOnly = true;
+            // 
+            // calle
+            // 
+            this.calle.HeaderText = "Calle";
+            this.calle.Name = "calle";
+            this.calle.ReadOnly = true;
+            // 
+            // numero
+            // 
+            this.numero.HeaderText = "Numero";
+            this.numero.Name = "numero";
+            this.numero.ReadOnly = true;
+            // 
+            // fechaHabilitacion
+            // 
+            this.fechaHabilitacion.HeaderText = "Fecha De Habilitacion";
+            this.fechaHabilitacion.Name = "fechaHabilitacion";
+            this.fechaHabilitacion.ReadOnly = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Estaciones Registradas";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(37, 225);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Empleados Registrados";
             // 
             // FormularioPrincipal
             // 
@@ -357,5 +368,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaNac;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaAlta;
         private System.Windows.Forms.DataGridViewTextBoxColumn legajoSup;
+        private System.Windows.Forms.ToolStripMenuItem administrarProductosToolStripMenuItem;
     }
 }

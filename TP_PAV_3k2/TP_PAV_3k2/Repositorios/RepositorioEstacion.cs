@@ -29,8 +29,8 @@ namespace TP_PAV_3k2.Repositorios
 
         public bool Guardar(Estacion estacion)
         {
-            string sqltxt = $"INSERT dbo.Estacion (razonSocial, calle, numero, fechaHabilitacion)" +
-                $"VALUES ('{estacion.razonSocial}', '{estacion.calle}', '{estacion.numero}', '{estacion.ReturnFechaHabilitacion()}')";
+            string sqltxt = $"INSERT dbo.Estacion (cuit, razonSocial, calle, numero, fechaHabilitacion)" +
+                $"VALUES ('{estacion.cuit}', '{estacion.razonSocial}', '{estacion.calle}', '{estacion.numero}', '{estacion.ReturnFechaHabilitacion()}')";
 
             return _BD.EjecutarSQL(sqltxt);
         }
@@ -55,7 +55,7 @@ namespace TP_PAV_3k2.Repositorios
                 DateTime fecha;
                 if (fila.HasErrors)
                     continue;
-                estacion.cuit = int.Parse(fila.ItemArray[0].ToString());
+                estacion.cuit = fila.ItemArray[0].ToString();
                 estacion.razonSocial = fila.ItemArray[1].ToString();
                 estacion.calle = fila.ItemArray[2].ToString();
                 estacion.numero = int.Parse(fila.ItemArray[3].ToString());
@@ -65,10 +65,20 @@ namespace TP_PAV_3k2.Repositorios
             }
             return estacion;
         }
+        public bool existeEstacion(string estacionID)
+        {
+            string sqltxt = $"SELECT * FROM dbo.Estacion WHERE cuit={estacionID}";
+            var tablaTemporal = _BD.consulta(sqltxt);
+
+            if (tablaTemporal.Rows.Count == 0)
+                return true;
+            else
+                return false;
+        }
 
         public bool Actualizar(Estacion estacion)
         {
-            string sqltxt = $"UPDATE dbo.Estacion SET razonSocial = '{estacion.razonSocial}', " +
+            string sqltxt = $"UPDATE dbo.Estacion SET cuit= '{estacion.cuit}', razonSocial = '{estacion.razonSocial}', " +
                 $"calle = '{estacion.calle}', numero= '{estacion.numero}', fechaHabilitacion = '{estacion.fechaHabilitacion.ToString("yyyy-MM-dd")}'  WHERE cuit={estacion.cuit}";
 
             return _BD.EjecutarSQL(sqltxt);

@@ -39,7 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.fechaHabilitación = new System.Windows.Forms.DateTimePicker();
             this.lblcuit = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCuit = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // bntAceptar
@@ -47,7 +47,7 @@
             this.bntAceptar.Location = new System.Drawing.Point(12, 160);
             this.bntAceptar.Name = "bntAceptar";
             this.bntAceptar.Size = new System.Drawing.Size(140, 67);
-            this.bntAceptar.TabIndex = 2;
+            this.bntAceptar.TabIndex = 5;
             this.bntAceptar.Text = "Aceptar";
             this.bntAceptar.UseVisualStyleBackColor = true;
             this.bntAceptar.Click += new System.EventHandler(this.BntAceptar_Click);
@@ -57,7 +57,7 @@
             this.btnSalir.Location = new System.Drawing.Point(242, 160);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(140, 67);
-            this.btnSalir.TabIndex = 3;
+            this.btnSalir.TabIndex = 6;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -68,7 +68,7 @@
             this.txtRazonSocial.MaxLength = 20;
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.Size = new System.Drawing.Size(200, 20);
-            this.txtRazonSocial.TabIndex = 4;
+            this.txtRazonSocial.TabIndex = 1;
             // 
             // txtNumeroCalle
             // 
@@ -76,7 +76,7 @@
             this.txtNumeroCalle.MaxLength = 10;
             this.txtNumeroCalle.Name = "txtNumeroCalle";
             this.txtNumeroCalle.Size = new System.Drawing.Size(200, 20);
-            this.txtNumeroCalle.TabIndex = 5;
+            this.txtNumeroCalle.TabIndex = 3;
             // 
             // txtCalle
             // 
@@ -84,7 +84,7 @@
             this.txtCalle.MaxLength = 20;
             this.txtCalle.Name = "txtCalle";
             this.txtCalle.Size = new System.Drawing.Size(200, 20);
-            this.txtCalle.TabIndex = 6;
+            this.txtCalle.TabIndex = 2;
             // 
             // label2
             // 
@@ -128,7 +128,7 @@
             this.fechaHabilitación.MaxDate = new System.DateTime(2100, 1, 25, 23, 59, 59, 0);
             this.fechaHabilitación.Name = "fechaHabilitación";
             this.fechaHabilitación.Size = new System.Drawing.Size(200, 20);
-            this.fechaHabilitación.TabIndex = 13;
+            this.fechaHabilitación.TabIndex = 4;
             this.fechaHabilitación.Value = new System.DateTime(2019, 9, 23, 1, 2, 50, 0);
             // 
             // lblcuit
@@ -140,12 +140,12 @@
             this.lblcuit.TabIndex = 14;
             this.lblcuit.Text = "CUIT";
             // 
-            // textBox1
+            // txtCuit
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 15;
+            this.txtCuit.Location = new System.Drawing.Point(182, 10);
+            this.txtCuit.Name = "txtCuit";
+            this.txtCuit.Size = new System.Drawing.Size(200, 20);
+            this.txtCuit.TabIndex = 0;
             // 
             // FormularioAgregarEstacion
             // 
@@ -153,7 +153,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(394, 232);
             this.ControlBox = false;
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCuit);
             this.Controls.Add(this.lblcuit);
             this.Controls.Add(this.fechaHabilitación);
             this.Controls.Add(this.label5);
@@ -169,6 +169,7 @@
             this.Name = "FormularioAgregarEstacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Estación";
+            this.Load += new System.EventHandler(this.FormularioAgregarEstacion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,6 +188,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker fechaHabilitación;
         private System.Windows.Forms.Label lblcuit;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCuit;
     }
 }

@@ -89,7 +89,7 @@
             this.cmbEstaciones.Location = new System.Drawing.Point(119, 208);
             this.cmbEstaciones.Name = "cmbEstaciones";
             this.cmbEstaciones.Size = new System.Drawing.Size(203, 21);
-            this.cmbEstaciones.TabIndex = 42;
+            this.cmbEstaciones.TabIndex = 5;
             // 
             // cmbLegajoSup
             // 
@@ -98,7 +98,7 @@
             this.cmbLegajoSup.Location = new System.Drawing.Point(119, 181);
             this.cmbLegajoSup.Name = "cmbLegajoSup";
             this.cmbLegajoSup.Size = new System.Drawing.Size(203, 21);
-            this.cmbLegajoSup.TabIndex = 36;
+            this.cmbLegajoSup.TabIndex = 4;
             // 
             // label8
             // 
@@ -115,7 +115,7 @@
             this.txtNombre.MaxLength = 15;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(200, 20);
-            this.txtNombre.TabIndex = 22;
+            this.txtNombre.TabIndex = 0;
             // 
             // dateFechaAlta
             // 
@@ -131,7 +131,7 @@
             this.txtNumero.MaxLength = 10;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(200, 20);
-            this.txtNumero.TabIndex = 23;
+            this.txtNumero.TabIndex = 3;
             // 
             // label7
             // 
@@ -148,7 +148,7 @@
             this.txtApellido.MaxLength = 15;
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(200, 20);
-            this.txtApellido.TabIndex = 24;
+            this.txtApellido.TabIndex = 1;
             // 
             // label6
             // 
@@ -166,12 +166,12 @@
             this.cmbTipoDoc.Location = new System.Drawing.Point(166, 81);
             this.cmbTipoDoc.Name = "cmbTipoDoc";
             this.cmbTipoDoc.Size = new System.Drawing.Size(153, 21);
-            this.cmbTipoDoc.TabIndex = 25;
+            this.cmbTipoDoc.TabIndex = 2;
             // 
             // dateFechaNacimiento
             // 
             this.dateFechaNacimiento.Location = new System.Drawing.Point(119, 134);
-            this.dateFechaNacimiento.MaxDate = new System.DateTime(2019, 8, 21, 0, 0, 0, 0);
+            this.dateFechaNacimiento.MaxDate = new System.DateTime(2019, 10, 5, 0, 0, 0, 0);
             this.dateFechaNacimiento.Name = "dateFechaNacimiento";
             this.dateFechaNacimiento.Size = new System.Drawing.Size(200, 20);
             this.dateFechaNacimiento.TabIndex = 31;
@@ -228,7 +228,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(12, 281);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 40;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -242,6 +242,7 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.panel1);
             this.Name = "AgregarEmpleado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AgregarEmpleado";
             this.Load += new System.EventHandler(this.AgregarEmpleado_Load);
             this.panel1.ResumeLayout(false);

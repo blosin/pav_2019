@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbEstacion = new System.Windows.Forms.ComboBox();
             this.lblLegajo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbLegajoSup = new System.Windows.Forms.ComboBox();
@@ -52,6 +54,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.cmbEstacion);
             this.panel1.Controls.Add(this.lblLegajo);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cmbLegajoSup);
@@ -72,6 +76,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(322, 263);
             this.panel1.TabIndex = 38;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(20, 216);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(48, 13);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "Estacion";
+            // 
+            // cmbEstacion
+            // 
+            this.cmbEstacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstacion.FormattingEnabled = true;
+            this.cmbEstacion.Location = new System.Drawing.Point(119, 208);
+            this.cmbEstacion.Name = "cmbEstacion";
+            this.cmbEstacion.Size = new System.Drawing.Size(203, 21);
+            this.cmbEstacion.TabIndex = 40;
             // 
             // lblLegajo
             // 
@@ -170,7 +192,7 @@
             // dateFechaNacimiento
             // 
             this.dateFechaNacimiento.Location = new System.Drawing.Point(119, 134);
-            this.dateFechaNacimiento.MaxDate = new System.DateTime(2019, 8, 21, 0, 0, 0, 0);
+            this.dateFechaNacimiento.MaxDate = new System.DateTime(2210, 12, 30, 0, 0, 0, 0);
             this.dateFechaNacimiento.Name = "dateFechaNacimiento";
             this.dateFechaNacimiento.Size = new System.Drawing.Size(200, 20);
             this.dateFechaNacimiento.TabIndex = 31;
@@ -241,6 +263,7 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.panel1);
             this.Name = "ModificarEmpleado";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModificarEmpleado";
             this.Load += new System.EventHandler(this.ModificarEmpleado_Load);
             this.panel1.ResumeLayout(false);
@@ -270,5 +293,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblLegajo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cmbEstacion;
     }
 }

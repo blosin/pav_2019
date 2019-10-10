@@ -49,6 +49,8 @@
     <Compile Include="Clases\Empleado.cs" />
     <Compile Include="Clases\Estacion.cs" />
     <Compile Include="Clases\Estadoss.cs" />
+    <Compile Include="Clases\Productoo.cs" />
+    <Compile Include="Clases\Surtidorr.cs" />
     <Compile Include="Clases\TipoDocumento.cs" />
     <Compile Include="Formularios\Empleados\AgregarEmpleado.cs">
       <SubType>Form</SubType>
@@ -68,11 +70,29 @@
     <Compile Include="Formularios\Estaciones\ModificarEstaciones.Designer.cs">
       <DependentUpon>ModificarEstaciones.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Producto\Productos.cs">
+    <Compile Include="Formularios\Producto\ABMProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Producto\Productos.Designer.cs">
-      <DependentUpon>Productos.cs</DependentUpon>
+    <Compile Include="Formularios\Producto\ABMProductos.Designer.cs">
+      <DependentUpon>ABMProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Producto\ActualizarStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Producto\ActualizarStock.Designer.cs">
+      <DependentUpon>ActualizarStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Producto\AltaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Producto\AltaProductos.Designer.cs">
+      <DependentUpon>AltaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Producto\ModificarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Producto\ModificarProducto.Designer.cs">
+      <DependentUpon>ModificarProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Soporte\Estados\ABMEstados.cs">
       <SubType>Form</SubType>
@@ -134,11 +154,17 @@
     <Compile Include="Formularios\Surtidor\ABMSurtidores.Designer.cs">
       <DependentUpon>ABMSurtidores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Surtidor\Surtidor.cs">
+    <Compile Include="Formularios\Surtidor\AltaSurtidor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Surtidor\Surtidor.Designer.cs">
-      <DependentUpon>Surtidor.cs</DependentUpon>
+    <Compile Include="Formularios\Surtidor\AltaSurtidor.Designer.cs">
+      <DependentUpon>AltaSurtidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Surtidor\ModificarSurtidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Surtidor\ModificarSurtidor.Designer.cs">
+      <DependentUpon>ModificarSurtidor.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\AccesoDB.cs" />
     <Compile Include="Formularios\Soporte\TipoCombustible\ModificarTipoCombustible.cs">
@@ -162,6 +188,7 @@
     <Compile Include="Repositorios\RepositorioEmpleado.cs" />
     <Compile Include="Repositorios\RepositorioEstados.cs" />
     <Compile Include="Repositorios\RepositorioEstacion.cs" />
+    <Compile Include="Repositorios\RepositorioProductos.cs" />
     <Compile Include="Repositorios\RepositorioSurtidor.cs" />
     <Compile Include="Repositorios\RepositorioTiposDoc.cs" />
     <Compile Include="Repositorios\RepositorioUnidadDeMedida.cs" />
@@ -194,11 +221,11 @@
     <Compile Include="Formularios\Empleados\FormularioABMEmpleado.Designer.cs">
       <DependentUpon>FormularioABMEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Estaciones\FormularioABMSucursal.cs">
+    <Compile Include="Formularios\Estaciones\FormularioABMSEstaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Estaciones\FormularioABMSucursal.Designer.cs">
-      <DependentUpon>FormularioABMSucursal.cs</DependentUpon>
+    <Compile Include="Formularios\Estaciones\FormularioABMSEstaciones.Designer.cs">
+      <DependentUpon>FormularioABMSEstaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Estaciones\FormularioAgregarEstacion.cs">
       <SubType>Form</SubType>
@@ -229,8 +256,17 @@
     <EmbeddedResource Include="Formularios\Estaciones\ModificarEstaciones.resx">
       <DependentUpon>ModificarEstaciones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Producto\Productos.resx">
-      <DependentUpon>Productos.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Producto\ABMProductos.resx">
+      <DependentUpon>ABMProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Producto\ActualizarStock.resx">
+      <DependentUpon>ActualizarStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Producto\AltaProductos.resx">
+      <DependentUpon>AltaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Producto\ModificarProducto.resx">
+      <DependentUpon>ModificarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Soporte\Estados\ABMEstados.resx">
       <DependentUpon>ABMEstados.cs</DependentUpon>
@@ -265,8 +301,8 @@
     <EmbeddedResource Include="Formularios\Empleados\FormularioABMEmpleado.resx">
       <DependentUpon>FormularioABMEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Estaciones\FormularioABMSucursal.resx">
-      <DependentUpon>FormularioABMSucursal.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Estaciones\FormularioABMSEstaciones.resx">
+      <DependentUpon>FormularioABMSEstaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estaciones\FormularioAgregarEstacion.resx">
       <DependentUpon>FormularioAgregarEstacion.cs</DependentUpon>
@@ -286,8 +322,11 @@
     <EmbeddedResource Include="Formularios\Surtidor\ABMSurtidores.resx">
       <DependentUpon>ABMSurtidores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\Surtidor\Surtidor.resx">
-      <DependentUpon>Surtidor.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\Surtidor\AltaSurtidor.resx">
+      <DependentUpon>AltaSurtidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Surtidor\ModificarSurtidor.resx">
+      <DependentUpon>ModificarSurtidor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaLogIn.resx">
       <DependentUpon>PantallaLogIn.cs</DependentUpon>

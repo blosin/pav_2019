@@ -12,6 +12,7 @@ using TP_PAV_3k2.Formularios.Surtidor;
 using TP_PAV_3k2.Repositorios;
 using TP_PAV_3k2.Formularios.Soporte.Estado;
 using TP_PAV_3k2.Formularios.Soporte.TipoDocumentos;
+using TP_PAV_3k2.Formularios.Producto;
 
 namespace TP_PAV_3k2
 {
@@ -53,7 +54,7 @@ namespace TP_PAV_3k2
         private void FormularioPrincipal_Load(object sender, EventArgs e)
         {
             ActualizarSucursales();
-            ActualizarEmpleados();
+            
             /*//Inicializo las columnas de la grid de Estaciones Registradas.
             grdEstaciones.Columns.Add("clmCUIT","CUIT");
             grdEstaciones.Columns.Add("clmRazonSocial", "Razon Social");
@@ -70,10 +71,10 @@ namespace TP_PAV_3k2
             grdEmpleados.Columns.Add("clmFechaNac", "Fecha de Nacimiento");
             grdEmpleados.Columns.Add("clmFechaAlta", "Fecha de Alta");*/
         }
-        public void ActualizarEmpleados()
+        public void ActualizarEmpleados(string cuit)
         {
             grdEmpleados.Rows.Clear();
-            var empleados = repositorioEmpleados.ObtenerEmpleados().Rows;
+            var empleados = repositorioEmpleados.ObtenerEmpleadosSucursal(cuit).Rows;
             ActualizarGrillaEmpleados(empleados);
         }
         private void ActualizarGrillaEmpleados(DataRowCollection registros)
@@ -102,9 +103,9 @@ namespace TP_PAV_3k2
         {
             grdEstaciones.Rows.Clear();
             var sucursales = repositorio.ObtenerSucursales().Rows;
-            ActualizarGrilla(sucursales);
+            ActualizarGrillaEstaciones(sucursales);
         }
-        private void ActualizarGrilla(DataRowCollection registros)
+        private void ActualizarGrillaEstaciones(DataRowCollection registros)
         {
             foreach (DataRow registro in registros)
             {
@@ -155,9 +156,8 @@ namespace TP_PAV_3k2
 
         private void aBMSurtidorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var surtidor = new Surtidor(this);
-            surtidor.Show();
-            this.Hide();
+            Form formulario = new ABMSurtidores();
+            formulario.ShowDialog();
 
         }
 
@@ -183,6 +183,25 @@ namespace TP_PAV_3k2
             var estados = new ABMEstado(this);
             estados.Show();
             this.Hide();
+        }
+
+        
+
+        
+
+        private void grdEstaciones_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = grdEstaciones.Rows[e.RowIndex];
+            String cuit = row.Cells["cuit"].Value.ToString();
+
+            ActualizarEmpleados(cuit);
+
+        }
+
+        private void administrarProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario = new ABMProductos();
+            formulario.ShowDialog();
         }
     }
 }

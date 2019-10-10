@@ -5,6 +5,7 @@ using System.Data.OleDb;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TP_PAV_3k2.Clases;
 
 namespace TP_PAV_3k2.Repositorios
 {
@@ -37,7 +38,57 @@ namespace TP_PAV_3k2.Repositorios
 
             return _BD.consulta(sqltxt);
         }
+        public DataTable ObtenerSurtidores()
+        {            
+            string sqltxt = "SELECT a.numeroSurtidor, a.cuit, b.nombre, c.nombre FROM Surtidor a, Estado b, TipoCombustible c WHERE a.idEstado=b.idEstado AND a.idTipoCombustible=c.idTipoCombustible";
 
+            return _BD.consulta(sqltxt);
+        }
+
+        public bool Guardar(Surtidorr surtidor)
+        {
+            string sqltxt =$"INSERT dbo.Surtidor (cuit, idEstado, idTipoCombustible)" +
+                    $"VALUES ('{surtidor.cuit}', (SELECT idEstado FROM Estado WHERE nombre='{surtidor.idEstado}'), (SELECT idTipoCombustible FROM TipoCombustible WHERE nombre='{surtidor.idTipoCombustible}'))";
+            
+            return _BD.EjecutarSQL(sqltxt);
+        }
+
+        public bool Eliminar(string numeroSurtidor)
+        {
+            string sqltxt = $"DELETE FROM [dbo].[Surtidor] WHERE numeroSurtidor = {numeroSurtidor}";
+
+            return _BD.EjecutarSQL(sqltxt);
+        }
+
+        public Surtidorr ObtenerSurtidor(string numeroSurtidor)
+        {
+            // a.numeroSurtidor, a.cuit, b.nombre, c.nombre FROM Surtidor a, Estado b, TipoCombustible c WHERE a.idEstado=b.idEstado AND a.idTipoCombustible=c.idTipoCombustible"
+            string sqltxt = $"SELECT a.numeroSurtidor, a.cuit, b.nombre, c.nombre FROM Surtidor a, Estado b, TipoCombustible c WHERE a.idEstado=b.idEstado AND a.idTipoCombustible=c.idTipoCombustible AND a.numeroSurtidor={numeroSurtidor}";
+            var tablaTemporal = _BD.consulta(sqltxt);
+
+            if (tablaTemporal.Rows.Count == 0)
+                return null;
+            var surtidor = new Surtidorr();
+            foreach (DataRow fila in tablaTemporal.Rows)
+            {
+                if (fila.HasErrors)
+                    continue;
+                surtidor.numeroSurtidor = int.Parse(fila.ItemArray[0].ToString());
+                surtidor.cuit = fila.ItemArray[1].ToString();
+                surtidor.idEstado= fila.ItemArray[2].ToString();
+                surtidor.idTipoCombustible = fila.ItemArray[3].ToString();
+                
+            }
+            return surtidor;
+        }
+
+        public bool Actualizar(Surtidorr surtidor)
+        {
+            string sqltxt= $"UPDATE dbo.Surtidor SET cuit = '{surtidor.cuit}', idEstado = (SELECT idEstado FROM Estado WHERE nombre='{surtidor.idEstado}'), idTipoCombustible= (SELECT idTipoCombustible FROM TipoCombustible WHERE nombre='{surtidor.idTipoCombustible}')" +
+                $" WHERE numeroSurtidor={surtidor.numeroSurtidor}";
+            
+            return _BD.EjecutarSQL(sqltxt);
+        }
 
     }
 }

@@ -101,6 +101,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
             this.Name = "ModificarTipoDocumento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ModificarTipoDocumento";
             this.Load += new System.EventHandler(this.ModificarTipoDocumento_Load);
             this.ResumeLayout(false);

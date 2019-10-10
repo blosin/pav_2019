@@ -112,6 +112,7 @@
             this.Controls.Add(this.btnAlta);
             this.Controls.Add(this.dgvTiposDocumento);
             this.Name = "fmTipoDocumento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tipos Documento";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fmTipoDocumento_FormClosing);
             this.Load += new System.EventHandler(this.fmTipoDocumento_Load);
