@@ -70,6 +70,12 @@
     <Compile Include="Formularios\Estaciones\ModificarEstaciones.Designer.cs">
       <DependentUpon>ModificarEstaciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\OrdenDeCompra\OrdenDeCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\OrdenDeCompra\OrdenDeCompra.Designer.cs">
+      <DependentUpon>OrdenDeCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Producto\ABMProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,12 @@
     <Compile Include="Formularios\Surtidor\ModificarSurtidor.Designer.cs">
       <DependentUpon>ModificarSurtidor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Tickets\Ticket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tickets\Ticket.Designer.cs">
+      <DependentUpon>Ticket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper\AccesoDB.cs" />
     <Compile Include="Formularios\Soporte\TipoCombustible\ModificarTipoCombustible.cs">
       <SubType>Form</SubType>
@@ -256,6 +268,9 @@
     <EmbeddedResource Include="Formularios\Estaciones\ModificarEstaciones.resx">
       <DependentUpon>ModificarEstaciones.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\OrdenDeCompra\OrdenDeCompra.resx">
+      <DependentUpon>OrdenDeCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Producto\ABMProductos.resx">
       <DependentUpon>ABMProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +343,9 @@
     <EmbeddedResource Include="Formularios\Surtidor\ModificarSurtidor.resx">
       <DependentUpon>ModificarSurtidor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Tickets\Ticket.resx">
+      <DependentUpon>Ticket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallaLogIn.resx">
       <DependentUpon>PantallaLogIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -362,8 +380,6 @@
   <ItemGroup>
     <Folder Include="Formularios\DetalleOrdenCompra\" />
     <Folder Include="Formularios\detalleTicket\" />
-    <Folder Include="Formularios\OrdenDeCompra\" />
-    <Folder Include="Formularios\Tickets\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
