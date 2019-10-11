@@ -24,7 +24,12 @@ namespace TP_PAV_3k2.Formularios.Tickets
 
         private void AltaTicket_Load(object sender, EventArgs e)
         {
+            LblFechaHoy.Text = DateTime.Today.ToString("dd/MM/yyyy");
+        }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

@@ -14,6 +14,7 @@ using TP_PAV_3k2.Formularios.Soporte.Estado;
 using TP_PAV_3k2.Formularios.Soporte.TipoDocumentos;
 using TP_PAV_3k2.Formularios.Producto;
 using TP_PAV_3k2.Formularios.OrdenDeCompra;
+using TP_PAV_3k2.Formularios.Tickets;
 
 namespace TP_PAV_3k2
 {
@@ -208,6 +209,12 @@ namespace TP_PAV_3k2
         private void ordenDeCompraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OrdenDeCompra formulario = new OrdenDeCompra();
+            formulario.ShowDialog();
+        }
+
+        private void ticketToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Ticket formulario = new Ticket();
             formulario.ShowDialog();
         }
     }

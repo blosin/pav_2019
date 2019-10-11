@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_PAV_3k2.Clases
 {
-    class OrdenDeCompraa
+    public class OrdenDeCompraa
     {
         public int numeroOrdenCompra { get; set; }
 
@@ -20,7 +20,13 @@ namespace TP_PAV_3k2.Clases
 
         public float MontoFinal { get; set; }
 
-        public void Validar()
+        public OrdenDeCompraa()
+        {
+
+        }
+
+
+            public void Validar()
         {
             if (string.IsNullOrEmpty(legajo.ToString()))
                 throw new ApplicationException("Ingrese legajo valido");

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_PAV_3k2.Clases
 {
-    class Productoo
+    public class Productoo
     {
         public int Id { get; set; }
         public string Nombre { get; set; }

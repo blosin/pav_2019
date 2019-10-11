@@ -16,5 +16,16 @@ namespace TP_PAV_3k2.Formularios.Tickets
         {
             InitializeComponent();
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            AltaTicket form = new AltaTicket();
+            form.ShowDialog();
+        }
     }
 }

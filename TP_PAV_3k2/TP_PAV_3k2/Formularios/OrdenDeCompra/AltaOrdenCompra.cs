@@ -18,12 +18,15 @@ namespace TP_PAV_3k2.Formularios.OrdenDeCompra
         RepositorioEstacion repositorioEstacion;
         RepositorioProductos repositorioProductos;
         RepositorioOrdenDeCompra repositorio;
+        
         public AltaOrdenCompra()
         {
             InitializeComponent();
             repositorioEmpleado = new RepositorioEmpleado();
             repositorioEstacion = new RepositorioEstacion();
             repositorioProductos = new RepositorioProductos();
+            repositorio = new RepositorioOrdenDeCompra();
+            
 
         }
 
@@ -119,16 +122,15 @@ namespace TP_PAV_3k2.Formularios.OrdenDeCompra
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            try
+           try
             {
-                var OrdenCompra = new OrdenDeCompraa()
-                {
-                    legajo = int.Parse(cmbEmpleados.SelectedValue.ToString()),
-                    fecha = DateTime.Today,
-                    cuitSolicitante= cmbCuits.SelectedValue.ToString(),
-                    detalleOrdenCompra = PreparaDetallesOrden(),
-                    MontoFinal = string.IsNullOrEmpty(TxtTotal.Text) ? 0 : float.Parse(TxtTotal.Text)
-                };
+                var OrdenCompra = new OrdenDeCompraa();
+                OrdenCompra.legajo = int.Parse(cmbEmpleados.SelectedValue.ToString());
+                OrdenCompra.fecha = DateTime.Today;
+                OrdenCompra.cuitSolicitante = cmbCuits.SelectedValue.ToString();
+                OrdenCompra.detalleOrdenCompra = PreparaDetallesOrden();
+                OrdenCompra.MontoFinal = string.IsNullOrEmpty(TxtTotal.Text) ? 0 : float.Parse(TxtTotal.Text);
+                
                 OrdenCompra.Validar();
                 repositorio.Guardar(OrdenCompra);
                 MessageBox.Show("La operación se realizó con exito");
@@ -141,8 +143,8 @@ namespace TP_PAV_3k2.Formularios.OrdenDeCompra
             catch (Exception ex)
             {
 
-                MessageBox.Show("Ocurrio un error inesperado");
-            }
+                MessageBox.Show("Ocurrio un error inesperado: "+ ex);
+           }
         }
 
         public List<DetalleOrdenCompraa> PreparaDetallesOrden()
@@ -157,9 +159,10 @@ namespace TP_PAV_3k2.Formularios.OrdenDeCompra
                     continue;
                 var detalle = new DetalleOrdenCompraa()
                 {
-                    Cantidad = int.Parse(fila.Cells["Cantidad"].Value.ToString()),
-                    PrecioUnitario = decimal.Parse(fila.Cells["PrecioUnitario"].Value.ToString()),
-                    Pelicula = new Pelicula() { Id = int.Parse(fila.Cells["Codigo"].Value.ToString()) }
+                    cantidad = int.Parse(fila.Cells["cantidad"].Value.ToString()),
+                    precio = fila.Cells["PrecioDeVenta"].Value.ToString(),
+                    unidadMedida=fila.Cells["unidadDeMedida"]?.Value.ToString(),                    
+                    producto = new Productoo() { Id = int.Parse(fila.Cells["id"].Value.ToString()) }
                 };
                 detalles.Add(detalle);
             }

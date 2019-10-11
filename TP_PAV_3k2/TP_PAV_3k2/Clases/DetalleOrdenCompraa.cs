@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace TP_PAV_3k2.Clases
 {
-    class DetalleOrdenCompraa
+    public class DetalleOrdenCompraa
     {
         public int numDetalleOrden { get; set; }
 
-        public int numOrdenCompra { get; set; }
+        public OrdenDeCompraa numOrdenCompra { get; set; }
 
         public Productoo producto { get; set; }
 
         public int cantidad { get; set; }
 
-        public UnidadDeMedida unidadMedida { get; set; }
+        public string unidadMedida { get; set; }
 
         public string precio { get; set; }
 

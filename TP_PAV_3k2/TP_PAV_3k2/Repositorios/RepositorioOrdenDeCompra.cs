@@ -48,7 +48,7 @@ namespace TP_PAV_3k2.Repositorios
                     {
                         sqltxt = $"INSERT [dbo].[DetalleOrdenCompra] " +
                             $"([numOrdenCompra], [idProducto], [Cantidad], [idUnidadMedida], [precio], [idUrgencia]) " +
-                            $"VALUES ({v.numeroOrdenCompra}, {d.producto.Id}, {d.cantidad}, {d.unidadMedida.Id}, {d.precio}, {d.urgencia.Id})";
+                            $"VALUES ({v.numeroOrdenCompra}, {d.producto.Id}, {d.cantidad}, (SELECT idUnidadMedida FROM UnidadMedida WHERE nombre={d.unidadMedida}), {d.precio}, {d.urgencia.Id})";
                         _BD.EjecutarTransaccion(sqltxt);
 
                         sqltxt = $"SELECT stockActual FROM Producto WHERE idProducto={d.producto.Id}";
