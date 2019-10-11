@@ -41,14 +41,14 @@
             this.cmbEmpleados = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbCuits = new System.Windows.Forms.ComboBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioDeVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidadDeMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdProductos)).BeginInit();
@@ -112,14 +112,14 @@
             this.grdProductos.AllowUserToDeleteRows = false;
             this.grdProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column8,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
+            this.ID,
+            this.nombre,
+            this.descripcion,
+            this.stock,
+            this.precioCompra,
+            this.PrecioDeVenta,
+            this.fecha,
+            this.unidadDeMedida,
             this.Cantidad,
             this.Subtotal});
             this.grdProductos.Location = new System.Drawing.Point(11, 61);
@@ -128,6 +128,7 @@
             this.grdProductos.RowTemplate.Height = 24;
             this.grdProductos.Size = new System.Drawing.Size(845, 327);
             this.grdProductos.TabIndex = 14;
+            this.grdProductos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdProductos_CellEndEdit);
             // 
             // btnGuardar
             // 
@@ -137,6 +138,7 @@
             this.btnGuardar.TabIndex = 23;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -173,47 +175,54 @@
             this.cmbCuits.Size = new System.Drawing.Size(121, 21);
             this.cmbCuits.TabIndex = 27;
             // 
-            // Column1
+            // ID
             // 
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.Visible = false;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Visible = false;
             // 
-            // Column8
+            // nombre
             // 
-            this.Column8.HeaderText = "Nombre";
-            this.Column8.Name = "Column8";
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
             // 
-            // Column2
+            // descripcion
             // 
-            this.Column2.HeaderText = "Descripcion";
-            this.Column2.Name = "Column2";
+            this.descripcion.HeaderText = "Descripcion";
+            this.descripcion.Name = "descripcion";
+            this.descripcion.ReadOnly = true;
             // 
-            // Column3
+            // stock
             // 
-            this.Column3.HeaderText = "Stock";
-            this.Column3.Name = "Column3";
+            this.stock.HeaderText = "Stock";
+            this.stock.Name = "stock";
+            this.stock.ReadOnly = true;
             // 
-            // Column4
+            // precioCompra
             // 
-            this.Column4.HeaderText = "Precio de compra";
-            this.Column4.Name = "Column4";
-            this.Column4.Visible = false;
+            this.precioCompra.HeaderText = "Precio de compra";
+            this.precioCompra.Name = "precioCompra";
+            this.precioCompra.ReadOnly = true;
+            this.precioCompra.Visible = false;
             // 
-            // Column5
+            // PrecioDeVenta
             // 
-            this.Column5.HeaderText = "Precio de venta";
-            this.Column5.Name = "Column5";
+            this.PrecioDeVenta.HeaderText = "Precio de venta";
+            this.PrecioDeVenta.Name = "PrecioDeVenta";
+            this.PrecioDeVenta.ReadOnly = true;
             // 
-            // Column6
+            // fecha
             // 
-            this.Column6.HeaderText = "fecha de ultima actualizacion";
-            this.Column6.Name = "Column6";
+            this.fecha.HeaderText = "fecha de ultima actualizacion";
+            this.fecha.Name = "fecha";
+            this.fecha.ReadOnly = true;
             // 
-            // Column7
+            // unidadDeMedida
             // 
-            this.Column7.HeaderText = "unidad de medida";
-            this.Column7.Name = "Column7";
+            this.unidadDeMedida.HeaderText = "unidad de medida";
+            this.unidadDeMedida.Name = "unidadDeMedida";
+            this.unidadDeMedida.ReadOnly = true;
             // 
             // Cantidad
             // 
@@ -271,14 +280,14 @@
         private System.Windows.Forms.ComboBox cmbEmpleados;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbCuits;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioCompra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioDeVenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unidadDeMedida;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
     }

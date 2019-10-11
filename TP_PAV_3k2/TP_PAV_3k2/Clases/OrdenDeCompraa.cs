@@ -18,7 +18,7 @@ namespace TP_PAV_3k2.Clases
 
         public IList<DetalleOrdenCompraa> detalleOrdenCompra { get; set; }
 
-        public decimal MontoFinal { get; set; }
+        public float MontoFinal { get; set; }
 
         public void Validar()
         {
