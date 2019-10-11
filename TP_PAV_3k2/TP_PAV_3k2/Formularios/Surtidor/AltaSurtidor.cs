@@ -105,5 +105,13 @@ namespace TP_PAV_3k2.Formularios.Surtidor
             this.Dispose();
             form.ActualizarSurtidores();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string val = cmbEstado.SelectedText.ToString();
+            string val2 = cmbEstado.SelectedValue.ToString();
+            MessageBox.Show(cmbEstado.SelectedText.ToString());
+            
+        }
     }
 }

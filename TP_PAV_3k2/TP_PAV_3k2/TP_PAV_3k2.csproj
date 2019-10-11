@@ -46,11 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\DetalleOrdenCompraa.cs" />
+    <Compile Include="Clases\DetalleTickett.cs" />
     <Compile Include="Clases\Empleado.cs" />
     <Compile Include="Clases\Estacion.cs" />
     <Compile Include="Clases\Estadoss.cs" />
+    <Compile Include="Clases\OrdenDeCompraa.cs" />
     <Compile Include="Clases\Productoo.cs" />
     <Compile Include="Clases\Surtidorr.cs" />
+    <Compile Include="Clases\Ticket.cs" />
     <Compile Include="Clases\TipoDocumento.cs" />
     <Compile Include="Formularios\Empleados\AgregarEmpleado.cs">
       <SubType>Form</SubType>
@@ -69,6 +73,12 @@
     </Compile>
     <Compile Include="Formularios\Estaciones\ModificarEstaciones.Designer.cs">
       <DependentUpon>ModificarEstaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\OrdenDeCompra\AltaOrdenCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\OrdenDeCompra\AltaOrdenCompra.Designer.cs">
+      <DependentUpon>AltaOrdenCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\OrdenDeCompra\OrdenDeCompra.cs">
       <SubType>Form</SubType>
@@ -172,6 +182,12 @@
     <Compile Include="Formularios\Surtidor\ModificarSurtidor.Designer.cs">
       <DependentUpon>ModificarSurtidor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Tickets\AltaTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Tickets\AltaTicket.Designer.cs">
+      <DependentUpon>AltaTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Tickets\Ticket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,8 +216,10 @@
     <Compile Include="Repositorios\RepositorioEmpleado.cs" />
     <Compile Include="Repositorios\RepositorioEstados.cs" />
     <Compile Include="Repositorios\RepositorioEstacion.cs" />
+    <Compile Include="Repositorios\RepositorioOrdenDeCompra.cs" />
     <Compile Include="Repositorios\RepositorioProductos.cs" />
     <Compile Include="Repositorios\RepositorioSurtidor.cs" />
+    <Compile Include="Repositorios\RepositorioTicket.cs" />
     <Compile Include="Repositorios\RepositorioTiposDoc.cs" />
     <Compile Include="Repositorios\RepositorioUnidadDeMedida.cs" />
     <Compile Include="Repositorios\RepositorioUrgencia.cs" />
@@ -267,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Estaciones\ModificarEstaciones.resx">
       <DependentUpon>ModificarEstaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\OrdenDeCompra\AltaOrdenCompra.resx">
+      <DependentUpon>AltaOrdenCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\OrdenDeCompra\OrdenDeCompra.resx">
       <DependentUpon>OrdenDeCompra.cs</DependentUpon>
@@ -342,6 +363,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Surtidor\ModificarSurtidor.resx">
       <DependentUpon>ModificarSurtidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Tickets\AltaTicket.resx">
+      <DependentUpon>AltaTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Tickets\Ticket.resx">
       <DependentUpon>Ticket.cs</DependentUpon>

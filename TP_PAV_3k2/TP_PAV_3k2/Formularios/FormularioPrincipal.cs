@@ -13,6 +13,7 @@ using TP_PAV_3k2.Repositorios;
 using TP_PAV_3k2.Formularios.Soporte.Estado;
 using TP_PAV_3k2.Formularios.Soporte.TipoDocumentos;
 using TP_PAV_3k2.Formularios.Producto;
+using TP_PAV_3k2.Formularios.OrdenDeCompra;
 
 namespace TP_PAV_3k2
 {
@@ -201,6 +202,12 @@ namespace TP_PAV_3k2
         private void administrarProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form formulario = new ABMProductos();
+            formulario.ShowDialog();
+        }
+
+        private void ordenDeCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OrdenDeCompra formulario = new OrdenDeCompra();
             formulario.ShowDialog();
         }
     }

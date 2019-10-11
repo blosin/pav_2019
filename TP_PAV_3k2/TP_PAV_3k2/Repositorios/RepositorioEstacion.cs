@@ -83,5 +83,12 @@ namespace TP_PAV_3k2.Repositorios
 
             return _BD.EjecutarSQL(sqltxt);
         }
+
+        public DataTable ObtenerCuits()
+        {
+            string sqltxt = "SELECT cuit FROM dbo.Estacion";
+
+            return _BD.consulta(sqltxt);
+        }
     }
 }

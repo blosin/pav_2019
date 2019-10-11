@@ -35,7 +35,7 @@ namespace TP_PAV_3k2
             cmd.CommandType = CommandType.Text;
         }
         //procedimiento privado <cerrar> que finaliza la conexión con la base de datos
-        private void cerrar()
+        public void cerrar()
         {
             //cierra la conexión con la base de datos
             conexion.Close();
@@ -78,5 +78,42 @@ namespace TP_PAV_3k2
 
             return filasAfectadas > 0;
         }
+        public int EjecutarTransaccion(string comando)
+        {
+            var id = 0;
+            cmd.CommandText = comando;
+
+            if (cmd.ExecuteNonQuery() > 0)
+            {
+                string consultaGetId = "Select @@Identity";
+                cmd.CommandText = consultaGetId;
+                id = int.Parse(cmd.ExecuteScalar()?.ToString());
+            }
+            return id;
+        }
+
+        public DataTable ConsultaDuranteTransaccion(string comando)
+        {
+
+            cmd.CommandText = comando;
+            //instancia un objeto <tabla> del tipo DataTable
+            DataTable tabla = new DataTable();
+
+            tabla.Load(cmd.ExecuteReader());
+
+            //devuelve el valor calculado a través de la función
+            return tabla;
+        }
+
+        public OleDbTransaction IniciarTransaccion()
+        {
+            conectar();
+            var transaccion = conexion.BeginTransaction();
+            cmd.Transaction = transaccion;
+            return transaccion;
+        }
+
+        
+
     }
 }

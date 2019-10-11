@@ -30,12 +30,12 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarSucursalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMSurtidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administrarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.administrarTiposDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarSucursalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administrarEstadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administrarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aBMSurtidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.administrarTiposDocumentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarTipoCombustibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUnidadDeMedidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUrgenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -93,13 +93,6 @@
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
-            // agregarSucursalToolStripMenuItem
-            // 
-            this.agregarSucursalToolStripMenuItem.Name = "agregarSucursalToolStripMenuItem";
-            this.agregarSucursalToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.agregarSucursalToolStripMenuItem.Text = "Administrar estaciones";
-            this.agregarSucursalToolStripMenuItem.Click += new System.EventHandler(this.agregarSucursalToolStripMenuItem_Click);
-            // 
             // agregarEmpleadoToolStripMenuItem
             // 
             this.agregarEmpleadoToolStripMenuItem.Name = "agregarEmpleadoToolStripMenuItem";
@@ -107,12 +100,19 @@
             this.agregarEmpleadoToolStripMenuItem.Text = "Administrar empleados";
             this.agregarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.agregarEmpleadoToolStripMenuItem_Click);
             // 
-            // aBMSurtidorToolStripMenuItem
+            // agregarSucursalToolStripMenuItem
             // 
-            this.aBMSurtidorToolStripMenuItem.Name = "aBMSurtidorToolStripMenuItem";
-            this.aBMSurtidorToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.aBMSurtidorToolStripMenuItem.Text = "Administrar surtidores";
-            this.aBMSurtidorToolStripMenuItem.Click += new System.EventHandler(this.aBMSurtidorToolStripMenuItem_Click);
+            this.agregarSucursalToolStripMenuItem.Name = "agregarSucursalToolStripMenuItem";
+            this.agregarSucursalToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.agregarSucursalToolStripMenuItem.Text = "Administrar estaciones";
+            this.agregarSucursalToolStripMenuItem.Click += new System.EventHandler(this.agregarSucursalToolStripMenuItem_Click);
+            // 
+            // administrarEstadosToolStripMenuItem
+            // 
+            this.administrarEstadosToolStripMenuItem.Name = "administrarEstadosToolStripMenuItem";
+            this.administrarEstadosToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.administrarEstadosToolStripMenuItem.Text = "Administrar estados";
+            this.administrarEstadosToolStripMenuItem.Click += new System.EventHandler(this.administrarEstadosToolStripMenuItem_Click);
             // 
             // administrarProductosToolStripMenuItem
             // 
@@ -121,19 +121,19 @@
             this.administrarProductosToolStripMenuItem.Text = "Administrar Productos";
             this.administrarProductosToolStripMenuItem.Click += new System.EventHandler(this.administrarProductosToolStripMenuItem_Click);
             // 
+            // aBMSurtidorToolStripMenuItem
+            // 
+            this.aBMSurtidorToolStripMenuItem.Name = "aBMSurtidorToolStripMenuItem";
+            this.aBMSurtidorToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
+            this.aBMSurtidorToolStripMenuItem.Text = "Administrar surtidores";
+            this.aBMSurtidorToolStripMenuItem.Click += new System.EventHandler(this.aBMSurtidorToolStripMenuItem_Click);
+            // 
             // administrarTiposDocumentoToolStripMenuItem
             // 
             this.administrarTiposDocumentoToolStripMenuItem.Name = "administrarTiposDocumentoToolStripMenuItem";
             this.administrarTiposDocumentoToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
             this.administrarTiposDocumentoToolStripMenuItem.Text = "Administrar tipos documento";
             this.administrarTiposDocumentoToolStripMenuItem.Click += new System.EventHandler(this.administrarTiposDocumentoToolStripMenuItem_Click);
-            // 
-            // administrarEstadosToolStripMenuItem
-            // 
-            this.administrarEstadosToolStripMenuItem.Name = "administrarEstadosToolStripMenuItem";
-            this.administrarEstadosToolStripMenuItem.Size = new System.Drawing.Size(253, 22);
-            this.administrarEstadosToolStripMenuItem.Text = "Administrar estados";
-            this.administrarEstadosToolStripMenuItem.Click += new System.EventHandler(this.administrarEstadosToolStripMenuItem_Click);
             // 
             // agregarTipoCombustibleToolStripMenuItem
             // 
@@ -161,6 +161,7 @@
             this.ordenDeCompraToolStripMenuItem.Name = "ordenDeCompraToolStripMenuItem";
             this.ordenDeCompraToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
             this.ordenDeCompraToolStripMenuItem.Text = "Orden de Compra";
+            this.ordenDeCompraToolStripMenuItem.Click += new System.EventHandler(this.ordenDeCompraToolStripMenuItem_Click);
             // 
             // ticketToolStripMenuItem
             // 
