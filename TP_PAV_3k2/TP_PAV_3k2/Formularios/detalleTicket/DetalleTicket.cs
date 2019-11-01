@@ -16,5 +16,11 @@ namespace TP_PAV_3k2.Formularios.detalleTicket
         {
             InitializeComponent();
         }
+
+        private void DetalleTicket_Load(object sender, EventArgs e)
+        {
+            //ActualizarDetalle();
+            //lblTotal.Text = MontoTotal.ToString();
+        }
     }
 }

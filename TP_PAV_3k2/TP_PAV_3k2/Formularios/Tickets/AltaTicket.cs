@@ -101,13 +101,35 @@ namespace TP_PAV_3k2.Formularios.Tickets
                 total += decimal.Parse(fila.Cells["Subtotal"].Value.ToString());
             }
             if (total != 0)
-                TxtTotal.Text=(decimal.Parse(TxtTotal.Text)+total).ToString();
+                TxtTotal.Text = (total+(int.Parse(txtCantidad.Text)*decimal.Parse(txtPrecioUnidad.Text))).ToString();
             else
-                TxtTotal.Text = "0";
+                TxtTotal.Text = (int.Parse(txtCantidad.Text) * decimal.Parse(txtPrecioUnidad.Text)).ToString();
         }
 
         private void grdProductos_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
+            if(txtCantidad.Text=="")
+            {
+                MessageBox.Show("primero debe ingresar cantidad");
+                
+                var selec = grdProductos.Rows[e.RowIndex];
+                
+                
+                    selec.Cells["Cantidad"].Value = null;
+                    selec.Cells["Subtotal"].Value = null;                    
+                    return;
+               
+            }
+            if(txtPrecioUnidad.Text=="")
+            {
+                MessageBox.Show("debe elegir un surtidor");
+                var selec = grdProductos.Rows[e.RowIndex];
+
+
+                selec.Cells["Cantidad"].Value = null;
+                selec.Cells["Subtotal"].Value = null;
+                return;
+            }
             var fila = grdProductos.Rows[e.RowIndex];
             int cantidad = 0;
             if (!int.TryParse(fila.Cells["Cantidad"].Value?.ToString(), out cantidad))
@@ -227,7 +249,22 @@ namespace TP_PAV_3k2.Formularios.Tickets
         {            
             txtUnidadMedida.Text = repositorioSurtidor.ObtenerUnidadMedia(cmbSurtidores.SelectedValue.ToString());
             txtPrecioUnidad.Text=repositorioProductos.ObtenerPrecio(cmbSurtidores.SelectedValue.ToString());
-            lblStock.Text = repositorioProductos.ObtenerStock(cmbSurtidores.SelectedValue.ToString()); 
+            lblStock.Text = repositorioProductos.ObtenerStock(cmbSurtidores.SelectedValue.ToString());
+            int defaul;
+            if (int.TryParse(txtCantidad.Text, out defaul))
+            {
+                txtCantidad.Text = defaul.ToString();
+                if (txtPrecioUnidad.Text != "")
+                {
+                    ActualizarTotal();
+                }
+            }
+            else
+            {
+                txtCantidad.Text = "";
+                txtCantidad.Focus();
+                return;
+            }
         }
 
         private void txtCantidad_KeyUp(object sender, KeyEventArgs e)
@@ -236,7 +273,10 @@ namespace TP_PAV_3k2.Formularios.Tickets
             if (int.TryParse(txtCantidad.Text, out defaul))
             {
                 txtCantidad.Text=defaul.ToString();
-                TxtTotal.Text = (decimal.Parse(TxtTotal.Text) + (defaul * decimal.Parse(txtPrecioUnidad.Text))).ToString();
+                if (txtPrecioUnidad.Text != "")
+                {
+                    ActualizarTotal();
+                }
             }
             else
             {
