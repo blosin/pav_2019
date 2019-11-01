@@ -64,5 +64,33 @@ namespace TP_PAV_3k2
 
             return _BD.EjecutarSQL(sqltxt);
         }
+
+        public string ObtenerNombreUnidadMedida(string id)
+        {
+            string sqltxt;
+            if (!string.IsNullOrEmpty(id))
+            {
+                sqltxt = $"SELECT nombre FROM UnidadMedida WHERE idUnidadMedida={id}";
+                var tablaTemporal = _BD.consulta(sqltxt);
+                if (tablaTemporal.Rows.Count == 0)
+                    return null;
+                string nombre = "";
+                foreach (DataRow fila in tablaTemporal.Rows)
+                {
+                    if (fila.HasErrors)
+                        continue;
+                    nombre = fila.ItemArray[0].ToString();
+
+                }
+                return nombre;
+            }
+            else
+                return "";
+            
+
+            
+
+            
+        }
     }
 }

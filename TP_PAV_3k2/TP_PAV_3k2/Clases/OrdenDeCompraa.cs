@@ -18,7 +18,7 @@ namespace TP_PAV_3k2.Clases
 
         public IList<DetalleOrdenCompraa> detalleOrdenCompra { get; set; }
 
-        public float MontoFinal { get; set; }
+        public decimal MontoFinal { get; set; }
 
         public OrdenDeCompraa()
         {
@@ -43,7 +43,7 @@ namespace TP_PAV_3k2.Clases
 
         public string ObtenerFecha()
         {
-            return fecha.ToString("dd/MM/yyyy");
+            return fecha.ToString("yyyy-MM-dd");
         }
 
     }

@@ -6,25 +6,29 @@ using System.Threading.Tasks;
 
 namespace TP_PAV_3k2.Clases
 {
-    class Ticket
+    public class Tickett
     {
-        public int numeroOrdenCompra { get; set; }
+        public int numTicket { get; set; }
 
         public DateTime fecha { get; set; }
 
-        public int legajo { get; set; }
+        public string cuit { get; set; }
 
-        public string cuitSolicitante { get; set; }
+        public Surtidorr numeroSurtidor { get; set; }
+
+        public int cantidad { get; set; }
+
+        public string unidadMedida { get; set; }        
 
         public IList<DetalleTickett> detalleTicket { get; set; }
+
+        public string observacion { get; set; }
 
         public decimal MontoFinal { get; set; }
 
         public void Validar()
         {
-            if (string.IsNullOrEmpty(legajo.ToString()))
-                throw new ApplicationException("Ingrese legajo valido");
-            if (string.IsNullOrEmpty(cuitSolicitante))
+            if (string.IsNullOrEmpty(cuit))
                 throw new ApplicationException("Ingrese cuit valido");
             if (detalleTicket == null || detalleTicket.Count == 0)
                 throw new ApplicationException("Al menos se requiere un detalle");
@@ -37,7 +41,7 @@ namespace TP_PAV_3k2.Clases
 
         public string ObtenerFecha()
         {
-            return fecha.ToString("dd/MM/yyyy");
+            return fecha.ToString("yyyy-MM-dd");
         }
 
 

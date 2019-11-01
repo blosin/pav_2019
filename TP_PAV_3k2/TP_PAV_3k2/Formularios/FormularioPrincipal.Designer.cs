@@ -52,13 +52,13 @@
             this.fechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.legajoSup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grdEstaciones = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.razonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaHabilitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstaciones)).BeginInit();
@@ -166,7 +166,7 @@
             // ticketToolStripMenuItem
             // 
             this.ticketToolStripMenuItem.Name = "ticketToolStripMenuItem";
-            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.ticketToolStripMenuItem.Text = "Ticket";
             this.ticketToolStripMenuItem.Click += new System.EventHandler(this.ticketToolStripMenuItem_Click);
             // 
@@ -182,6 +182,8 @@
             // 
             // grdEmpleados
             // 
+            this.grdEmpleados.AllowUserToAddRows = false;
+            this.grdEmpleados.AllowUserToDeleteRows = false;
             this.grdEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdEmpleados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.legajo,
@@ -249,6 +251,8 @@
             // 
             // grdEstaciones
             // 
+            this.grdEstaciones.AllowUserToAddRows = false;
+            this.grdEstaciones.AllowUserToDeleteRows = false;
             this.grdEstaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdEstaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cuit,
@@ -257,12 +261,31 @@
             this.numero,
             this.fechaHabilitacion});
             this.grdEstaciones.Location = new System.Drawing.Point(39, 81);
+            this.grdEstaciones.MultiSelect = false;
             this.grdEstaciones.Name = "grdEstaciones";
             this.grdEstaciones.ReadOnly = true;
             this.grdEstaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdEstaciones.Size = new System.Drawing.Size(869, 141);
             this.grdEstaciones.TabIndex = 5;
             this.grdEstaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstaciones_CellClick_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Estaciones Registradas";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(37, 225);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Empleados Registrados";
             // 
             // cuit
             // 
@@ -293,24 +316,6 @@
             this.fechaHabilitacion.HeaderText = "Fecha De Habilitacion";
             this.fechaHabilitacion.Name = "fechaHabilitacion";
             this.fechaHabilitacion.ReadOnly = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Estaciones Registradas";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 225);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Empleados Registrados";
             // 
             // FormularioPrincipal
             // 
@@ -355,11 +360,6 @@
         private System.Windows.Forms.ToolStripMenuItem aBMSurtidorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ordenDeCompraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ticketToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cuit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn razonSocial;
-        private System.Windows.Forms.DataGridViewTextBoxColumn calle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaHabilitacion;
         private System.Windows.Forms.ToolStripMenuItem administrarTiposDocumentoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem administrarEstadosToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn legajo;
@@ -371,5 +371,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaAlta;
         private System.Windows.Forms.DataGridViewTextBoxColumn legajoSup;
         private System.Windows.Forms.ToolStripMenuItem administrarProductosToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cuit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn razonSocial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn calle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaHabilitacion;
     }
 }

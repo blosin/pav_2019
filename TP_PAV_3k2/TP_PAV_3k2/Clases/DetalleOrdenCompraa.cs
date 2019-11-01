@@ -18,7 +18,7 @@ namespace TP_PAV_3k2.Clases
 
         public string unidadMedida { get; set; }
 
-        public string precio { get; set; }
+        public decimal precio { get; set; }
 
         public Urgencia urgencia { get; set; }
 
@@ -28,7 +28,7 @@ namespace TP_PAV_3k2.Clases
             if (string.IsNullOrEmpty(cantidad.ToString()) || cantidad < 0)
                 throw new ApplicationException("Ingrese cantidad valida");
 
-            if (string.IsNullOrEmpty(precio.ToString()) || int.Parse(precio) < 0)
+            if (precio < 0)
                 throw new ApplicationException("Ingrese precio valido");
         }
 

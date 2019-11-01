@@ -36,11 +36,6 @@
             this.lblX = new System.Windows.Forms.Label();
             this.LblCliente = new System.Windows.Forms.Label();
             this.grdProductos = new System.Windows.Forms.DataGridView();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.cmbEmpleados = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbCuits = new System.Windows.Forms.ComboBox();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +46,11 @@
             this.unidadDeMedida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.cmbEmpleados = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmbCuits = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,51 +130,6 @@
             this.grdProductos.TabIndex = 14;
             this.grdProductos.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdProductos_CellEndEdit);
             // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(603, 419);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 23;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(684, 419);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 24;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // cmbEmpleados
-            // 
-            this.cmbEmpleados.FormattingEnabled = true;
-            this.cmbEmpleados.Location = new System.Drawing.Point(107, 35);
-            this.cmbEmpleados.Name = "cmbEmpleados";
-            this.cmbEmpleados.Size = new System.Drawing.Size(121, 21);
-            this.cmbEmpleados.TabIndex = 25;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(270, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 13);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Cuit:";
-            // 
-            // cmbCuits
-            // 
-            this.cmbCuits.FormattingEnabled = true;
-            this.cmbCuits.Location = new System.Drawing.Point(304, 35);
-            this.cmbCuits.Name = "cmbCuits";
-            this.cmbCuits.Size = new System.Drawing.Size(121, 21);
-            this.cmbCuits.TabIndex = 27;
-            // 
             // id
             // 
             this.id.HeaderText = "ID";
@@ -240,6 +195,53 @@
             this.Subtotal.HeaderText = "Subtotal";
             this.Subtotal.Name = "Subtotal";
             this.Subtotal.ReadOnly = true;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(603, 419);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 23;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(684, 419);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 24;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // cmbEmpleados
+            // 
+            this.cmbEmpleados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEmpleados.FormattingEnabled = true;
+            this.cmbEmpleados.Location = new System.Drawing.Point(107, 35);
+            this.cmbEmpleados.Name = "cmbEmpleados";
+            this.cmbEmpleados.Size = new System.Drawing.Size(121, 21);
+            this.cmbEmpleados.TabIndex = 25;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(270, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Cuit:";
+            // 
+            // cmbCuits
+            // 
+            this.cmbCuits.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCuits.FormattingEnabled = true;
+            this.cmbCuits.Location = new System.Drawing.Point(304, 35);
+            this.cmbCuits.Name = "cmbCuits";
+            this.cmbCuits.Size = new System.Drawing.Size(121, 21);
+            this.cmbCuits.TabIndex = 27;
             // 
             // AltaOrdenCompra
             // 

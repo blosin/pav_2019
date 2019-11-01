@@ -12,8 +12,8 @@ namespace TP_PAV_3k2.Clases
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public int Stock { get; set; }
-        public float PrecioCompra { get; set; }
-        public float PrecioVenta { get; set; }
+        public decimal PrecioCompra { get; set; }
+        public decimal PrecioVenta { get; set; }
         public DateTime FechaUltimaActualizacion { get; set; }
         public string UnidadMedida { get; set; }
 

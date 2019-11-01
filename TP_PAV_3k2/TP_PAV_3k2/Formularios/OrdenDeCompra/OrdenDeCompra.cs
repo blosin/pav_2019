@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP_PAV_3k2.Formularios.DetalleOrdenCompra;
 using TP_PAV_3k2.Repositorios;
 
 namespace TP_PAV_3k2.Formularios.OrdenDeCompra
@@ -60,8 +61,44 @@ namespace TP_PAV_3k2.Formularios.OrdenDeCompra
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            AltaOrdenCompra form = new AltaOrdenCompra();
+            AltaOrdenCompra form = new AltaOrdenCompra(this);
             form.ShowDialog();
         }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            var seleccion = grdOrdenes.SelectedRows;
+            if (seleccion.Count == 0 || seleccion.Count > 1)
+            {
+                MessageBox.Show("Debe seleccionar una fila");
+                return;
+            }
+            foreach (DataGridViewRow fila in seleccion)
+            {
+                var numOrden = fila.Cells[0].Value;
+                var montoTotal= fila.Cells[4].Value;
+
+                var ventana = new DetalleCompra(numOrden.ToString(), decimal.Parse(montoTotal.ToString()));
+                ventana.ShowDialog();
+                
+            }
+        }
+        /*public decimal montoFinal()
+        {
+            var seleccion = grdOrdenes.SelectedRows;
+            if (seleccion.Count == 0 || seleccion.Count > 1)
+            {
+                MessageBox.Show("Debe seleccionar una fila");
+                return;
+            }
+            foreach (DataGridViewRow fila in seleccion)
+            {
+                var id = fila.Cells[0].Value;
+
+                var ventana = new ModificarProducto(id.ToString());
+                ventana.ShowDialog();
+                ActualizarProductos();
+            }
+        }*/
     }
 }

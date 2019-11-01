@@ -138,6 +138,7 @@ namespace TP_PAV_3k2.Formularios.Producto
             else
             {
                 txtStockAgregado.Text = "";
+                lblStockResultante.Text = producto.Stock.ToString();
                 txtStockAgregado.Focus();
                 return;
             }
@@ -154,6 +155,7 @@ namespace TP_PAV_3k2.Formularios.Producto
             else
             {
                 txtStockRemplazo.Text = "";
+                lblStockResultante.Text = producto.Stock.ToString();
                 txtStockRemplazo.Focus();
                 return;
             }

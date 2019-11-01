@@ -102,7 +102,7 @@ namespace TP_PAV_3k2.Formularios.Soporte.TipoDocumentos
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
 
         private void fmTipoDocumento_Load(object sender, EventArgs e)
@@ -112,7 +112,7 @@ namespace TP_PAV_3k2.Formularios.Soporte.TipoDocumentos
 
         private void fmTipoDocumento_FormClosing(object sender, FormClosingEventArgs e)
         {
-            formularioPrincipal.Show();
+            //formularioPrincipal.Show();
         }
     }
 }

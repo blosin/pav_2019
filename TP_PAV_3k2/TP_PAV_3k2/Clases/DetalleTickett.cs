@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace TP_PAV_3k2.Clases
 {
-    class DetalleTickett
+    public class DetalleTickett
     {
         public int nroDetalleTICKET { get; set; }
 
-        public int nroTicket { get; set; }
+        public Tickett nroTicket { get; set; }
 
-        public int idProducto { get; set; }
+        public Productoo producto { get; set; }        
 
         public int cantidad { get; set; }
 
-        public float precio { get; set; }
+        public decimal precio { get; set; }
 
 
         public void Validar()

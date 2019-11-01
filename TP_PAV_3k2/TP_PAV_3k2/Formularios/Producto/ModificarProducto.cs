@@ -107,8 +107,8 @@ namespace TP_PAV_3k2.Formularios.Producto
                 }
                 else
                 {
-                    float defaul;
-                    if (float.TryParse(txtPrecioCompra.Text, out defaul))
+                    decimal defaul;
+                    if (decimal.TryParse(txtPrecioCompra.Text, out defaul))
                     {
                         datosProducto.PrecioCompra = defaul;
                     }
@@ -136,8 +136,8 @@ namespace TP_PAV_3k2.Formularios.Producto
                 }
                 else
                 {
-                    float defaul;
-                    if (float.TryParse(txtPrecioVenta.Text, out defaul))
+                    decimal defaul;
+                    if (decimal.TryParse(txtPrecioVenta.Text, out defaul))
                     {
                         datosProducto.PrecioVenta = defaul;
                     }
@@ -187,8 +187,8 @@ namespace TP_PAV_3k2.Formularios.Producto
                 }
                 else
                 {
-                    float defaul;
-                    if (float.TryParse(txtPrecioCompra.Text, out defaul))
+                    decimal defaul;
+                    if (decimal.TryParse(txtPrecioCompra.Text, out defaul))
                     {
                         datosProducto.PrecioCompra = defaul;
                     }
@@ -216,8 +216,8 @@ namespace TP_PAV_3k2.Formularios.Producto
                 }
                 else
                 {
-                    float defaul;
-                    if (float.TryParse(txtPrecioVenta.Text, out defaul))
+                    decimal defaul;
+                    if (decimal.TryParse(txtPrecioVenta.Text, out defaul))
                     {
                         datosProducto.PrecioVenta = defaul;
                     }

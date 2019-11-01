@@ -6,21 +6,21 @@ using System.Text;
 using System.Threading.Tasks;
 using TP_PAV_3k2.Clases;
 
-
 namespace TP_PAV_3k2.Repositorios
 {
-    class RepositorioOrdenDeCompra
+    class RepositorioTickets
     {
         private accesoBD _BD;
 
-        public RepositorioOrdenDeCompra()
+        public RepositorioTickets()
         {
-            _BD = new accesoBD();        }
+            _BD = new accesoBD();
+        }
 
-        
-        public DataTable ObtenerOrdenes()
-        {            
-            string sqltxt = "SELECT * FROM OrdenCompra";
+
+        public DataTable ObtenerTickets()
+        {
+            string sqltxt = "SELECT * FROM Ticket";
 
             return _BD.consulta(sqltxt);
         }
@@ -32,24 +32,24 @@ namespace TP_PAV_3k2.Repositorios
             return _BD.consulta(sqltxt);
         }
 
-        public void Guardar(OrdenDeCompraa v)
+        public void Guardar(Tickett v)
         {
             using (var tx = _BD.IniciarTransaccion())
             {
                 try
                 {                    //CAST(REPLACE( '{producto.PrecioCompra}', ',', '.') as float)
-                    string sqltxt = $"INSERT [dbo].[OrdenCompra] ([fecha], [legajo], [cuitSolicitante], [montoFinal])" +
-                        $" VALUES ('{v.ObtenerFecha()}', '{v.legajo}', '{v.cuitSolicitante}', CAST(REPLACE( '{v.MontoFinal}', ',', '.') as float))";
-                    v.numeroOrdenCompra = _BD.EjecutarTransaccion(sqltxt);
-                    if (v.numeroOrdenCompra == 0)
+                    string sqltxt = $"INSERT [dbo].[Ticket] ([fecha], [cuit], [numeroSurtidor], [cantidad], [idUnidadMedida], [observacion], [montoFinal])" +
+                        $" VALUES ('{v.ObtenerFecha()}', '{v.cuit}', '{v.numeroSurtidor.numeroSurtidor}', '{v.cantidad}', (SELECT idUnidadMedida FROM UnidadMedida WHERE nombre='{v.unidadMedida}'), '{v.observacion}', CAST(REPLACE( '{v.MontoFinal}', ',', '.') as float))";
+                    v.numTicket = _BD.EjecutarTransaccion(sqltxt);
+                    if (v.numTicket == 0)
                         throw new ApplicationException();
 
-                    foreach (var d in v.detalleOrdenCompra)
+                    foreach (var d in v.detalleTicket)
                     {
 
-                        sqltxt = $"INSERT [dbo].[DetalleOrdenCompra] " +
-                            $"([numOrdenCompra], [idProducto], [Cantidad], [idUnidadMedida], [precio]) " +
-                            $"VALUES ({v.numeroOrdenCompra}, {d.producto.Id}, {d.cantidad}, (SELECT idUnidadMedida FROM UnidadMedida WHERE nombre='{d.unidadMedida}'), CAST(REPLACE( '{d.precio}', ',', '.') as float))";
+                        sqltxt = $"INSERT [dbo].[DetalleTicket] " +
+                            $"([nroTicket], [idProducto], [Cantidad], [precio]) " +
+                            $"VALUES ({v.numTicket}, {d.producto.Id}, {d.cantidad}, CAST(REPLACE( '{d.precio}', ',', '.') as float))";
                         _BD.EjecutarTransaccion(sqltxt);
 
                         sqltxt = $"SELECT stockActual FROM Producto WHERE idProducto={d.producto.Id}";
@@ -68,7 +68,7 @@ namespace TP_PAV_3k2.Repositorios
                 catch (Exception ex)
                 {
                     tx.Rollback();
-                    throw new ApplicationException("No se pudo guardar la orden de compra."+ex.Message);
+                    throw new ApplicationException("No se pudo guardar la orden de compra." + ex.Message);
                 }
                 finally
                 {
@@ -77,15 +77,5 @@ namespace TP_PAV_3k2.Repositorios
             }
 
         }
-
-        /*public bool Eliminar(string legajo)
-        {
-            string sqltxt = $"DELETE FROM [dbo].[Empleado] WHERE legajo = {legajo}";
-
-            return _BD.EjecutarSQL(sqltxt);
-        } */
-
-        
-    
     }
 }

@@ -70,7 +70,7 @@ namespace TP_PAV_3k2
 
         private void ABMUrgencia_FormClosing(object sender, FormClosingEventArgs e)
         {
-            _formularioPrincipal.Show();
+            //_formularioPrincipal.Show();
         }
 
         private void btnBaja_Click(object sender, EventArgs e)
@@ -119,7 +119,7 @@ namespace TP_PAV_3k2
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
     }
 }

@@ -24,6 +24,25 @@ namespace TP_PAV_3k2.Repositorios
 
             return _BD.consulta(sqltxt);
         }
+        public string ObtenerUnidadMedia(string numSurtidor)
+        {
+            //SELECT idTipoCombustible FROM Surtidor WHERE numeroSurtidor = numSurtidor;
+            string sqltxt = $"SELECT unidadMedida FROM dbo.Producto " +
+            $"WHERE nombre= (SELECT nombre FROM TipoCombustible WHERE idTipoCombustible=(SELECT idTipoCombustible FROM Surtidor WHERE numeroSurtidor = '{numSurtidor}'))";
+            var tablaTemporal = _BD.consulta(sqltxt);
+
+            if (tablaTemporal.Rows.Count == 0)
+                return null;
+            string unidadMedida="";
+            foreach (DataRow fila in tablaTemporal.Rows)
+            {
+                if (fila.HasErrors)
+                    continue;
+                unidadMedida= fila.ItemArray[0].ToString();               
+
+            }
+            return unidadMedida;
+        }
 
         public DataTable ObtenerEstados()
         {
@@ -41,6 +60,12 @@ namespace TP_PAV_3k2.Repositorios
         public DataTable ObtenerSurtidores()
         {            
             string sqltxt = "SELECT a.numeroSurtidor, a.cuit, b.nombre, c.nombre FROM Surtidor a, Estado b, TipoCombustible c WHERE a.idEstado=b.idEstado AND a.idTipoCombustible=c.idTipoCombustible";
+
+            return _BD.consulta(sqltxt);
+        }
+        public DataTable ObtenerSurtidoresCombo()
+        {
+            string sqltxt = "SELECT a.numeroSurtidor as numeroSurtidor, CAST(a.numeroSurtidor AS varchar)+' '+c.nombre as nombre FROM Surtidor a, TipoCombustible c WHERE a.idTipoCombustible=c.idTipoCombustible";
 
             return _BD.consulta(sqltxt);
         }

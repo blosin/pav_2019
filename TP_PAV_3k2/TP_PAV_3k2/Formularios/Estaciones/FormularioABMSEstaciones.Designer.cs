@@ -31,13 +31,13 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.grdEstaciones = new System.Windows.Forms.DataGridView();
-            this.btnQuitar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.Cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RazonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaHabilitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnQuitar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstaciones)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +57,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 27);
             this.button1.TabIndex = 26;
-            this.button1.Text = "Salir";
+            this.button1.Text = "Volver";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
@@ -76,26 +76,6 @@
             this.grdEstaciones.Size = new System.Drawing.Size(616, 337);
             this.grdEstaciones.TabIndex = 28;
             this.grdEstaciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstaciones_CellContentClick);
-            // 
-            // btnQuitar
-            // 
-            this.btnQuitar.Location = new System.Drawing.Point(634, 45);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(75, 23);
-            this.btnQuitar.TabIndex = 29;
-            this.btnQuitar.Text = "Quitar";
-            this.btnQuitar.UseVisualStyleBackColor = true;
-            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(12, 355);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(100, 57);
-            this.btnModificar.TabIndex = 30;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // Cuit
             // 
@@ -127,6 +107,26 @@
             this.FechaHabilitacion.Name = "FechaHabilitacion";
             this.FechaHabilitacion.ReadOnly = true;
             this.FechaHabilitacion.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // btnQuitar
+            // 
+            this.btnQuitar.Location = new System.Drawing.Point(634, 45);
+            this.btnQuitar.Name = "btnQuitar";
+            this.btnQuitar.Size = new System.Drawing.Size(75, 23);
+            this.btnQuitar.TabIndex = 29;
+            this.btnQuitar.Text = "Quitar";
+            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitar.Click += new System.EventHandler(this.btnQuitar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.Location = new System.Drawing.Point(12, 355);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(100, 57);
+            this.btnModificar.TabIndex = 30;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // FormularioABMSucursal
             // 

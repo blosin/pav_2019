@@ -39,9 +39,9 @@
             this.fechaNacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.legajoSuperior = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnQuitar = new System.Windows.Forms.Button();
-            this.estacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +61,7 @@
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 27);
             this.btnSalir.TabIndex = 19;
-            this.btnSalir.Text = "Salir";
+            this.btnSalir.Text = "Volver";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
@@ -132,6 +132,12 @@
             this.legajoSuperior.Name = "legajoSuperior";
             this.legajoSuperior.ReadOnly = true;
             // 
+            // estacion
+            // 
+            this.estacion.HeaderText = "Estacion";
+            this.estacion.Name = "estacion";
+            this.estacion.ReadOnly = true;
+            // 
             // btnModificar
             // 
             this.btnModificar.Location = new System.Drawing.Point(12, 388);
@@ -151,12 +157,6 @@
             this.btnQuitar.Text = "Quitar";
             this.btnQuitar.UseVisualStyleBackColor = true;
             this.btnQuitar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // estacion
-            // 
-            this.estacion.HeaderText = "Estacion";
-            this.estacion.Name = "estacion";
-            this.estacion.ReadOnly = true;
             // 
             // FormularioABMEmpleado
             // 

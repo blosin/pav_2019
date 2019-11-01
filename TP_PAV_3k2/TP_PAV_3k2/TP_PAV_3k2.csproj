@@ -54,8 +54,20 @@
     <Compile Include="Clases\OrdenDeCompraa.cs" />
     <Compile Include="Clases\Productoo.cs" />
     <Compile Include="Clases\Surtidorr.cs" />
-    <Compile Include="Clases\Ticket.cs" />
+    <Compile Include="Clases\Tickett.cs" />
     <Compile Include="Clases\TipoDocumento.cs" />
+    <Compile Include="Formularios\DetalleOrdenCompra\DetalleCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\DetalleOrdenCompra\DetalleCompra.Designer.cs">
+      <DependentUpon>DetalleCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\detalleTicket\DetalleTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\detalleTicket\DetalleTicket.Designer.cs">
+      <DependentUpon>DetalleTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Empleados\AgregarEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,13 +225,14 @@
     <Compile Include="Formularios\Soporte\TipoUrgencia\ModificarUrgencia.Designer.cs">
       <DependentUpon>ModificarUrgencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repositorios\RepositorioDetalle.cs" />
     <Compile Include="Repositorios\RepositorioEmpleado.cs" />
     <Compile Include="Repositorios\RepositorioEstados.cs" />
     <Compile Include="Repositorios\RepositorioEstacion.cs" />
     <Compile Include="Repositorios\RepositorioOrdenDeCompra.cs" />
     <Compile Include="Repositorios\RepositorioProductos.cs" />
     <Compile Include="Repositorios\RepositorioSurtidor.cs" />
-    <Compile Include="Repositorios\RepositorioTicket.cs" />
+    <Compile Include="Repositorios\RepositorioTickets.cs" />
     <Compile Include="Repositorios\RepositorioTiposDoc.cs" />
     <Compile Include="Repositorios\RepositorioUnidadDeMedida.cs" />
     <Compile Include="Repositorios\RepositorioUrgencia.cs" />
@@ -277,6 +290,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\DetalleOrdenCompra\DetalleCompra.resx">
+      <DependentUpon>DetalleCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Empleados\AgregarEmpleado.resx">
       <DependentUpon>AgregarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -401,9 +417,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Formularios\DetalleOrdenCompra\" />
-    <Folder Include="Formularios\detalleTicket\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

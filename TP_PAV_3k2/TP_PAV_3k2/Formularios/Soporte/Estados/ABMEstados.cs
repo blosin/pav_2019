@@ -32,7 +32,7 @@ namespace TP_PAV_3k2.Formularios.Soporte.Estado
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
 
         private void btnAlta_Click(object sender, EventArgs e)
@@ -113,7 +113,7 @@ namespace TP_PAV_3k2.Formularios.Soporte.Estado
 
         private void ABMEstado_FormClosing(object sender, FormClosingEventArgs e)
         {
-            formularioPrincipal.Show();
+            //formularioPrincipal.Show();
         }
     }
 }

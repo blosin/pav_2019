@@ -56,7 +56,9 @@ namespace TP_PAV_3k2
         private void FormularioPrincipal_Load(object sender, EventArgs e)
         {
             ActualizarSucursales();
-            
+            grdEstaciones.ClearSelection();
+
+
             /*//Inicializo las columnas de la grid de Estaciones Registradas.
             grdEstaciones.Columns.Add("clmCUIT","CUIT");
             grdEstaciones.Columns.Add("clmRazonSocial", "Razon Social");
@@ -138,22 +140,22 @@ namespace TP_PAV_3k2
         private void agregarTipoCombustibleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var TipoCombustibleForm = new ABMTipoCombustible(this);
-            TipoCombustibleForm.Show();
-            this.Hide();
+            TipoCombustibleForm.ShowDialog();
+            
         }
 
         private void agregarUnidadDeMedidaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var UnidadMedida = new ABMUnidadMedida(this);
-            UnidadMedida.Show();
-            this.Hide();
+            UnidadMedida.ShowDialog();
+           
         }
 
         private void agregarUrgenciaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var Urgencia = new ABMUrgencia(this);
-            Urgencia.Show();
-            this.Hide();
+            var Urgencia = new ABMUrgencia();
+            Urgencia.ShowDialog();
+            
         }
 
         private void aBMSurtidorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -175,16 +177,16 @@ namespace TP_PAV_3k2
 
         private void administrarTiposDocumentoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var tiposDoc = new fmTipoDocumento(this);
-            tiposDoc.Show();
-            this.Hide();
+            var tiposDoc = new fmTipoDocumento();
+            tiposDoc.ShowDialog();
+            
         }
 
         private void administrarEstadosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var estados = new ABMEstado(this);
-            estados.Show();
-            this.Hide();
+            var estados = new ABMEstado();
+            estados.ShowDialog();
+            
         }
 
         
@@ -193,10 +195,20 @@ namespace TP_PAV_3k2
 
         private void grdEstaciones_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow row = grdEstaciones.Rows[e.RowIndex];
-            String cuit = row.Cells["cuit"].Value.ToString();
+            try
+            {
+                DataGridViewRow row = grdEstaciones.Rows[e.RowIndex];
 
-            ActualizarEmpleados(cuit);
+                string cuit = row.Cells["cuit"].Value.ToString();
+                ActualizarEmpleados(cuit);
+            }
+            catch
+            {
+                
+            }
+            
+                         
+                
 
         }
 

@@ -25,19 +25,64 @@ namespace TP_PAV_3k2.Repositorios
 
             return _BD.consulta(sqltxt);
         }
+        public DataTable ObtenerProductosSinMedida()
+        {
+            //se define una variable local a la función <sqltxt> del tipo <string> donde en el 
+            //momento de su creación se le asigan su contenido, que es el comando SELECT  
+            //necesario para poder establecer la veracidad del usuario.
+            string sqltxt = "SELECT * FROM dbo.Producto WHERE unidadMedida IS NULL";
 
+            return _BD.consulta(sqltxt);
+        }
+        public string ObtenerPrecio(string numSurtidor)
+        {
+            string sqltxt = $"SELECT precioVenta FROM dbo.Producto " +
+            $"WHERE nombre= (SELECT nombre FROM TipoCombustible WHERE idTipoCombustible=(SELECT idTipoCombustible FROM Surtidor WHERE numeroSurtidor = '{numSurtidor}'))";
+            var tablaTemporal = _BD.consulta(sqltxt);
+
+            if (tablaTemporal.Rows.Count == 0)
+                return null;
+            string precio = "";
+            foreach (DataRow fila in tablaTemporal.Rows)
+            {
+                if (fila.HasErrors)
+                    continue;
+                precio = fila.ItemArray[0].ToString();
+
+            }
+            return precio;
+        }
+        public string ObtenerStock(string numSurtidor)
+        {
+            string sqltxt = $"SELECT stockActual FROM dbo.Producto " +
+            $"WHERE nombre= (SELECT nombre FROM TipoCombustible WHERE idTipoCombustible=(SELECT idTipoCombustible FROM Surtidor WHERE numeroSurtidor = '{numSurtidor}'))";
+            var tablaTemporal = _BD.consulta(sqltxt);
+
+            if (tablaTemporal.Rows.Count == 0)
+                return null;
+            string stock = "";
+            foreach (DataRow fila in tablaTemporal.Rows)
+            {
+                if (fila.HasErrors)
+                    continue;
+                stock = fila.ItemArray[0].ToString();
+
+            }
+            return stock;
+        }
         public bool Guardar(Productoo producto)
         {
             string sqltxt = "";
             if (producto.UnidadMedida == null)
-            {
+            {//CAST(REPLACE( '{producto.PrecioVenta}', ',', '.') as float)
+                //CAST(REPLACE( '{producto.PrecioCompra}', ',', '.') as float)
                 sqltxt = $"INSERT dbo.Producto (descripcion, stockActual, precioCompra, precioVenta, fechaUltimaActualizacion, nombre)" +
-                    $"VALUES ('{producto.Descripcion}', '{producto.Stock}', '{producto.PrecioCompra}', '{producto.PrecioVenta}', '{producto.ReturnFechaActualizacion()}', '{producto.Nombre}')";
+                    $"VALUES ('{producto.Descripcion}', '{producto.Stock}', CAST(REPLACE( '{producto.PrecioCompra}', ',', '.') as float), CAST(REPLACE( '{producto.PrecioVenta}', ',', '.') as float), '{producto.ReturnFechaActualizacion()}', '{producto.Nombre}')";
             }
             else
             {
                 sqltxt = $"INSERT dbo.Producto (descripcion, stockActual, precioCompra, precioVenta, fechaUltimaActualizacion, nombre, unidadMedida)" +
-                   $"VALUES ('{producto.Descripcion}', '{producto.Stock}', '{producto.PrecioCompra}', '{producto.PrecioVenta}', '{producto.ReturnFechaActualizacion()}', '{producto.Nombre}', '{producto.UnidadMedida}')";
+                   $"VALUES ('{producto.Descripcion}', '{producto.Stock}', CAST(REPLACE( '{producto.PrecioCompra}', ',', '.') as float), CAST(REPLACE( '{producto.PrecioVenta}', ',', '.') as float), '{producto.ReturnFechaActualizacion()}', '{producto.Nombre}', '{producto.UnidadMedida}')";
             }
             return _BD.EjecutarSQL(sqltxt);
         }
@@ -65,8 +110,8 @@ namespace TP_PAV_3k2.Repositorios
                 producto.Id = int.Parse(fila.ItemArray[0].ToString());
                 producto.Descripcion = fila.ItemArray[1].ToString();
                 producto.Stock = int.Parse(fila.ItemArray[2].ToString());
-                producto.PrecioCompra = float.Parse(fila.ItemArray[3].ToString());
-                producto.PrecioVenta = float.Parse(fila.ItemArray[4].ToString());
+                producto.PrecioCompra = decimal.Parse(fila.ItemArray[3].ToString());
+                producto.PrecioVenta = decimal.Parse(fila.ItemArray[4].ToString());
                 DateTime.TryParse(fila.ItemArray[5]?.ToString(), out fecha1);
                 producto.FechaUltimaActualizacion = fecha1;
                 producto.Nombre = fila.ItemArray[6].ToString();
@@ -86,15 +131,15 @@ namespace TP_PAV_3k2.Repositorios
             if (producto.UnidadMedida == "")
             {
                 sqltxt = $"UPDATE dbo.Producto SET nombre = '{producto.Nombre}', descripcion = '{producto.Descripcion}', " +
-                    $"stockActual = '{producto.Stock}', precioCompra = '{producto.PrecioCompra}', " +
-                    $"precioVenta = '{producto.PrecioVenta}', fechaUltimaActualizacion = '{producto.ReturnFechaActualizacion()}' " +
+                    $"stockActual = '{producto.Stock}', precioCompra = CAST(REPLACE( '{producto.PrecioCompra}', ',', '.') as float), " +
+                    $"precioVenta = CAST(REPLACE( '{producto.PrecioVenta}', ',', '.') as float), fechaUltimaActualizacion = '{producto.ReturnFechaActualizacion()}' " +
                     $"WHERE idProducto={producto.Id}";
             }
             else
             {
                 sqltxt= $"UPDATE dbo.Producto SET nombre = '{producto.Nombre}', descripcion = '{producto.Descripcion}', " +
-                    $"stockActual = '{producto.Stock}', precioCompra = '{producto.PrecioCompra}', " +
-                    $"precioVenta = '{producto.PrecioVenta}', fechaUltimaActualizacion = '{producto.ReturnFechaActualizacion()}', " +
+                    $"stockActual = '{producto.Stock}', precioCompra = CAST(REPLACE( '{producto.PrecioCompra}', ',', '.') as float), " +
+                    $"precioVenta = CAST(REPLACE( '{producto.PrecioVenta}', ',', '.') as float), fechaUltimaActualizacion = '{producto.ReturnFechaActualizacion()}', " +
                     $"unidadMedida = '{producto.UnidadMedida}' " +
                     $"WHERE idProducto={producto.Id}";
             }

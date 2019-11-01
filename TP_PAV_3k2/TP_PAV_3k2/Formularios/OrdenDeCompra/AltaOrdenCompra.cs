@@ -18,15 +18,16 @@ namespace TP_PAV_3k2.Formularios.OrdenDeCompra
         RepositorioEstacion repositorioEstacion;
         RepositorioProductos repositorioProductos;
         RepositorioOrdenDeCompra repositorio;
+        OrdenDeCompra orden;
         
-        public AltaOrdenCompra()
+        public AltaOrdenCompra(OrdenDeCompra ordenDeCompra)
         {
             InitializeComponent();
             repositorioEmpleado = new RepositorioEmpleado();
             repositorioEstacion = new RepositorioEstacion();
             repositorioProductos = new RepositorioProductos();
             repositorio = new RepositorioOrdenDeCompra();
-            
+            orden = ordenDeCompra;
 
         }
 
@@ -35,14 +36,14 @@ namespace TP_PAV_3k2.Formularios.OrdenDeCompra
             LblFechaHoy.Text = DateTime.Today.ToString("dd/MM/yyyy");
             DataTable legajos;
             DataTable cuit;
-            legajos = repositorioEmpleado.ObtenerLegajos();
+            legajos = repositorioEmpleado.ObtenerSuperiores();
             cmbEmpleados.DataSource = legajos;
             cmbEmpleados.ValueMember = "legajo";
-            cmbEmpleados.DisplayMember = "legajo";
-            cuit = repositorioEstacion.ObtenerCuits();
+            cmbEmpleados.DisplayMember = "nombre";
+            cuit = repositorioEstacion.ObtenerComboSucursales();
             cmbCuits.DataSource = cuit;
             cmbCuits.ValueMember = "cuit";
-            cmbCuits.DisplayMember = "cuit";
+            cmbCuits.DisplayMember = "sucursales";
 
             cmbCuits.SelectedIndex = -1;
             cmbEmpleados.SelectedIndex = -1;
@@ -107,12 +108,12 @@ namespace TP_PAV_3k2.Formularios.OrdenDeCompra
         {
             var filas = grdProductos.Rows;
 
-            float total = 0;
+            decimal total = 0;
             foreach (DataGridViewRow fila in filas)
             {
                 if (fila.Cells["Subtotal"].Value == null)
                     continue;
-                total += float.Parse(fila.Cells["Subtotal"].Value.ToString());
+                total += decimal.Parse(fila.Cells["Subtotal"].Value.ToString());
             }
             if (total != 0)
                 TxtTotal.Text = total.ToString();
@@ -122,14 +123,28 @@ namespace TP_PAV_3k2.Formularios.OrdenDeCompra
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-           try
+            
+
+            if (cmbEmpleados.Text == "")
+            {
+                MessageBox.Show("ingrese empleado");
+                return;
+            }
+
+            if (cmbCuits.Text == "")
+            {
+                MessageBox.Show("ingrese cuit");
+                return;
+            }
+
+            try
             {
                 var OrdenCompra = new OrdenDeCompraa();
                 OrdenCompra.legajo = int.Parse(cmbEmpleados.SelectedValue.ToString());
                 OrdenCompra.fecha = DateTime.Today;
                 OrdenCompra.cuitSolicitante = cmbCuits.SelectedValue.ToString();
                 OrdenCompra.detalleOrdenCompra = PreparaDetallesOrden();
-                OrdenCompra.MontoFinal = string.IsNullOrEmpty(TxtTotal.Text) ? 0 : float.Parse(TxtTotal.Text);
+                OrdenCompra.MontoFinal = string.IsNullOrEmpty(TxtTotal.Text) ? 0 : decimal.Parse(TxtTotal.Text);
                 
                 OrdenCompra.Validar();
                 repositorio.Guardar(OrdenCompra);
@@ -145,6 +160,10 @@ namespace TP_PAV_3k2.Formularios.OrdenDeCompra
 
                 MessageBox.Show("Ocurrio un error inesperado: "+ ex);
            }
+            finally
+            {
+                orden.ActualizarOrdenes();
+            }
         }
 
         public List<DetalleOrdenCompraa> PreparaDetallesOrden()
@@ -159,8 +178,9 @@ namespace TP_PAV_3k2.Formularios.OrdenDeCompra
                     continue;
                 var detalle = new DetalleOrdenCompraa()
                 {
+                    
                     cantidad = int.Parse(fila.Cells["cantidad"].Value.ToString()),
-                    precio = fila.Cells["PrecioDeVenta"].Value.ToString(),
+                    precio = decimal.Parse(fila.Cells["PrecioDeVenta"].Value.ToString()),
                     unidadMedida=fila.Cells["unidadDeMedida"]?.Value.ToString(),                    
                     producto = new Productoo() { Id = int.Parse(fila.Cells["id"].Value.ToString()) }
                 };

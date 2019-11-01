@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_PAV_3k2.Clases
 {
-    class Surtidorr
+    public class Surtidorr
     {
         public int numeroSurtidor { get; set; }
         public string cuit { get; set; }

@@ -141,6 +141,7 @@
             // 
             // dateFechaAlta
             // 
+            this.dateFechaAlta.Enabled = false;
             this.dateFechaAlta.Location = new System.Drawing.Point(119, 160);
             this.dateFechaAlta.Name = "dateFechaAlta";
             this.dateFechaAlta.Size = new System.Drawing.Size(200, 20);
