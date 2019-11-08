@@ -43,6 +43,11 @@ namespace TP_PAV_3k2.Repositorios
                     v.numTicket = _BD.EjecutarTransaccion(sqltxt);
                     if (v.numTicket == 0)
                         throw new ApplicationException();
+                    string sqltxt2 = $"SELECT stockActual FROM dbo.Producto " +
+            $"WHERE nombre= (SELECT nombre FROM TipoCombustible WHERE idTipoCombustible=(SELECT idTipoCombustible FROM Surtidor WHERE numeroSurtidor = '{v.numeroSurtidor.numeroSurtidor}'))";
+                    var stock2 =int.Parse(_BD.ConsultaDuranteTransaccion(sqltxt2).Rows[0]["stockActual"].ToString());
+                   string sqltxt3 = $"UPDATE [dbo].[Producto] SET stockActual = '{stock2 - v.cantidad}' WHERE nombre= (SELECT nombre FROM TipoCombustible WHERE idTipoCombustible=(SELECT idTipoCombustible FROM Surtidor WHERE numeroSurtidor = '{v.numeroSurtidor.numeroSurtidor}'))";
+                    _BD.EjecutarTransaccion(sqltxt3);
 
                     foreach (var d in v.detalleTicket)
                     {

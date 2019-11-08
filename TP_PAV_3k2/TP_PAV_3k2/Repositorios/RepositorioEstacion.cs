@@ -28,7 +28,7 @@ namespace TP_PAV_3k2.Repositorios
         }
         public DataTable ObtenerComboSucursales()
         {
-            string sqltxt = "SELECT cuit, cuit+' '+razonSocial as sucursales FROM dbo.Estacion";
+            string sqltxt = "SELECT cuit, razonSocial+' '+\'('+cuit+\')' as sucursales FROM dbo.Estacion";
 
             return _BD.consulta(sqltxt);
         }

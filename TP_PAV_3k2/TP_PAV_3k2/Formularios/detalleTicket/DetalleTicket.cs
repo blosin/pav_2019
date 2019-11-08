@@ -12,9 +12,10 @@ namespace TP_PAV_3k2.Formularios.detalleTicket
 {
     public partial class DetalleTicket : Form
     {
-        public DetalleTicket()
+        public DetalleTicket(string numTicket, decimal monto)
         {
             InitializeComponent();
+            //falta aca;
         }
 
         private void DetalleTicket_Load(object sender, EventArgs e)

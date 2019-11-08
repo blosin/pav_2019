@@ -78,8 +78,8 @@ namespace TP_PAV_3k2.Formularios.Tickets
                 var numTicket = fila.Cells[0].Value;
                 var montoTotal = fila.Cells[7].Value;
 
-                //var ventana = new DetalleTicket(numTicket.ToString(), decimal.Parse(montoTotal.ToString()));
-                //ventana.ShowDialog();
+                var ventana = new DetalleTicket(numTicket.ToString(), decimal.Parse(montoTotal.ToString()));
+                ventana.ShowDialog();
 
             }
         }

@@ -36,23 +36,23 @@ namespace TP_PAV_3k2.Formularios.Tickets
 
         private void AltaTicket_Load(object sender, EventArgs e)
         {
-            
+            //cambiar combo de surtidores segun cuit seleccionado.
             TxtTotal.Text = "0";
             LblFechaHoy.Text = DateTime.Today.ToString("dd/MM/yyyy");
             
-            DataTable Surtidores;
+            //DataTable Surtidores;
             DataTable cuit;
-            Surtidores = repositorioSurtidor.ObtenerSurtidoresCombo();
-            cmbSurtidores.DataSource = Surtidores;
-            cmbSurtidores.ValueMember = "numeroSurtidor";
-            cmbSurtidores.DisplayMember = "nombre";
+            //Surtidores = repositorioSurtidor.ObtenerSurtidoresCombo();
+            //cmbSurtidores.DataSource = Surtidores;
+            //cmbSurtidores.ValueMember = "numeroSurtidor";
+            //cmbSurtidores.DisplayMember = "nombre";
             cuit = repositorioEstacion.ObtenerComboSucursales();
             cmbCuit.DataSource = cuit;
             cmbCuit.ValueMember = "cuit";
             cmbCuit.DisplayMember = "sucursales";
 
             cmbCuit.SelectedIndex = -1;
-            cmbSurtidores.SelectedIndex = -1;
+            //cmbSurtidores.SelectedIndex = -1;
 
             ActualizarProductos();
         }
@@ -156,7 +156,7 @@ namespace TP_PAV_3k2.Formularios.Tickets
 
             if (cmbSurtidores.Text == "")
             {
-                MessageBox.Show("ingrese surtidor cuit");
+                MessageBox.Show("ingrese surtidor valido");
                 return;
             }
 
@@ -285,6 +285,20 @@ namespace TP_PAV_3k2.Formularios.Tickets
                 return;
             }
 
+        }
+
+        private void cmbCuit_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            cmbSurtidores.Enabled = true;
+
+            //cambiar combo de surtidores segun cuit seleccionado.   
+
+            DataTable Surtidores;          
+            Surtidores = repositorioSurtidor.ObtenerSurtidoresPorCuit(cmbCuit.SelectedValue.ToString());
+            cmbSurtidores.DataSource = Surtidores;
+            cmbSurtidores.ValueMember = "numeroSurtidor";
+            cmbSurtidores.DisplayMember = "nombre";
+            cmbSurtidores.SelectedIndex = -1;
         }
     }
 }

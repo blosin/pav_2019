@@ -63,7 +63,7 @@ namespace TP_PAV_3k2.Formularios.Empleados
             empleado.fechaNacimiento = dateFechaNacimiento.Value.Date;
             empleado.fechaAlta = DateTime.Today;
             
-            if(cmbEstaciones.Text==null)
+            if(cmbEstaciones.Text=="")
             {
                 MessageBox.Show("debe seleccionar un cuit");
                 return;

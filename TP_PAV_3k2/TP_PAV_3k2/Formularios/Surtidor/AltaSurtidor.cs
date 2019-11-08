@@ -54,10 +54,10 @@ namespace TP_PAV_3k2.Formularios.Surtidor
         public void cargarComboCuit()
         {
             DataTable tablacombo = new DataTable();
-            tablacombo = repositorioSurtidor.ObtenerCuits();
+            tablacombo = repositorioSurtidor.ObtenerComboSucursales();
             cmbCuit.DataSource = tablacombo;
             cmbCuit.ValueMember = "cuit";
-            cmbCuit.DisplayMember = "cuit";
+            cmbCuit.DisplayMember = "sucursales";
         }
         private void Surtidor_Load(object sender, EventArgs e)
         {
@@ -108,9 +108,7 @@ namespace TP_PAV_3k2.Formularios.Surtidor
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string val = cmbEstado.SelectedText.ToString();
-            string val2 = cmbEstado.SelectedValue.ToString();
-            MessageBox.Show(cmbEstado.SelectedText.ToString());
+            
             
         }
     }

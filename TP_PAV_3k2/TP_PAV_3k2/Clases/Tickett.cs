@@ -30,11 +30,11 @@ namespace TP_PAV_3k2.Clases
         {
             if (string.IsNullOrEmpty(cuit))
                 throw new ApplicationException("Ingrese cuit valido");
-            if (detalleTicket == null || detalleTicket.Count == 0)
+            /*if (detalleTicket == null || detalleTicket.Count == 0)
                 throw new ApplicationException("Al menos se requiere un detalle");
             else
                 foreach (var da in detalleTicket)
-                    da.Validar();
+                    da.Validar();*/
             if (MontoFinal == 0)
                 throw new ApplicationException("Al menos se requiere un detalle");
         }

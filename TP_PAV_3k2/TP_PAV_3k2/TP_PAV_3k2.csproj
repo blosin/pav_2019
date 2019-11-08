@@ -225,7 +225,8 @@
     <Compile Include="Formularios\Soporte\TipoUrgencia\ModificarUrgencia.Designer.cs">
       <DependentUpon>ModificarUrgencia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Repositorios\RepositorioDetalle.cs" />
+    <Compile Include="Repositorios\RepositorioDetalleOrden.cs" />
+    <Compile Include="Repositorios\RepositorioDetalleTicket.cs" />
     <Compile Include="Repositorios\RepositorioEmpleado.cs" />
     <Compile Include="Repositorios\RepositorioEstados.cs" />
     <Compile Include="Repositorios\RepositorioEstacion.cs" />

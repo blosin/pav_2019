@@ -65,6 +65,8 @@
             // 
             // grdTicket
             // 
+            this.grdTicket.AllowUserToAddRows = false;
+            this.grdTicket.AllowUserToDeleteRows = false;
             this.grdTicket.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdTicket.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -77,6 +79,7 @@
             this.Column8});
             this.grdTicket.Location = new System.Drawing.Point(12, 12);
             this.grdTicket.Name = "grdTicket";
+            this.grdTicket.ReadOnly = true;
             this.grdTicket.Size = new System.Drawing.Size(840, 212);
             this.grdTicket.TabIndex = 5;
             // 
@@ -84,41 +87,49 @@
             // 
             this.Column1.HeaderText = "Numero de ticket";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Fecha";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Cuit";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Numero de surtidor";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Cantidad";
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
             this.Column6.HeaderText = "Unidad de medida";
             this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // Column7
             // 
             this.Column7.HeaderText = "Observaciones";
             this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
             // 
             // Column8
             // 
             this.Column8.HeaderText = "Monto final";
             this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
             // 
             // btnDetalle
             // 

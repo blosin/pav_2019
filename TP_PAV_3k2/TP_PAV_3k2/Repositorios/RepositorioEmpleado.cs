@@ -39,7 +39,7 @@ namespace TP_PAV_3k2.Repositorios
         }
         public DataTable ObtenerSuperiores()
         {
-            string sqltxt = "SELECT legajo, CAST(legajo AS varchar)+' '+nombre+' '+apellido as nombre FROM dbo.Empleado";
+            string sqltxt = "SELECT legajo, nombre+' '+apellido+' '+\'('+CAST(legajo AS varchar)+\')' as nombre FROM dbo.Empleado";
 
             return _BD.consulta(sqltxt);
         }

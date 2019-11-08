@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace TP_PAV_3k2.Repositorios
 {
-    class RepositorioDetalle
+    class RepositorioDetalleOrden
     {
         private accesoBD _BD;
 
-        public RepositorioDetalle()
+        public RepositorioDetalleOrden()
         {
             _BD = new accesoBD();
         }

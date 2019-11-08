@@ -104,35 +104,35 @@
             this.txtDescripcion.Location = new System.Drawing.Point(197, 49);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(100, 20);
-            this.txtDescripcion.TabIndex = 5;
+            this.txtDescripcion.TabIndex = 2;
             // 
             // txtPrecioVenta
             // 
             this.txtPrecioVenta.Location = new System.Drawing.Point(197, 155);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.Size = new System.Drawing.Size(100, 20);
-            this.txtPrecioVenta.TabIndex = 6;
+            this.txtPrecioVenta.TabIndex = 5;
             // 
             // txtStock
             // 
             this.txtStock.Location = new System.Drawing.Point(197, 85);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(100, 20);
-            this.txtStock.TabIndex = 7;
+            this.txtStock.TabIndex = 3;
             // 
             // txtPrecioCompra
             // 
             this.txtPrecioCompra.Location = new System.Drawing.Point(197, 120);
             this.txtPrecioCompra.Name = "txtPrecioCompra";
             this.txtPrecioCompra.Size = new System.Drawing.Size(100, 20);
-            this.txtPrecioCompra.TabIndex = 8;
+            this.txtPrecioCompra.TabIndex = 4;
             // 
             // dtpActualizacion
             // 
             this.dtpActualizacion.Location = new System.Drawing.Point(197, 191);
             this.dtpActualizacion.Name = "dtpActualizacion";
             this.dtpActualizacion.Size = new System.Drawing.Size(200, 20);
-            this.dtpActualizacion.TabIndex = 9;
+            this.dtpActualizacion.TabIndex = 6;
             // 
             // btnAceptar
             // 
@@ -171,7 +171,7 @@
             this.cmbUnidades.Location = new System.Drawing.Point(197, 226);
             this.cmbUnidades.Name = "cmbUnidades";
             this.cmbUnidades.Size = new System.Drawing.Size(121, 21);
-            this.cmbUnidades.TabIndex = 14;
+            this.cmbUnidades.TabIndex = 7;
             // 
             // label7
             // 
@@ -254,14 +254,14 @@
             this.cmbNombre.Location = new System.Drawing.Point(176, 20);
             this.cmbNombre.Name = "cmbNombre";
             this.cmbNombre.Size = new System.Drawing.Size(121, 21);
-            this.cmbNombre.TabIndex = 20;
+            this.cmbNombre.TabIndex = 0;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(197, 21);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 21;
+            this.txtNombre.TabIndex = 1;
             // 
             // btnUnidadMedida
             // 

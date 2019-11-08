@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtTotal = new System.Windows.Forms.TextBox();
             this.LblFechaHoy = new System.Windows.Forms.Label();
@@ -113,6 +113,7 @@
             this.cmbCuit.Name = "cmbCuit";
             this.cmbCuit.Size = new System.Drawing.Size(121, 21);
             this.cmbCuit.TabIndex = 29;
+            this.cmbCuit.SelectionChangeCommitted += new System.EventHandler(this.cmbCuit_SelectionChangeCommitted);
             // 
             // label2
             // 
@@ -154,6 +155,7 @@
             // cmbSurtidores
             // 
             this.cmbSurtidores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSurtidores.Enabled = false;
             this.cmbSurtidores.FormattingEnabled = true;
             this.cmbSurtidores.Location = new System.Drawing.Point(278, 9);
             this.cmbSurtidores.Name = "cmbSurtidores";
@@ -284,17 +286,17 @@
             // 
             // Cantidad
             // 
-            dataGridViewCellStyle1.Format = "N0";
-            dataGridViewCellStyle1.NullValue = null;
-            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle3;
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
             // 
             // Subtotal
             // 
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle4;
             this.Subtotal.HeaderText = "Subtotal";
             this.Subtotal.Name = "Subtotal";
             this.Subtotal.ReadOnly = true;

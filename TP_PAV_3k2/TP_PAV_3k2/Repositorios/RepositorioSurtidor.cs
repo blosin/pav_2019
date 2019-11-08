@@ -57,6 +57,12 @@ namespace TP_PAV_3k2.Repositorios
 
             return _BD.consulta(sqltxt);
         }
+        public DataTable ObtenerComboSucursales()
+        {
+            string sqltxt = "SELECT cuit, razonSocial+' '+\'('+cuit+\')' as sucursales FROM dbo.Estacion";
+
+            return _BD.consulta(sqltxt);
+        }
         public DataTable ObtenerSurtidores()
         {            
             string sqltxt = "SELECT a.numeroSurtidor, a.cuit, b.nombre, c.nombre FROM Surtidor a, Estado b, TipoCombustible c WHERE a.idEstado=b.idEstado AND a.idTipoCombustible=c.idTipoCombustible";
@@ -66,6 +72,12 @@ namespace TP_PAV_3k2.Repositorios
         public DataTable ObtenerSurtidoresCombo()
         {
             string sqltxt = "SELECT a.numeroSurtidor as numeroSurtidor, CAST(a.numeroSurtidor AS varchar)+' '+c.nombre as nombre FROM Surtidor a, TipoCombustible c WHERE a.idTipoCombustible=c.idTipoCombustible";
+
+            return _BD.consulta(sqltxt);
+        }
+        public DataTable ObtenerSurtidoresPorCuit(string cuit)
+        {
+            string sqltxt = $"SELECT a.numeroSurtidor as numeroSurtidor, c.nombre+' '+\'('+CAST(a.numeroSurtidor AS varchar)+\')' as nombre FROM Surtidor a, TipoCombustible c WHERE a.idTipoCombustible=c.idTipoCombustible AND a.cuit='{cuit}'";
 
             return _BD.consulta(sqltxt);
         }

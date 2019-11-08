@@ -13,14 +13,14 @@ namespace TP_PAV_3k2.Formularios.DetalleOrdenCompra
 {
     public partial class DetalleCompra : Form
     {
-        RepositorioDetalle repostorio;
+        RepositorioDetalleOrden repostorio;
         RepositorioUnidadDeMedida repositorioUnidadDeMedida;
         decimal MontoTotal;
         string numeroOrden;
         public DetalleCompra(string numOrden, decimal montoTotal)
         {
             InitializeComponent();
-            repostorio = new RepositorioDetalle();
+            repostorio = new RepositorioDetalleOrden();
             numeroOrden = numOrden;
             repositorioUnidadDeMedida = new RepositorioUnidadDeMedida();
             MontoTotal = montoTotal;
