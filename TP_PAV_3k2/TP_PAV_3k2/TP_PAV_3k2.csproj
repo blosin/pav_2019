@@ -33,6 +33,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.337.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.337.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.337.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.337.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.337.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -225,6 +243,28 @@
     <Compile Include="Formularios\Soporte\TipoUrgencia\ModificarUrgencia.Designer.cs">
       <DependentUpon>ModificarUrgencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Informes\ProductosVendidos\DatosProductosVendidos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosProductosVendidos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\ProductosVendidos\formProductosVendidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\ProductosVendidos\formProductosVendidos.Designer.cs">
+      <DependentUpon>formProductosVendidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\StockFaltantes\DatosStockFaltantes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosStockFaltantes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\StockFaltantes\formularioStocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\StockFaltantes\formularioStocks.Designer.cs">
+      <DependentUpon>formularioStocks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repositorios\RepositorioDetalleOrden.cs" />
     <Compile Include="Repositorios\RepositorioDetalleTicket.cs" />
     <Compile Include="Repositorios\RepositorioEmpleado.cs" />
@@ -291,6 +331,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Formularios\DetalleOrdenCompra\DetalleCompra.resx">
       <DependentUpon>DetalleCompra.cs</DependentUpon>
     </EmbeddedResource>
@@ -390,6 +431,14 @@
     <EmbeddedResource Include="Formularios\Tickets\Ticket.resx">
       <DependentUpon>Ticket.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informes\ProductosVendidos\formProductosVendidos.resx">
+      <DependentUpon>formProductosVendidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\ProductosVendidos\InformeProductosvendidos.rdlc" />
+    <EmbeddedResource Include="Informes\StockFaltantes\formularioStocks.resx">
+      <DependentUpon>formularioStocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\StockFaltantes\InformeStockFaltantes.rdlc" />
     <EmbeddedResource Include="PantallaLogIn.resx">
       <DependentUpon>PantallaLogIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -408,6 +457,29 @@
     <EmbeddedResource Include="Formularios\Soporte\TipoUrgencia\AltaUrgencia.resx">
       <DependentUpon>AltaUrgencia.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Informes\ProductosVendidos\DatosProductosVendidos.xsc">
+      <DependentUpon>DatosProductosVendidos.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\ProductosVendidos\DatosProductosVendidos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosProductosVendidos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\ProductosVendidos\DatosProductosVendidos.xss">
+      <DependentUpon>DatosProductosVendidos.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\StockFaltantes\DatosStockFaltantes.xsc">
+      <DependentUpon>DatosStockFaltantes.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\StockFaltantes\DatosStockFaltantes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosStockFaltantes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\StockFaltantes\DatosStockFaltantes.xss">
+      <DependentUpon>DatosStockFaltantes.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -421,6 +493,25 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Informes\CantidadLitrosVendidosXSurtidor\" />
+    <Folder Include="Informes\IDetalleTicket\" />
+    <Folder Include="Informes\MesMasVenta\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

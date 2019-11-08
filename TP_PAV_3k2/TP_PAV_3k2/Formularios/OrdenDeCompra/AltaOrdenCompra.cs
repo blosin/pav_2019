@@ -97,6 +97,14 @@ namespace TP_PAV_3k2.Formularios.OrdenDeCompra
                 ActualizarTotal();
                 return;
             }
+            if (cantidad < 0)
+            {
+                MessageBox.Show("ingrese cantidad valida");
+                fila.Cells["Cantidad"].Value = null;
+                fila.Cells["Subtotal"].Value = null;
+                ActualizarTotal();
+                return;
+            }
             var precioUnitario = float.Parse(fila.Cells["PrecioDeVenta"].Value.ToString());
             var subtotal = cantidad * precioUnitario;
             fila.Cells["Subtotal"].Value = subtotal;

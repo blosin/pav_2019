@@ -15,6 +15,8 @@ using TP_PAV_3k2.Formularios.Soporte.TipoDocumentos;
 using TP_PAV_3k2.Formularios.Producto;
 using TP_PAV_3k2.Formularios.OrdenDeCompra;
 using TP_PAV_3k2.Formularios.Tickets;
+using TP_PAV_3k2.Informes.StockFaltantes;
+using TP_PAV_3k2.Informes.ProductosVendidos;
 
 namespace TP_PAV_3k2
 {
@@ -227,6 +229,18 @@ namespace TP_PAV_3k2
         private void ticketToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Ticket formulario = new Ticket();
+            formulario.ShowDialog();
+        }
+
+        private void verProductosFaltantesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formularioStocks formulario = new formularioStocks();
+            formulario.ShowDialog();
+        }
+
+        private void verProductosVendidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formProductosVendidos formulario = new formProductosVendidos();
             formulario.ShowDialog();
         }
     }

@@ -52,13 +52,18 @@
             this.fechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.legajoSup = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grdEstaciones = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.cuit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.razonSocial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaHabilitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verProductosFaltantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mesConMasVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.litrosVendidosPorSurtidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verProductosVendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstaciones)).BeginInit();
@@ -69,7 +74,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem,
             this.ordenDeCompraToolStripMenuItem,
-            this.ticketToolStripMenuItem});
+            this.ticketToolStripMenuItem,
+            this.informesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(920, 24);
@@ -166,7 +172,7 @@
             // ticketToolStripMenuItem
             // 
             this.ticketToolStripMenuItem.Name = "ticketToolStripMenuItem";
-            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.ticketToolStripMenuItem.Text = "Ticket";
             this.ticketToolStripMenuItem.Click += new System.EventHandler(this.ticketToolStripMenuItem_Click);
             // 
@@ -269,24 +275,6 @@
             this.grdEstaciones.TabIndex = 5;
             this.grdEstaciones.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEstaciones_CellClick_1);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Estaciones Registradas";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 225);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Empleados Registrados";
-            // 
             // cuit
             // 
             this.cuit.HeaderText = "Cuit";
@@ -316,6 +304,61 @@
             this.fechaHabilitacion.HeaderText = "Fecha De Habilitacion";
             this.fechaHabilitacion.Name = "fechaHabilitacion";
             this.fechaHabilitacion.ReadOnly = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Estaciones Registradas";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(37, 225);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Empleados Registrados";
+            // 
+            // informesToolStripMenuItem
+            // 
+            this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verProductosFaltantesToolStripMenuItem,
+            this.verProductosVendidosToolStripMenuItem,
+            this.mesConMasVentasToolStripMenuItem,
+            this.litrosVendidosPorSurtidorToolStripMenuItem});
+            this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
+            this.informesToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.informesToolStripMenuItem.Text = "Informes";
+            // 
+            // verProductosFaltantesToolStripMenuItem
+            // 
+            this.verProductosFaltantesToolStripMenuItem.Name = "verProductosFaltantesToolStripMenuItem";
+            this.verProductosFaltantesToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.verProductosFaltantesToolStripMenuItem.Text = "Ver productos faltantes";
+            this.verProductosFaltantesToolStripMenuItem.Click += new System.EventHandler(this.verProductosFaltantesToolStripMenuItem_Click);
+            // 
+            // mesConMasVentasToolStripMenuItem
+            // 
+            this.mesConMasVentasToolStripMenuItem.Name = "mesConMasVentasToolStripMenuItem";
+            this.mesConMasVentasToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.mesConMasVentasToolStripMenuItem.Text = "Mes con mas ventas";
+            // 
+            // litrosVendidosPorSurtidorToolStripMenuItem
+            // 
+            this.litrosVendidosPorSurtidorToolStripMenuItem.Name = "litrosVendidosPorSurtidorToolStripMenuItem";
+            this.litrosVendidosPorSurtidorToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.litrosVendidosPorSurtidorToolStripMenuItem.Text = "Litros vendidos por surtidor";
+            // 
+            // verProductosVendidosToolStripMenuItem
+            // 
+            this.verProductosVendidosToolStripMenuItem.Name = "verProductosVendidosToolStripMenuItem";
+            this.verProductosVendidosToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.verProductosVendidosToolStripMenuItem.Text = "Ver productos vendidos";
+            this.verProductosVendidosToolStripMenuItem.Click += new System.EventHandler(this.verProductosVendidosToolStripMenuItem_Click);
             // 
             // FormularioPrincipal
             // 
@@ -376,5 +419,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn calle;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaHabilitacion;
+        private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verProductosFaltantesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verProductosVendidosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mesConMasVentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem litrosVendidosPorSurtidorToolStripMenuItem;
     }
 }

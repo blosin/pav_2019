@@ -18,7 +18,7 @@ namespace TP_PAV_3k2.Repositorios
         public DataTable ObtenerDetalles(string numOrdenCompra)
         {
             string sqltxt = $"SELECT a.numDetalleOrden, b.nombre, a.cantidad, a.idUnidadMedida, a.precio, CAST(REPLACE(a.precio, ',', '.') as float)*a.cantidad as subtotal FROM DetalleOrdenCompra a, Producto b WHERE a.idProducto=b.idProducto AND numOrdenCompra='{numOrdenCompra}'";
-            falta.
+            //falta.
             return _BD.consulta(sqltxt);
         }
     }
