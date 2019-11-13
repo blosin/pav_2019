@@ -29,37 +29,37 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.rvProductosVendidos = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DatosProductosVendidos = new TP_PAV_3k2.Informes.ProductosVendidos.DatosProductosVendidos();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.ProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DatosProductosVendidos = new TP_PAV_3k2.Informes.ProductosVendidos.DatosProductosVendidos();
+            this.rvProductosVendidos = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ProductoTableAdapter = new TP_PAV_3k2.Informes.ProductosVendidos.DatosProductosVendidosTableAdapters.ProductoTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DatosProductosVendidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosProductosVendidos)).BeginInit();
             this.SuspendLayout();
             // 
-            // rvProductosVendidos
+            // ProductoBindingSource
             // 
-            this.rvProductosVendidos.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DatosProductosVendidos";
-            reportDataSource1.Value = this.ProductoBindingSource;
-            this.rvProductosVendidos.LocalReport.DataSources.Add(reportDataSource1);
-            this.rvProductosVendidos.LocalReport.ReportEmbeddedResource = "TP_PAV_3k2.Informes.ProductosVendidos.InformeProductosvendidos.rdlc";
-            this.rvProductosVendidos.Location = new System.Drawing.Point(0, 0);
-            this.rvProductosVendidos.Name = "rvProductosVendidos";
-            this.rvProductosVendidos.ServerReport.BearerToken = null;
-            this.rvProductosVendidos.Size = new System.Drawing.Size(800, 450);
-            this.rvProductosVendidos.TabIndex = 0;
+            this.ProductoBindingSource.DataMember = "Producto";
+            this.ProductoBindingSource.DataSource = this.DatosProductosVendidos;
             // 
             // DatosProductosVendidos
             // 
             this.DatosProductosVendidos.DataSetName = "DatosProductosVendidos";
             this.DatosProductosVendidos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // ProductoBindingSource
+            // rvProductosVendidos
             // 
-            this.ProductoBindingSource.DataMember = "Producto";
-            this.ProductoBindingSource.DataSource = this.DatosProductosVendidos;
+            this.rvProductosVendidos.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource2.Name = "DatosProductosVendidos";
+            reportDataSource2.Value = this.ProductoBindingSource;
+            this.rvProductosVendidos.LocalReport.DataSources.Add(reportDataSource2);
+            this.rvProductosVendidos.LocalReport.ReportEmbeddedResource = "TP_PAV_3k2.Informes.ProductosVendidos.InformeProductosvendidos.rdlc";
+            this.rvProductosVendidos.Location = new System.Drawing.Point(0, 0);
+            this.rvProductosVendidos.Name = "rvProductosVendidos";
+            this.rvProductosVendidos.ServerReport.BearerToken = null;
+            this.rvProductosVendidos.Size = new System.Drawing.Size(1023, 450);
+            this.rvProductosVendidos.TabIndex = 0;
             // 
             // ProductoTableAdapter
             // 
@@ -69,13 +69,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1023, 450);
             this.Controls.Add(this.rvProductosVendidos);
             this.Name = "formProductosVendidos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos vendidos";
             this.Load += new System.EventHandler(this.formProductosVendidos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DatosProductosVendidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosProductosVendidos)).EndInit();
             this.ResumeLayout(false);
 
         }

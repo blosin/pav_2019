@@ -32,6 +32,12 @@ namespace TP_PAV_3k2.Informes.ProductosVendidos
 
             rvProductosVendidos.LocalReport.DataSources.Add(ds);
             this.rvProductosVendidos.RefreshReport();
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

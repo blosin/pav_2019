@@ -15,10 +15,10 @@ namespace TP_PAV_3k2.Repositorios
         {
             _BD = new accesoBD();
         }
-        public DataTable ObtenerDetalles(string numOrdenCompra)
+        public DataTable ObtenerDetalles(string numTicket)
         {
-            string sqltxt = $"SELECT a.numDetalleOrden, b.nombre, a.cantidad, a.idUnidadMedida, a.precio, CAST(REPLACE(a.precio, ',', '.') as float)*a.cantidad as subtotal FROM DetalleOrdenCompra a, Producto b WHERE a.idProducto=b.idProducto AND numOrdenCompra='{numOrdenCompra}'";
-            //falta.
+            //SELECT a.nroDetalleTicket, b.nombre, a.cantidad, a.precio, CAST(REPLACE(a.precio, ',', '.') as float) * a.cantidad as subtotal FROM DetalleTicket a, Producto b WHERE a.idProducto = b.idProducto AND a.nroTicket =
+                string sqltxt = $"SELECT a.nroDetalleTicket, b.nombre, a.cantidad, a.precio, CAST(REPLACE(a.precio, ',', '.') as float)*a.cantidad as subtotal FROM DetalleTicket a, Producto b WHERE a.idProducto=b.idProducto AND a.nroTicket='{numTicket}'";
             return _BD.consulta(sqltxt);
         }
     }

@@ -30,13 +30,23 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.rvStocks = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.DatosStockFaltantes = new TP_PAV_3k2.Informes.StockFaltantes.DatosStockFaltantes();
             this.ProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DatosStockFaltantes = new TP_PAV_3k2.Informes.StockFaltantes.DatosStockFaltantes();
+            this.rvStocks = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ProductoTableAdapter = new TP_PAV_3k2.Informes.StockFaltantes.DatosStockFaltantesTableAdapters.ProductoTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.DatosStockFaltantes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosStockFaltantes)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ProductoBindingSource
+            // 
+            this.ProductoBindingSource.DataMember = "Producto";
+            this.ProductoBindingSource.DataSource = this.DatosStockFaltantes;
+            // 
+            // DatosStockFaltantes
+            // 
+            this.DatosStockFaltantes.DataSetName = "DatosStockFaltantes";
+            this.DatosStockFaltantes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // rvStocks
             // 
@@ -48,18 +58,8 @@
             this.rvStocks.Location = new System.Drawing.Point(0, 0);
             this.rvStocks.Name = "rvStocks";
             this.rvStocks.ServerReport.BearerToken = null;
-            this.rvStocks.Size = new System.Drawing.Size(800, 450);
+            this.rvStocks.Size = new System.Drawing.Size(644, 300);
             this.rvStocks.TabIndex = 0;
-            // 
-            // DatosStockFaltantes
-            // 
-            this.DatosStockFaltantes.DataSetName = "DatosStockFaltantes";
-            this.DatosStockFaltantes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ProductoBindingSource
-            // 
-            this.ProductoBindingSource.DataMember = "Producto";
-            this.ProductoBindingSource.DataSource = this.DatosStockFaltantes;
             // 
             // ProductoTableAdapter
             // 
@@ -69,13 +69,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(644, 300);
             this.Controls.Add(this.rvStocks);
             this.Name = "formularioStocks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos con stock faltante";
             this.Load += new System.EventHandler(this.formularioStocks_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DatosStockFaltantes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DatosStockFaltantes)).EndInit();
             this.ResumeLayout(false);
 
         }

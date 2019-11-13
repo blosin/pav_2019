@@ -25,6 +25,29 @@ namespace TP_PAV_3k2
 
             return _BD.consulta(sqltxt);
         }
+        public string ObtenerNombreTipoCombustible(string numSurtidor)
+        {
+            string sqltxt;
+            if (!string.IsNullOrEmpty(numSurtidor))
+            {
+                sqltxt = $"SELECT tipoCombustible.nombre FROM TipoCombustible tipoCombustible, Surtidor surtidor, Ticket ticket WHERE tipoCombustible.idTipoCombustible=surtidor.idTipoCombustible AND surtidor.numeroSurtidor=ticket.numeroSurtidor AND surtidor.numeroSurtidor='{numSurtidor}'";
+                var tablaTemporal = _BD.consulta(sqltxt);
+                if (tablaTemporal.Rows.Count == 0)
+                    return null;
+                string nombre = "";
+                foreach (DataRow fila in tablaTemporal.Rows)
+                {
+                    if (fila.HasErrors)
+                        continue;
+                    nombre = fila.ItemArray[0].ToString();
+
+                }
+                return nombre;
+            }
+            else
+                return "";
+            
+        }
 
         public bool Guardar(TipoCombustible tipoCombustible)
         {

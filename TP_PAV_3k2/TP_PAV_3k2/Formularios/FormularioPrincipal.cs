@@ -17,6 +17,7 @@ using TP_PAV_3k2.Formularios.OrdenDeCompra;
 using TP_PAV_3k2.Formularios.Tickets;
 using TP_PAV_3k2.Informes.StockFaltantes;
 using TP_PAV_3k2.Informes.ProductosVendidos;
+using TP_PAV_3k2.Informes.MesMasVenta;
 
 namespace TP_PAV_3k2
 {
@@ -241,6 +242,12 @@ namespace TP_PAV_3k2
         private void verProductosVendidosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             formProductosVendidos formulario = new formProductosVendidos();
+            formulario.ShowDialog();
+        }
+
+        private void mesConMasVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MesMasVentaForm formulario = new MesMasVentaForm();
             formulario.ShowDialog();
         }
     }

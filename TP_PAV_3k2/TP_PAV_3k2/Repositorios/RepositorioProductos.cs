@@ -128,11 +128,11 @@ namespace TP_PAV_3k2.Repositorios
         public bool Actualizar(Productoo producto)
         {
             string sqltxt;
-            if (producto.UnidadMedida == "")
+            if (producto.UnidadMedida == null)
             {
                 sqltxt = $"UPDATE dbo.Producto SET nombre = '{producto.Nombre}', descripcion = '{producto.Descripcion}', " +
                     $"stockActual = '{producto.Stock}', precioCompra = CAST(REPLACE( '{producto.PrecioCompra}', ',', '.') as float), " +
-                    $"precioVenta = CAST(REPLACE( '{producto.PrecioVenta}', ',', '.') as float), fechaUltimaActualizacion = '{producto.ReturnFechaActualizacion()}' " +
+                    $"precioVenta = CAST(REPLACE( '{producto.PrecioVenta}', ',', '.') as float), fechaUltimaActualizacion = '{producto.ReturnFechaActualizacion()}', unidadMedida=NULL " +
                     $"WHERE idProducto={producto.Id}";
             }
             else

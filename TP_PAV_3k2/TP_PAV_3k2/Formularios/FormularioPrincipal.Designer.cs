@@ -41,6 +41,11 @@
             this.agregarUrgenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ticketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verProductosFaltantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verProductosVendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mesConMasVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.litrosVendidosPorSurtidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSalir = new System.Windows.Forms.Button();
             this.grdEmpleados = new System.Windows.Forms.DataGridView();
             this.legajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,11 +64,6 @@
             this.fechaHabilitacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verProductosFaltantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mesConMasVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.litrosVendidosPorSurtidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verProductosVendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdEstaciones)).BeginInit();
@@ -73,9 +73,9 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem,
+            this.informesToolStripMenuItem,
             this.ordenDeCompraToolStripMenuItem,
-            this.ticketToolStripMenuItem,
-            this.informesToolStripMenuItem});
+            this.ticketToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(920, 24);
@@ -172,9 +172,47 @@
             // ticketToolStripMenuItem
             // 
             this.ticketToolStripMenuItem.Name = "ticketToolStripMenuItem";
-            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.ticketToolStripMenuItem.Text = "Ticket";
             this.ticketToolStripMenuItem.Click += new System.EventHandler(this.ticketToolStripMenuItem_Click);
+            // 
+            // informesToolStripMenuItem
+            // 
+            this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.verProductosFaltantesToolStripMenuItem,
+            this.verProductosVendidosToolStripMenuItem,
+            this.mesConMasVentasToolStripMenuItem,
+            this.litrosVendidosPorSurtidorToolStripMenuItem});
+            this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
+            this.informesToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.informesToolStripMenuItem.Text = "Informes";
+            // 
+            // verProductosFaltantesToolStripMenuItem
+            // 
+            this.verProductosFaltantesToolStripMenuItem.Name = "verProductosFaltantesToolStripMenuItem";
+            this.verProductosFaltantesToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.verProductosFaltantesToolStripMenuItem.Text = "Ver productos faltantes";
+            this.verProductosFaltantesToolStripMenuItem.Click += new System.EventHandler(this.verProductosFaltantesToolStripMenuItem_Click);
+            // 
+            // verProductosVendidosToolStripMenuItem
+            // 
+            this.verProductosVendidosToolStripMenuItem.Name = "verProductosVendidosToolStripMenuItem";
+            this.verProductosVendidosToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.verProductosVendidosToolStripMenuItem.Text = "Ver productos vendidos";
+            this.verProductosVendidosToolStripMenuItem.Click += new System.EventHandler(this.verProductosVendidosToolStripMenuItem_Click);
+            // 
+            // mesConMasVentasToolStripMenuItem
+            // 
+            this.mesConMasVentasToolStripMenuItem.Name = "mesConMasVentasToolStripMenuItem";
+            this.mesConMasVentasToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.mesConMasVentasToolStripMenuItem.Text = "Mes con mas ventas";
+            this.mesConMasVentasToolStripMenuItem.Click += new System.EventHandler(this.mesConMasVentasToolStripMenuItem_Click);
+            // 
+            // litrosVendidosPorSurtidorToolStripMenuItem
+            // 
+            this.litrosVendidosPorSurtidorToolStripMenuItem.Name = "litrosVendidosPorSurtidorToolStripMenuItem";
+            this.litrosVendidosPorSurtidorToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.litrosVendidosPorSurtidorToolStripMenuItem.Text = "Litros vendidos por surtidor";
             // 
             // btnSalir
             // 
@@ -322,43 +360,6 @@
             this.label2.Size = new System.Drawing.Size(118, 13);
             this.label2.TabIndex = 7;
             this.label2.Text = "Empleados Registrados";
-            // 
-            // informesToolStripMenuItem
-            // 
-            this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.verProductosFaltantesToolStripMenuItem,
-            this.verProductosVendidosToolStripMenuItem,
-            this.mesConMasVentasToolStripMenuItem,
-            this.litrosVendidosPorSurtidorToolStripMenuItem});
-            this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
-            this.informesToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.informesToolStripMenuItem.Text = "Informes";
-            // 
-            // verProductosFaltantesToolStripMenuItem
-            // 
-            this.verProductosFaltantesToolStripMenuItem.Name = "verProductosFaltantesToolStripMenuItem";
-            this.verProductosFaltantesToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.verProductosFaltantesToolStripMenuItem.Text = "Ver productos faltantes";
-            this.verProductosFaltantesToolStripMenuItem.Click += new System.EventHandler(this.verProductosFaltantesToolStripMenuItem_Click);
-            // 
-            // mesConMasVentasToolStripMenuItem
-            // 
-            this.mesConMasVentasToolStripMenuItem.Name = "mesConMasVentasToolStripMenuItem";
-            this.mesConMasVentasToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
-            this.mesConMasVentasToolStripMenuItem.Text = "Mes con mas ventas";
-            // 
-            // litrosVendidosPorSurtidorToolStripMenuItem
-            // 
-            this.litrosVendidosPorSurtidorToolStripMenuItem.Name = "litrosVendidosPorSurtidorToolStripMenuItem";
-            this.litrosVendidosPorSurtidorToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
-            this.litrosVendidosPorSurtidorToolStripMenuItem.Text = "Litros vendidos por surtidor";
-            // 
-            // verProductosVendidosToolStripMenuItem
-            // 
-            this.verProductosVendidosToolStripMenuItem.Name = "verProductosVendidosToolStripMenuItem";
-            this.verProductosVendidosToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
-            this.verProductosVendidosToolStripMenuItem.Text = "Ver productos vendidos";
-            this.verProductosVendidosToolStripMenuItem.Click += new System.EventHandler(this.verProductosVendidosToolStripMenuItem_Click);
             // 
             // FormularioPrincipal
             // 

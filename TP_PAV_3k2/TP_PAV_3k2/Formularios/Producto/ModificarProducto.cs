@@ -82,7 +82,8 @@ namespace TP_PAV_3k2.Formularios.Producto
             {
                 datosProducto.Id = producto.Id;
                 datosProducto.Nombre = txtNombre.Text;
-                if(datosProducto.NombreValido()==false)
+                datosProducto.UnidadMedida=null;
+                if (datosProducto.NombreValido()==false)
                 {
                     MessageBox.Show("ingrese nombre valido");
                     txtNombre.Text = null;

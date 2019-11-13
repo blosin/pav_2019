@@ -243,6 +243,39 @@
     <Compile Include="Formularios\Soporte\TipoUrgencia\ModificarUrgencia.Designer.cs">
       <DependentUpon>ModificarUrgencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Informes\CantidadLitrosVendidosXSurtidor\CantidadLitrosVendidosform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\CantidadLitrosVendidosXSurtidor\CantidadLitrosVendidosform.Designer.cs">
+      <DependentUpon>CantidadLitrosVendidosform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\CantidadLitrosVendidosXSurtidor\DatosVentaXSurtidor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosVentaXSurtidor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\IDetalleTicket\DatosDetalleTicket.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosDetalleTicket.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\IDetalleTicket\TicketReporteform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\IDetalleTicket\TicketReporteform.Designer.cs">
+      <DependentUpon>TicketReporteform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\MesMasVenta\DatosMasVenta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosMasVenta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Informes\MesMasVenta\MesMasVentaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Informes\MesMasVenta\MesMasVentaForm.Designer.cs">
+      <DependentUpon>MesMasVentaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Informes\ProductosVendidos\DatosProductosVendidos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -431,6 +464,15 @@
     <EmbeddedResource Include="Formularios\Tickets\Ticket.resx">
       <DependentUpon>Ticket.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informes\CantidadLitrosVendidosXSurtidor\InfomeVentaPorSurtidor.rdlc" />
+    <EmbeddedResource Include="Informes\IDetalleTicket\InformeTicket.rdlc" />
+    <EmbeddedResource Include="Informes\IDetalleTicket\TicketReporteform.resx">
+      <DependentUpon>TicketReporteform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Informes\MesMasVenta\InformeMesMasVenta.rdlc" />
+    <EmbeddedResource Include="Informes\MesMasVenta\MesMasVentaForm.resx">
+      <DependentUpon>MesMasVentaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Informes\ProductosVendidos\formProductosVendidos.resx">
       <DependentUpon>formProductosVendidos.cs</DependentUpon>
     </EmbeddedResource>
@@ -457,6 +499,39 @@
     <EmbeddedResource Include="Formularios\Soporte\TipoUrgencia\AltaUrgencia.resx">
       <DependentUpon>AltaUrgencia.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Informes\CantidadLitrosVendidosXSurtidor\DatosVentaXSurtidor.xsc">
+      <DependentUpon>DatosVentaXSurtidor.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\CantidadLitrosVendidosXSurtidor\DatosVentaXSurtidor.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosVentaXSurtidor.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\CantidadLitrosVendidosXSurtidor\DatosVentaXSurtidor.xss">
+      <DependentUpon>DatosVentaXSurtidor.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\IDetalleTicket\DatosDetalleTicket.xsc">
+      <DependentUpon>DatosDetalleTicket.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\IDetalleTicket\DatosDetalleTicket.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosDetalleTicket.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\IDetalleTicket\DatosDetalleTicket.xss">
+      <DependentUpon>DatosDetalleTicket.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\MesMasVenta\DatosMasVenta.xsc">
+      <DependentUpon>DatosMasVenta.xsd</DependentUpon>
+    </None>
+    <None Include="Informes\MesMasVenta\DatosMasVenta.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosMasVenta.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Informes\MesMasVenta\DatosMasVenta.xss">
+      <DependentUpon>DatosMasVenta.xsd</DependentUpon>
+    </None>
     <None Include="Informes\ProductosVendidos\DatosProductosVendidos.xsc">
       <DependentUpon>DatosProductosVendidos.xsd</DependentUpon>
     </None>
@@ -493,11 +568,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Informes\CantidadLitrosVendidosXSurtidor\" />
-    <Folder Include="Informes\IDetalleTicket\" />
-    <Folder Include="Informes\MesMasVenta\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">

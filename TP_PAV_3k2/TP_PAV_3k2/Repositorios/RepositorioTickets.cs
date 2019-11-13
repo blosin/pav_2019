@@ -24,6 +24,12 @@ namespace TP_PAV_3k2.Repositorios
 
             return _BD.consulta(sqltxt);
         }
+        public DataTable ObtenerTicket(string numTicket)
+        {
+            string sqltxt = $"SELECT * FROM Ticket WHERE numTicket='{numTicket}'";
+
+            return _BD.consulta(sqltxt);
+        }
 
         public DataTable ObtenerLegajos()
         {

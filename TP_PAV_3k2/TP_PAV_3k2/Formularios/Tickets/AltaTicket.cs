@@ -150,7 +150,7 @@ namespace TP_PAV_3k2.Formularios.Tickets
                     return;                    
                 }
             }
-            var precioUnitario = float.Parse(fila.Cells["PrecioDeVenta"].Value.ToString());
+            var precioUnitario = decimal.Parse(fila.Cells["PrecioDeVenta"].Value.ToString());
             var subtotal = cantidad * precioUnitario;
             fila.Cells["Subtotal"].Value = subtotal;
             ActualizarTotal();
