@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.rvVentasXSurtidor = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.SuspendLayout();
+            // 
+            // rvVentasXSurtidor
+            // 
+            this.rvVentasXSurtidor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rvVentasXSurtidor.Location = new System.Drawing.Point(0, 0);
+            this.rvVentasXSurtidor.Name = "rvVentasXSurtidor";
+            this.rvVentasXSurtidor.ServerReport.BearerToken = null;
+            this.rvVentasXSurtidor.Size = new System.Drawing.Size(800, 450);
+            this.rvVentasXSurtidor.TabIndex = 0;
+            // 
+            // CantidadLitrosVendidosform
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "CantidadLitrosVendidosform";
+            this.Controls.Add(this.rvVentasXSurtidor);
+            this.Name = "CantidadLitrosVendidosform";
+            this.Text = "Ventas por surtidor";
+            this.Load += new System.EventHandler(this.CantidadLitrosVendidosform_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Microsoft.Reporting.WinForms.ReportViewer rvVentasXSurtidor;
     }
 }

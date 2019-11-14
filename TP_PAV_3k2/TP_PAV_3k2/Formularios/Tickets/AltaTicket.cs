@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TP_PAV_3k2.Clases;
+using TP_PAV_3k2.Informes.IDetalleTicket;
 using TP_PAV_3k2.Repositorios;
+
 
 namespace TP_PAV_3k2.Formularios.Tickets
 {
@@ -159,6 +161,7 @@ namespace TP_PAV_3k2.Formularios.Tickets
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            int numticket=0;
             if (cmbCuit.Text == "")
             {
                 MessageBox.Show("ingrese cuit valido");
@@ -201,9 +204,9 @@ namespace TP_PAV_3k2.Formularios.Tickets
                 ticket.detalleTicket = PreparaDetallesTickets();
 
                 ticket.Validar();
-                repositorio.Guardar(ticket);
+                numticket=repositorio.Guardar(ticket);
                 MessageBox.Show("La operación se realizó con exito");
-                this.Dispose();
+                
             }
             catch (ApplicationException aex)
             {
@@ -217,7 +220,20 @@ namespace TP_PAV_3k2.Formularios.Tickets
             finally
             {
                 ticket.ActualizarTickets();
+                if(numticket==0)
+                {
+                    MessageBox.Show("error");
+                }
+                else
+                {
+                    TicketReporteform formulario = new TicketReporteform(numticket.ToString(), txtPrecioUnidad.Text.ToString(), (decimal.Parse(txtPrecioUnidad.Text) * int.Parse(txtCantidad.Text)).ToString());
+                    formulario.Show();
+                    this.Dispose();
+
+
+                }
             }//HARD
+
         }
         public List<DetalleTickett> PreparaDetallesTickets()
         {

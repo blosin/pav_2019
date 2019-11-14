@@ -38,8 +38,9 @@ namespace TP_PAV_3k2.Repositorios
             return _BD.consulta(sqltxt);
         }
 
-        public void Guardar(Tickett v)
+        public int Guardar(Tickett v)
         {
+            int numticket=0;
             using (var tx = _BD.IniciarTransaccion())
             {
                 try
@@ -47,6 +48,7 @@ namespace TP_PAV_3k2.Repositorios
                     string sqltxt = $"INSERT [dbo].[Ticket] ([fecha], [cuit], [numeroSurtidor], [cantidad], [idUnidadMedida], [observacion], [montoFinal])" +
                         $" VALUES ('{v.ObtenerFecha()}', '{v.cuit}', '{v.numeroSurtidor.numeroSurtidor}', '{v.cantidad}', (SELECT idUnidadMedida FROM UnidadMedida WHERE nombre='{v.unidadMedida}'), '{v.observacion}', CAST(REPLACE( '{v.MontoFinal}', ',', '.') as float))";
                     v.numTicket = _BD.EjecutarTransaccion(sqltxt);
+                    numticket = v.numTicket;
                     if (v.numTicket == 0)
                         throw new ApplicationException();
                     string sqltxt2 = $"SELECT stockActual FROM dbo.Producto " +
@@ -84,9 +86,11 @@ namespace TP_PAV_3k2.Repositorios
                 finally
                 {
                     _BD.cerrar();
+                    
                 }
-            }
 
+            }
+            return numticket;
         }
     }
 }

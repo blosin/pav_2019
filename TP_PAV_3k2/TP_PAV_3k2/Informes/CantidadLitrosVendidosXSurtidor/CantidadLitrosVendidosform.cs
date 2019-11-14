@@ -16,5 +16,11 @@ namespace TP_PAV_3k2.Informes.CantidadLitrosVendidosXSurtidor
         {
             InitializeComponent();
         }
+
+        private void CantidadLitrosVendidosform_Load(object sender, EventArgs e)
+        {
+
+            this.rvVentasXSurtidor.RefreshReport();
+        }
     }
 }

@@ -39,13 +39,13 @@
             this.agregarTipoCombustibleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUnidadDeMedidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarUrgenciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ordenDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ticketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verProductosFaltantesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verProductosVendidosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mesConMasVentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.litrosVendidosPorSurtidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordenDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ticketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnSalir = new System.Windows.Forms.Button();
             this.grdEmpleados = new System.Windows.Forms.DataGridView();
             this.legajo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -162,20 +162,6 @@
             this.agregarUrgenciaToolStripMenuItem.Text = "Administrar urgencias";
             this.agregarUrgenciaToolStripMenuItem.Click += new System.EventHandler(this.agregarUrgenciaToolStripMenuItem_Click);
             // 
-            // ordenDeCompraToolStripMenuItem
-            // 
-            this.ordenDeCompraToolStripMenuItem.Name = "ordenDeCompraToolStripMenuItem";
-            this.ordenDeCompraToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
-            this.ordenDeCompraToolStripMenuItem.Text = "Orden de Compra";
-            this.ordenDeCompraToolStripMenuItem.Click += new System.EventHandler(this.ordenDeCompraToolStripMenuItem_Click);
-            // 
-            // ticketToolStripMenuItem
-            // 
-            this.ticketToolStripMenuItem.Name = "ticketToolStripMenuItem";
-            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.ticketToolStripMenuItem.Text = "Ticket";
-            this.ticketToolStripMenuItem.Click += new System.EventHandler(this.ticketToolStripMenuItem_Click);
-            // 
             // informesToolStripMenuItem
             // 
             this.informesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -190,29 +176,44 @@
             // verProductosFaltantesToolStripMenuItem
             // 
             this.verProductosFaltantesToolStripMenuItem.Name = "verProductosFaltantesToolStripMenuItem";
-            this.verProductosFaltantesToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.verProductosFaltantesToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.verProductosFaltantesToolStripMenuItem.Text = "Ver productos faltantes";
             this.verProductosFaltantesToolStripMenuItem.Click += new System.EventHandler(this.verProductosFaltantesToolStripMenuItem_Click);
             // 
             // verProductosVendidosToolStripMenuItem
             // 
             this.verProductosVendidosToolStripMenuItem.Name = "verProductosVendidosToolStripMenuItem";
-            this.verProductosVendidosToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.verProductosVendidosToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.verProductosVendidosToolStripMenuItem.Text = "Ver productos vendidos";
             this.verProductosVendidosToolStripMenuItem.Click += new System.EventHandler(this.verProductosVendidosToolStripMenuItem_Click);
             // 
             // mesConMasVentasToolStripMenuItem
             // 
             this.mesConMasVentasToolStripMenuItem.Name = "mesConMasVentasToolStripMenuItem";
-            this.mesConMasVentasToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.mesConMasVentasToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.mesConMasVentasToolStripMenuItem.Text = "Mes con mas ventas";
             this.mesConMasVentasToolStripMenuItem.Click += new System.EventHandler(this.mesConMasVentasToolStripMenuItem_Click);
             // 
             // litrosVendidosPorSurtidorToolStripMenuItem
             // 
             this.litrosVendidosPorSurtidorToolStripMenuItem.Name = "litrosVendidosPorSurtidorToolStripMenuItem";
-            this.litrosVendidosPorSurtidorToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
-            this.litrosVendidosPorSurtidorToolStripMenuItem.Text = "Litros vendidos por surtidor";
+            this.litrosVendidosPorSurtidorToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.litrosVendidosPorSurtidorToolStripMenuItem.Text = "Ventas por surtidor";
+            this.litrosVendidosPorSurtidorToolStripMenuItem.Click += new System.EventHandler(this.litrosVendidosPorSurtidorToolStripMenuItem_Click);
+            // 
+            // ordenDeCompraToolStripMenuItem
+            // 
+            this.ordenDeCompraToolStripMenuItem.Name = "ordenDeCompraToolStripMenuItem";
+            this.ordenDeCompraToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
+            this.ordenDeCompraToolStripMenuItem.Text = "Orden de Compra";
+            this.ordenDeCompraToolStripMenuItem.Click += new System.EventHandler(this.ordenDeCompraToolStripMenuItem_Click);
+            // 
+            // ticketToolStripMenuItem
+            // 
+            this.ticketToolStripMenuItem.Name = "ticketToolStripMenuItem";
+            this.ticketToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.ticketToolStripMenuItem.Text = "Ticket";
+            this.ticketToolStripMenuItem.Click += new System.EventHandler(this.ticketToolStripMenuItem_Click);
             // 
             // btnSalir
             // 

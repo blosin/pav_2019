@@ -464,8 +464,11 @@
     <EmbeddedResource Include="Formularios\Tickets\Ticket.resx">
       <DependentUpon>Ticket.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Informes\CantidadLitrosVendidosXSurtidor\CantidadLitrosVendidosform.resx">
+      <DependentUpon>CantidadLitrosVendidosform.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Informes\CantidadLitrosVendidosXSurtidor\InfomeVentaPorSurtidor.rdlc" />
-    <EmbeddedResource Include="Informes\IDetalleTicket\InformeTicket.rdlc" />
+    <EmbeddedResource Include="Informes\IDetalleTicket\Informeticket.rdlc" />
     <EmbeddedResource Include="Informes\IDetalleTicket\TicketReporteform.resx">
       <DependentUpon>TicketReporteform.cs</DependentUpon>
     </EmbeddedResource>

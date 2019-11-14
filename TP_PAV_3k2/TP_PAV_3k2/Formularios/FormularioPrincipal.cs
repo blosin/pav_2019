@@ -18,6 +18,8 @@ using TP_PAV_3k2.Formularios.Tickets;
 using TP_PAV_3k2.Informes.StockFaltantes;
 using TP_PAV_3k2.Informes.ProductosVendidos;
 using TP_PAV_3k2.Informes.MesMasVenta;
+using TP_PAV_3k2.Informes.IDetalleTicket;
+using TP_PAV_3k2.Informes.CantidadLitrosVendidosXSurtidor;
 
 namespace TP_PAV_3k2
 {
@@ -248,6 +250,18 @@ namespace TP_PAV_3k2
         private void mesConMasVentasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MesMasVentaForm formulario = new MesMasVentaForm();
+            formulario.ShowDialog();
+        }
+
+        private void informedepruebaticketToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /*TicketReporteform formulario = new TicketReporteform("8");
+            formulario.ShowDialog();*/
+        }
+
+        private void litrosVendidosPorSurtidorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CantidadLitrosVendidosform formulario = new CantidadLitrosVendidosform();
             formulario.ShowDialog();
         }
     }
