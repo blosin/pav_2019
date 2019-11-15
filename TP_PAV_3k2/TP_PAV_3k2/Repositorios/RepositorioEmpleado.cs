@@ -71,6 +71,11 @@ namespace TP_PAV_3k2.Repositorios
             string sqltxt = $"SELECT * FROM Empleado WHERE legajoSuperior='{legajo}'";
             return _BD.consulta(sqltxt);
         }
+        public DataTable EmpleadoExistente(string nroDoc)
+        {
+            string sqltxt = $"SELECT * FROM Empleado WHERE nroDoc='{nroDoc}'";
+            return _BD.consulta(sqltxt);
+        }
         public Empleado ObtenerEmpleado(string legajo)
         {
             string sqltxt =$"SELECT a.legajo, a.nombre, a.apellido, b.nombre, a.nroDoc, a.fechaNacimiento, a.fechaAlta, a.legajoSuperior, a.cuit FROM Empleado a, TipoDocumento b WHERE a.tipoDoc = b.idTipoDocumento AND legajo='{legajo}'";

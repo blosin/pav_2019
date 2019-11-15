@@ -105,10 +105,16 @@ namespace TP_PAV_3k2.Formularios.Empleados
                 MessageBox.Show("ingrese fecha valida");
                 return;
             }
-
-            repositorio.Guardar(empleado);
-            this.Dispose();
-            form.ActualizarEmpleados();
+            DataTable tablatemporal = repositorio.EmpleadoExistente(empleado.nroDoc.ToString());
+            if (tablatemporal.Rows.Count == 0)
+            {
+                repositorio.Guardar(empleado);
+                this.Dispose();
+                form.ActualizarEmpleados();
+            }
+            else
+                MessageBox.Show($"ya existe un empleado con ese numero de documento");
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

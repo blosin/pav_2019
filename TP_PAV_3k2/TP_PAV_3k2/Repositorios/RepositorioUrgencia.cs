@@ -32,7 +32,11 @@ namespace TP_PAV_3k2
 
             return _BD.EjecutarSQL(sqltxt);
         }
-
+        public DataTable SoyUrgenciaExistente(string nombre)
+        {
+            string sqltxt = $"SELECT * FROM Urgencia WHERE nombre='{nombre}'";
+            return _BD.consulta(sqltxt);
+        }
         public bool Eliminar(string urgenciaId)
         {
             string sqltxt = $"DELETE FROM [dbo].[Urgencia] WHERE idUrgencia = {urgenciaId}";

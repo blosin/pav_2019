@@ -25,6 +25,11 @@ namespace TP_PAV_3k2.Repositorios
 
             return _BD.consulta(sqltxt);
         }
+        public DataTable SoySucursalExistente(string nombre)
+        {
+            string sqltxt = $"SELECT * FROM TipoDocumento WHERE nombre='{nombre}'";
+            return _BD.consulta(sqltxt);
+        }
 
         public bool Guardar(TipoDocumento tipoDocumento)
         {
@@ -33,7 +38,11 @@ namespace TP_PAV_3k2.Repositorios
 
             return _BD.EjecutarSQL(sqltxt);
         }
-
+        public DataTable SoyTipoDocExistente(string nombre)
+        {
+            string sqltxt = $"SELECT * FROM TipoDocumento WHERE nombre='{nombre}'";
+            return _BD.consulta(sqltxt);
+        }
         public bool Eliminar(string TipoDocumentoID)
         {
             string sqltxt = $"DELETE FROM [dbo].[TipoDocumento] WHERE idTipoDocumento = {TipoDocumentoID}";

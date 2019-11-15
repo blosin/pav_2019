@@ -32,6 +32,11 @@ namespace TP_PAV_3k2.Repositorios
 
             return _BD.consulta(sqltxt);
         }
+        public DataTable SoySucursalExistente(string cuit)
+        {
+            string sqltxt = $"SELECT * FROM Estacion WHERE cuit='{cuit}'";
+            return _BD.consulta(sqltxt);
+        }
 
         public bool Guardar(Estacion estacion)
         {

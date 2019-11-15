@@ -34,6 +34,11 @@ namespace TP_PAV_3k2.Repositorios
 
             return _BD.consulta(sqltxt);
         }
+        public DataTable SoyProductoExistente(string nombre)
+        {
+            string sqltxt = $"SELECT * FROM Producto WHERE nombre='{nombre}'";
+            return _BD.consulta(sqltxt);
+        }
         public string ObtenerPrecio(string numSurtidor)
         {
             string sqltxt = $"SELECT precioVenta FROM dbo.Producto " +

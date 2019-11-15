@@ -234,10 +234,22 @@ namespace TP_PAV_3k2.Formularios.Producto
                 }
                 else
                 producto.UnidadMedida = cmbUnidades.SelectedValue.ToString();
-                repositorioProductos.Guardar(producto);
-                this.Dispose();
-                form.ActualizarProductos();
-                return;
+                DataTable tablatemporal = repositorioProductos.SoyProductoExistente(producto.Nombre);
+                if (tablatemporal.Rows.Count == 0)
+                {
+                    repositorioProductos.Guardar(producto);
+                    this.Dispose();
+                    form.ActualizarProductos();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show($"ya existe un producto con ese nombre");
+                    return;
+                }
+                   
+                    
+                
 
             }
 
@@ -351,10 +363,20 @@ namespace TP_PAV_3k2.Formularios.Producto
 
                 producto.FechaUltimaActualizacion =DateTime.Today;
 
-                repositorioProductos.Guardar(producto);
-                this.Dispose();
-                form.ActualizarProductos();
-                return;
+                DataTable tablatemporal = repositorioProductos.SoyProductoExistente(producto.Nombre);
+                if (tablatemporal.Rows.Count == 0)
+                {
+                    repositorioProductos.Guardar(producto);
+                    this.Dispose();
+                    form.ActualizarProductos();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show($"ya existe un producto con ese nombre");
+                    return;
+                }
+                
 
             }
 

@@ -31,12 +31,18 @@ namespace TP_PAV_3k2
                 MessageBox.Show("Nombre inválido");
                 return;
             }
-            
-            if (_repositorio.Guardar(Urgencia))
+            DataTable tablatemporal = _repositorio.SoyUrgenciaExistente(Urgencia.Nombre);
+            if (tablatemporal.Rows.Count == 0)
             {
-                MessageBox.Show("Se registro con éxito");
-                this.Dispose();
+                if (_repositorio.Guardar(Urgencia))
+                {
+                    MessageBox.Show("Se registro con éxito");
+                    this.Dispose();
+                }
             }
+            else
+                MessageBox.Show($"ya existe un tipo de urgencia con ese nombre");
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

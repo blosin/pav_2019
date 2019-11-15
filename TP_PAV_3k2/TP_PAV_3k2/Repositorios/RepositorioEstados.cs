@@ -25,7 +25,11 @@ namespace TP_PAV_3k2.Repositorios
 
             return _BD.consulta(sqltxt);
         }
-
+        public DataTable SoyEstadoExistente(string nombre)
+        {
+            string sqltxt = $"SELECT * FROM Estado WHERE nombre='{nombre}'";
+            return _BD.consulta(sqltxt);
+        }
         public bool Guardar(Estadoss estado)
         {
             string sqltxt = $"INSERT dbo.Estado (nombre) " +

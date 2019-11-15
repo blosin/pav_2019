@@ -41,12 +41,18 @@ namespace TP_PAV_3k2
                 MessageBox.Show("Nombre inválido");
                 return;
             }
-
-            if (_repositorio.Guardar(TipoCombustible))
+            DataTable tablatemporal = _repositorio.SoyTipoCombustibleExistente(TipoCombustible.Nombre);
+            if (tablatemporal.Rows.Count == 0)
             {
-                MessageBox.Show("Se registro con éxito");
-                this.Dispose();
+                if (_repositorio.Guardar(TipoCombustible))
+                {
+                    MessageBox.Show("Se registro con éxito");
+                    this.Dispose();
+                }
             }
+            else
+                MessageBox.Show($"ya existe un tipo de combustible con ese nombre");
+            
         }
     }
 }

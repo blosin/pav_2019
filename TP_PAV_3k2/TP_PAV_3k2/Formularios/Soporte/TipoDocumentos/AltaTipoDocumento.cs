@@ -33,12 +33,18 @@ namespace TP_PAV_3k2.Formularios.Soporte.TipoDocumentos
                 MessageBox.Show("Nombre inválido");
                 return;
             }
-
-            if (_repositorio.Guardar(tipoDocumento))
+            DataTable tablatemporal = _repositorio.SoyTipoDocExistente(tipoDocumento.Nombre);
+            if (tablatemporal.Rows.Count == 0)
             {
-                MessageBox.Show("Se registro con éxito");
-                this.Dispose();
+                if (_repositorio.Guardar(tipoDocumento))
+                {
+                    MessageBox.Show("Se registro con éxito");
+                    this.Dispose();
+                }
             }
+            else
+                MessageBox.Show($"ya existe un tipo de documento con ese nombre");
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

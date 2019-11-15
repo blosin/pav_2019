@@ -24,7 +24,11 @@ namespace TP_PAV_3k2
 
             return _BD.consulta(sqltxt);
         }
-
+        public DataTable SoyUnidadMedidaExistente(string nombre)
+        {
+            string sqltxt = $"SELECT * FROM UnidadMedida WHERE nombre='{nombre}'";
+            return _BD.consulta(sqltxt);
+        }
         public bool Guardar(UnidadDeMedida unidadmedida)
         {
             string sqltxt = $"INSERT dbo.UnidadMedida (Nombre) " +

@@ -35,11 +35,19 @@ namespace TP_PAV_3k2.Formularios.Soporte.Estados
                 return;
             }
 
-            if (_repositorio.Guardar(estado))
+            DataTable tablatemporal = _repositorio.SoyEstadoExistente(estado.Nombre);
+            if (tablatemporal.Rows.Count == 0)
             {
-                MessageBox.Show("Se registro con éxito");
-                this.Dispose();
+                if (_repositorio.Guardar(estado))
+                {
+                    MessageBox.Show("Se registro con éxito");
+                    this.Dispose();
+                }
             }
+            else
+                MessageBox.Show($"ya existe un estado con ese nombre");
+
+            
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

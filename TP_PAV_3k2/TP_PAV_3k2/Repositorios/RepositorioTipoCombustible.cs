@@ -25,6 +25,12 @@ namespace TP_PAV_3k2
 
             return _BD.consulta(sqltxt);
         }
+
+        public DataTable SoyTipoCombustibleExistente(string nombre)
+        {
+            string sqltxt = $"SELECT * FROM TipoCombustible WHERE nombre='{nombre}'";
+            return _BD.consulta(sqltxt);
+        }
         public string ObtenerNombreTipoCombustible(string numSurtidor)
         {
             string sqltxt;

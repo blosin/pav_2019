@@ -36,12 +36,18 @@ namespace TP_PAV_3k2
                 MessageBox.Show("Nombre inválido");
                 return;
             }
-
-            if (_repositorio.Guardar(UnidadMedida))
+            DataTable tablatemporal = _repositorio.SoyUnidadMedidaExistente(UnidadMedida.Nombre);
+            if (tablatemporal.Rows.Count == 0)
             {
-                MessageBox.Show("Se registro con éxito");
-                this.Dispose();
+                if (_repositorio.Guardar(UnidadMedida))
+                {
+                    MessageBox.Show("Se registro con éxito");
+                    this.Dispose();
+                }
             }
+            else
+                MessageBox.Show($"ya existe una unidad de medida con ese nombre");
+                
         }
     }
 }
