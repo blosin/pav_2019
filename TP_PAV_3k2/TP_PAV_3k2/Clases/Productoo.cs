@@ -31,7 +31,7 @@ namespace TP_PAV_3k2.Clases
         }
         public bool StockValido()
         {
-            if (!string.IsNullOrEmpty(Stock.ToString()) && Stock > 0)
+            if (!string.IsNullOrEmpty(Stock.ToString()) && Stock >= 0)
                 return true;
             return false;
         }

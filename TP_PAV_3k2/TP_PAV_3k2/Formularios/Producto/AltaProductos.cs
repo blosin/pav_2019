@@ -235,7 +235,7 @@ namespace TP_PAV_3k2.Formularios.Producto
                 else
                 producto.UnidadMedida = cmbUnidades.SelectedValue.ToString();
                 DataTable tablatemporal = repositorioProductos.SoyProductoExistente(producto.Nombre);
-                if (tablatemporal.Rows.Count == 0)
+                if (tablatemporal.Rows.Count == 0 && producto.PrecioCompra<producto.PrecioVenta)
                 {
                     repositorioProductos.Guardar(producto);
                     this.Dispose();
@@ -244,8 +244,17 @@ namespace TP_PAV_3k2.Formularios.Producto
                 }
                 else
                 {
-                    MessageBox.Show($"ya existe un producto con ese nombre");
-                    return;
+                    if(producto.PrecioCompra > producto.PrecioVenta)
+                    {
+                        MessageBox.Show("El precio de venta no puede ser menor al de compra");
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show($"ya existe un producto con ese nombre");
+                        return;
+                    }
+                   
                 }
                    
                     
@@ -364,7 +373,7 @@ namespace TP_PAV_3k2.Formularios.Producto
                 producto.FechaUltimaActualizacion =DateTime.Today;
 
                 DataTable tablatemporal = repositorioProductos.SoyProductoExistente(producto.Nombre);
-                if (tablatemporal.Rows.Count == 0)
+                if (tablatemporal.Rows.Count == 0 && producto.PrecioCompra < producto.PrecioVenta)
                 {
                     repositorioProductos.Guardar(producto);
                     this.Dispose();
@@ -373,8 +382,16 @@ namespace TP_PAV_3k2.Formularios.Producto
                 }
                 else
                 {
-                    MessageBox.Show($"ya existe un producto con ese nombre");
-                    return;
+                    if (producto.PrecioCompra > producto.PrecioVenta)
+                    {
+                        MessageBox.Show("El precio de venta no puede ser menor al de compra");
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show($"ya existe un producto con ese nombre");
+                        return;
+                    }
                 }
                 
 
